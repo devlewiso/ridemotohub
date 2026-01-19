@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <!-- Gradient Background -->
+  <defs>
+    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4A90E2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7B68EE;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="roadGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#555;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#333;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Sky -->
+  <rect width="800" height="450" fill="url(#skyGradient)"/>
+  
+  <!-- Mountains (Volcanes) -->
+  <polygon points="0,300 200,150 400,300" fill="#2C3E50" opacity="0.8"/>
+  <polygon points="300,300 500,100 700,300" fill="#34495E" opacity="0.7"/>
+  <polygon points="600,300 800,180 800,300" fill="#2C3E50" opacity="0.6"/>
+  
+  <!-- Mountain highlights -->
+  <polygon points="500,100 520,120 480,120" fill="#ECF0F1" opacity="0.5"/>
+  
+  <!-- Road -->
+  <path d="M 0 350 Q 200 320 400 340 T 800 350" fill="url(#roadGradient)"/>
+  <path d="M 0 360 Q 200 330 400 350 T 800 360" fill="#444"/>
+  
+  <!-- Road lines -->
+  <path d="M 50 355 L 100 353" stroke="#FFF" stroke-width="3" stroke-dasharray="20,20" opacity="0.6"/>
+  <path d="M 150 352 L 200 350" stroke="#FFF" stroke-width="3" stroke-dasharray="20,20" opacity="0.6"/>
+  <path d="M 250 351 L 300 352" stroke="#FFF" stroke-width="3" stroke-dasharray="20,20" opacity="0.6"/>
+  <path d="M 350 353 L 400 355" stroke="#FFF" stroke-width="3" stroke-dasharray="20,20" opacity="0.6"/>
+  <path d="M 450 356 L 500 357" stroke="#FFF" stroke-width="3" stroke-dasharray="20,20" opacity="0.6"/>
+  <path d="M 550 358 L 600 358" stroke="#FFF" stroke-width="3" stroke-dasharray="20,20" opacity="0.6"/>
+  <path d="M 650 357 L 700 356" stroke="#FFF" stroke-width="3" stroke-dasharray="20,20" opacity="0.6"/>
+  <path d="M 750 355 L 800 354" stroke="#FFF" stroke-width="3" stroke-dasharray="20,20" opacity="0.6"/>
+  
+  <!-- Motorcycle silhouette -->
+  <g transform="translate(600, 320) scale(1.5)">
+    <!-- Wheels -->
+    <circle cx="10" cy="20" r="8" fill="#333" stroke="#666" stroke-width="2"/>
+    <circle cx="50" cy="20" r="8" fill="#333" stroke="#666" stroke-width="2"/>
+    <circle cx="10" cy="20" r="4" fill="#888"/>
+    <circle cx="50" cy="20" r="4" fill="#888"/>
+    
+    <!-- Frame -->
+    <path d="M 10 20 L 30 10 L 50 20" stroke="#E74C3C" stroke-width="3" fill="none"/>
+    <path d="M 30 10 L 35 5" stroke="#E74C3C" stroke-width="2"/>
+    <path d="M 30 10 L 30 15" stroke="#E74C3C" stroke-width="2"/>
+    
+    <!-- Rider silhouette -->
+    <circle cx="35" cy="3" r="3" fill="#2C3E50"/>
+    <path d="M 35 6 L 35 12" stroke="#2C3E50" stroke-width="2"/>
+    <path d="M 35 8 L 32 10" stroke="#2C3E50" stroke-width="2"/>
+    <path d="M 35 8 L 38 11" stroke="#2C3E50" stroke-width="2"/>
+  </g>
+  
+  <!-- Sun -->
+  <circle cx="700" cy="80" r="40" fill="#FFD700" opacity="0.8"/>
+  <circle cx="700" cy="80" r="35" fill="#FFA500" opacity="0.6"/>
+  
+  <!-- Text -->
+  <text x="400" y="420" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#FFF" text-anchor="middle" opacity="0.9">
+    Primera Ruta al Lago de Atitlán
+  </text>
+  <text x="400" y="440" font-family="Arial, sans-serif" font-size="14" fill="#ECF0F1" text-anchor="middle" opacity="0.7">
+    🏍️ Historias de Ruta • RideMotoHub Guatemala
+  </text>
+</svg>

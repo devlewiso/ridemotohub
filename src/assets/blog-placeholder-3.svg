@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <!-- Mountain Sky Gradient -->
+  <defs>
+    <linearGradient id="mountainSky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#87CEEB;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4682B4;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="fogGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFF;stop-opacity:0" />
+      <stop offset="50%" style="stop-color:#E8E8E8;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#FFF;stop-opacity:0" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Sky -->
+  <rect width="800" height="450" fill="url(#mountainSky)"/>
+  
+  <!-- Distant Mountains (layers) -->
+  <polygon points="0,280 200,120 400,280" fill="#5D6D7E" opacity="0.4"/>
+  <polygon points="300,280 500,80 700,280" fill="#566573" opacity="0.5"/>
+  <polygon points="600,280 800,140 800,280" fill="#5D6D7E" opacity="0.4"/>
+  
+  <!-- Mid Mountains -->
+  <polygon points="0,320 150,180 300,320" fill="#34495E" opacity="0.7"/>
+  <polygon points="200,320 450,140 650,320" fill="#2C3E50" opacity="0.8"/>
+  <polygon points="550,320 800,200 800,320" fill="#34495E" opacity="0.7"/>
+  
+  <!-- Snow caps -->
+  <polygon points="450,140 470,160 430,160" fill="#ECF0F1" opacity="0.8"/>
+  <polygon points="200,120 220,140 180,140" fill="#ECF0F1" opacity="0.7"/>
+  
+  <!-- Fog layers -->
+  <ellipse cx="400" cy="250" rx="300" ry="40" fill="url(#fogGradient)" opacity="0.5"/>
+  <ellipse cx="200" cy="280" rx="200" ry="30" fill="url(#fogGradient)" opacity="0.4"/>
+  <ellipse cx="600" cy="270" rx="250" ry="35" fill="url(#fogGradient)" opacity="0.4"/>
+  
+  <!-- Winding Road -->
+  <path d="M 0 380 Q 150 370 300 385 Q 450 400 600 375 Q 700 365 800 380" 
+        fill="none" stroke="#555" stroke-width="30" opacity="0.8"/>
+  <path d="M 0 380 Q 150 370 300 385 Q 450 400 600 375 Q 700 365 800 380" 
+        fill="none" stroke="#666" stroke-width="25" opacity="0.6"/>
+  
+  <!-- Road center line (curved) -->
+  <path d="M 0 380 Q 150 370 300 385 Q 450 400 600 375 Q 700 365 800 380" 
+        fill="none" stroke="#FFD700" stroke-width="2" stroke-dasharray="20,15" opacity="0.6"/>
+  
+  <!-- Motorcycle on curve -->
+  <g transform="translate(400, 360) rotate(-5) scale(2)">
+    <!-- Wheels -->
+    <circle cx="10" cy="20" r="8" fill="#2C3E50" stroke="#E74C3C" stroke-width="2"/>
+    <circle cx="50" cy="20" r="8" fill="#2C3E50" stroke="#E74C3C" stroke-width="2"/>
+    <circle cx="10" cy="20" r="4" fill="#555"/>
+    <circle cx="50" cy="20" r="4" fill="#555"/>
+    
+    <!-- Frame (leaning) -->
+    <path d="M 10 20 L 28 8 L 50 20" stroke="#E74C3C" stroke-width="3.5" fill="none"/>
+    <path d="M 28 8 L 33 3" stroke="#E74C3C" stroke-width="2.5"/>
+    <path d="M 28 8 L 28 15" stroke="#E74C3C" stroke-width="2"/>
+    
+    <!-- Rider (leaning into curve) -->
+    <circle cx="30" cy="1" r="3.5" fill="#2C3E50"/>
+    <path d="M 30 4 L 28 12" stroke="#2C3E50" stroke-width="2.5"/>
+    <path d="M 28 7 L 24 9" stroke="#2C3E50" stroke-width="2"/>
+    <path d="M 28 7 L 32 10" stroke="#2C3E50" stroke-width="2"/>
+  </g>
+  
+  <!-- Clouds -->
+  <ellipse cx="150" cy="80" rx="40" ry="20" fill="#FFF" opacity="0.7"/>
+  <ellipse cx="170" cy="75" rx="35" ry="18" fill="#FFF" opacity="0.7"/>
+  <ellipse cx="130" cy="75" rx="30" ry="15" fill="#FFF" opacity="0.7"/>
+  
+  <ellipse cx="650" cy="100" rx="45" ry="22" fill="#FFF" opacity="0.6"/>
+  <ellipse cx="670" cy="95" rx="38" ry="19" fill="#FFF" opacity="0.6"/>
+  <ellipse cx="630" cy="95" rx="32" ry="16" fill="#FFF" opacity="0.6"/>
+  
+  <!-- Text -->
+  <text x="400" y="420" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#2C3E50" text-anchor="middle" opacity="0.9">
+    Conquistando la Interamericana
+  </text>
+  <text x="400" y="440" font-family="Arial, sans-serif" font-size="14" fill="#34495E" text-anchor="middle" opacity="0.7">
+    🏔️ Historias de Ruta • RideMotoHub Guatemala
+  </text>
+</svg>

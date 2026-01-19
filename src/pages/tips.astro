@@ -1,0 +1,771 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+---
+
+<!doctype html>
+<html lang="es">
+    <head>
+        <BaseHead
+            title="Tips & Consejos - RideMotoHub Guatemala"
+            description="Aprende sobre mantenimiento, seguridad vial, técnicas de conducción y más. Consejos de expertos para riders en Guatemala."
+        />
+    </head>
+    <body>
+        <Header />
+
+        <!-- Hero Section -->
+        <section class="page-hero">
+            <div class="hero-content">
+                <div class="hero-badge">💡 Tips & Consejos</div>
+                <h1>Guía del Rider</h1>
+                <p>
+                    Todo lo que necesitas saber para rodar seguro y mantener tu
+                    moto en perfecto estado
+                </p>
+            </div>
+        </section>
+
+        <!-- Tips Categories -->
+        <section class="tips-section">
+            <div class="container">
+                <!-- Category: Mantenimiento -->
+                <div class="category-section">
+                    <div class="category-header">
+                        <h2>🔧 Mantenimiento</h2>
+                        <p>Mantén tu moto en óptimas condiciones</p>
+                    </div>
+
+                    <div class="tips-grid">
+                        <article class="tip-card">
+                            <div class="tip-icon">🛢️</div>
+                            <h3>Cambio de Aceite</h3>
+                            <p class="tip-intro">
+                                El cambio de aceite es fundamental para la vida
+                                útil del motor.
+                            </p>
+                            <div class="tip-content">
+                                <h4>Frecuencia recomendada:</h4>
+                                <ul>
+                                    <li>Motos de calle: cada 3,000-5,000 km</li>
+                                    <li>
+                                        Motos deportivas: cada 2,000-3,000 km
+                                    </li>
+                                    <li>Motos de trail: cada 4,000-6,000 km</li>
+                                </ul>
+                                <div class="tip-highlight">
+                                    <strong>💡 Pro Tip:</strong> Cambia el aceite
+                                    cuando el motor esté tibio, fluye mejor y arrastra
+                                    más impurezas.
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="tip-card">
+                            <div class="tip-icon">⛓️</div>
+                            <h3>Mantenimiento de Cadena</h3>
+                            <p class="tip-intro">
+                                Una cadena bien mantenida mejora el rendimiento
+                                y la seguridad.
+                            </p>
+                            <div class="tip-content">
+                                <h4>Pasos básicos:</h4>
+                                <ul>
+                                    <li>Limpia la cadena cada 500-800 km</li>
+                                    <li>Lubrica después de cada limpieza</li>
+                                    <li>Ajusta la tensión según manual</li>
+                                    <li>Revisa desgaste de piñones</li>
+                                </ul>
+                                <div class="tip-highlight">
+                                    <strong>⚠️ Importante:</strong> Nunca uses WD-40
+                                    como lubricante permanente.
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="tip-card">
+                            <div class="tip-icon">🛞</div>
+                            <h3>Cuidado de Neumáticos</h3>
+                            <p class="tip-intro">
+                                Los neumáticos son tu único contacto con el
+                                asfalto.
+                            </p>
+                            <div class="tip-content">
+                                <h4>Checklist semanal:</h4>
+                                <ul>
+                                    <li>Verifica presión de aire (en frío)</li>
+                                    <li>Inspecciona desgaste irregular</li>
+                                    <li>Busca cortes o grietas</li>
+                                    <li>Revisa profundidad de banda</li>
+                                </ul>
+                                <div class="tip-highlight">
+                                    <strong>📊 Presión ideal:</strong> Consulta el
+                                    manual de tu moto, varía según modelo y carga.
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="tip-card">
+                            <div class="tip-icon">🔋</div>
+                            <h3>Batería</h3>
+                            <p class="tip-intro">
+                                Evita quedarte sin arranque con estos consejos.
+                            </p>
+                            <div class="tip-content">
+                                <h4>Mantenimiento básico:</h4>
+                                <ul>
+                                    <li>Limpia terminales regularmente</li>
+                                    <li>Verifica nivel de agua (si aplica)</li>
+                                    <li>
+                                        Carga si no usas la moto por semanas
+                                    </li>
+                                    <li>Reemplaza cada 2-3 años</li>
+                                </ul>
+                                <div class="tip-highlight">
+                                    <strong>🔌 Tip:</strong> Desconecta el terminal
+                                    negativo si guardarás la moto por mucho tiempo.
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- Category: Seguridad -->
+                <div class="category-section">
+                    <div class="category-header">
+                        <h2>🛡️ Seguridad Vial</h2>
+                        <p>Tu seguridad es lo primero</p>
+                    </div>
+
+                    <div class="tips-grid">
+                        <article class="tip-card safety">
+                            <div class="tip-icon">🪖</div>
+                            <h3>Equipo de Protección</h3>
+                            <p class="tip-intro">
+                                El equipo adecuado puede salvar tu vida.
+                            </p>
+                            <div class="tip-content">
+                                <h4>Equipo esencial:</h4>
+                                <ul>
+                                    <li>
+                                        <strong>Casco:</strong> Certificado DOT/ECE,
+                                        reemplazar cada 5 años
+                                    </li>
+                                    <li>
+                                        <strong>Chaqueta:</strong> Con protecciones
+                                        en hombros, codos y espalda
+                                    </li>
+                                    <li>
+                                        <strong>Guantes:</strong> Protección de nudillos
+                                        y palmas reforzadas
+                                    </li>
+                                    <li>
+                                        <strong>Botas:</strong> Tobilleras, suela
+                                        antideslizante
+                                    </li>
+                                    <li>
+                                        <strong>Pantalones:</strong> Con protecciones
+                                        en rodillas y caderas
+                                    </li>
+                                </ul>
+                                <div class="tip-highlight">
+                                    <strong>⚠️ Nunca:</strong> Comprometas la seguridad
+                                    por estética o comodidad.
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="tip-card safety">
+                            <div class="tip-icon">👁️</div>
+                            <h3>Conducción Defensiva</h3>
+                            <p class="tip-intro">
+                                Anticipa peligros y mantente visible.
+                            </p>
+                            <div class="tip-content">
+                                <h4>Reglas de oro:</h4>
+                                <ul>
+                                    <li>Asume que los demás no te ven</li>
+                                    <li>Mantén distancia de seguridad</li>
+                                    <li>Escanea constantemente el entorno</li>
+                                    <li>Usa luces incluso de día</li>
+                                    <li>
+                                        Evita puntos ciegos de otros vehículos
+                                    </li>
+                                </ul>
+                                <div class="tip-highlight">
+                                    <strong>🚦 Regla 2-3 segundos:</strong> Mantén
+                                    esta distancia con el vehículo de adelante.
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="tip-card safety">
+                            <div class="tip-icon">🌧️</div>
+                            <h3>Conducción en Lluvia</h3>
+                            <p class="tip-intro">
+                                El clima de Guatemala puede ser impredecible.
+                            </p>
+                            <div class="tip-content">
+                                <h4>Consejos para lluvia:</h4>
+                                <ul>
+                                    <li>Reduce velocidad un 30-40%</li>
+                                    <li>
+                                        Evita líneas pintadas y tapas de
+                                        alcantarilla
+                                    </li>
+                                    <li>Aumenta distancia de frenado</li>
+                                    <li>
+                                        Usa movimientos suaves y progresivos
+                                    </li>
+                                    <li>
+                                        Activa luces de emergencia si es
+                                        necesario
+                                    </li>
+                                </ul>
+                                <div class="tip-highlight">
+                                    <strong>⚡ Peligro:</strong> Los primeros 15 minutos
+                                    de lluvia son los más resbalosos.
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="tip-card safety">
+                            <div class="tip-icon">🏔️</div>
+                            <h3>Conducción en Montaña</h3>
+                            <p class="tip-intro">
+                                Guatemala tiene rutas montañosas espectaculares.
+                            </p>
+                            <div class="tip-content">
+                                <h4>Técnicas importantes:</h4>
+                                <ul>
+                                    <li>Usa el freno motor en bajadas</li>
+                                    <li>
+                                        Mira hacia donde quieres ir en curvas
+                                    </li>
+                                    <li>
+                                        Mantén marcha baja en subidas empinadas
+                                    </li>
+                                    <li>Cuidado con grava en curvas</li>
+                                    <li>Descansa cada hora</li>
+                                </ul>
+                                <div class="tip-highlight">
+                                    <strong>🎯 Técnica:</strong> "Lento a la entrada,
+                                    rápido a la salida" en curvas cerradas.
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- Category: Técnicas -->
+                <div class="category-section">
+                    <div class="category-header">
+                        <h2>🏍️ Técnicas de Conducción</h2>
+                        <p>Mejora tus habilidades sobre dos ruedas</p>
+                    </div>
+
+                    <div class="tips-grid">
+                        <article class="tip-card technique">
+                            <div class="tip-icon">🎯</div>
+                            <h3>Frenado de Emergencia</h3>
+                            <p class="tip-intro">
+                                Saber frenar correctamente puede evitar
+                                accidentes.
+                            </p>
+                            <div class="tip-content">
+                                <h4>Técnica correcta:</h4>
+                                <ul>
+                                    <li>Usa ambos frenos simultáneamente</li>
+                                    <li>70% freno delantero, 30% trasero</li>
+                                    <li>Presión progresiva, no brusca</li>
+                                    <li>Mantén la moto vertical</li>
+                                    <li>Mira hacia donde quieres ir</li>
+                                </ul>
+                                <div class="tip-highlight">
+                                    <strong>🏋️ Práctica:</strong> Practica en lugar
+                                    seguro hasta que sea un reflejo.
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="tip-card technique">
+                            <div class="tip-icon">🔄</div>
+                            <h3>Contramanillar</h3>
+                            <p class="tip-intro">
+                                La técnica esencial para curvas a velocidad.
+                            </p>
+                            <div class="tip-content">
+                                <h4>Cómo funciona:</h4>
+                                <ul>
+                                    <li>
+                                        Para girar a la derecha, empuja manillar
+                                        derecho
+                                    </li>
+                                    <li>
+                                        Para girar a la izquierda, empuja
+                                        manillar izquierdo
+                                    </li>
+                                    <li>
+                                        La moto se inclina en dirección opuesta
+                                        al empuje
+                                    </li>
+                                    <li>
+                                        Funciona mejor a velocidades
+                                        medias-altas
+                                    </li>
+                                </ul>
+                                <div class="tip-highlight">
+                                    <strong>🧪 Prueba:</strong> En recta segura, empuja
+                                    suavemente un manillar y siente la respuesta.
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="tip-card technique">
+                            <div class="tip-icon">⚖️</div>
+                            <h3>Balance y Postura</h3>
+                            <p class="tip-intro">
+                                La postura correcta mejora control y reduce
+                                fatiga.
+                            </p>
+                            <div class="tip-content">
+                                <h4>Postura ideal:</h4>
+                                <ul>
+                                    <li>
+                                        Brazos relajados, codos ligeramente
+                                        flexionados
+                                    </li>
+                                    <li>Agarre firme pero no tenso</li>
+                                    <li>Rodillas apretando el tanque</li>
+                                    <li>Espalda recta, mirada al horizonte</li>
+                                    <li>
+                                        Pies en estribos, listos para frenar
+                                    </li>
+                                </ul>
+                                <div class="tip-highlight">
+                                    <strong>💪 Recuerda:</strong> Tu cuerpo controla
+                                    la moto, no solo tus manos.
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="tip-card technique">
+                            <div class="tip-icon">🚦</div>
+                            <h3>Arranques Suaves</h3>
+                            <p class="tip-intro">
+                                Domina el embrague para arranques perfectos.
+                            </p>
+                            <div class="tip-content">
+                                <h4>Pasos para arranque perfecto:</h4>
+                                <ul>
+                                    <li>
+                                        Encuentra el punto de fricción del
+                                        embrague
+                                    </li>
+                                    <li>
+                                        Suelta embrague suavemente mientras
+                                        aceleras
+                                    </li>
+                                    <li>Mantén RPMs constantes (2000-3000)</li>
+                                    <li>Coordina mano y muñeca</li>
+                                </ul>
+                                <div class="tip-highlight">
+                                    <strong>🎓 Práctica:</strong> Practica en pendiente
+                                    para dominar el control.
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- Category: Preparación de Viaje -->
+                <div class="category-section">
+                    <div class="category-header">
+                        <h2>🎒 Preparación de Viaje</h2>
+                        <p>Lista para tu próxima aventura</p>
+                    </div>
+
+                    <div class="checklist-container">
+                        <div class="checklist-column">
+                            <h3>✅ Antes de Salir</h3>
+                            <ul class="checklist">
+                                <li>Revisar presión de neumáticos</li>
+                                <li>Verificar nivel de aceite</li>
+                                <li>Probar luces y señales</li>
+                                <li>Revisar frenos</li>
+                                <li>Cargar celular completamente</li>
+                                <li>Planear ruta y paradas</li>
+                                <li>Verificar clima</li>
+                                <li>Informar a alguien tu ruta</li>
+                            </ul>
+                        </div>
+
+                        <div class="checklist-column">
+                            <h3>🎒 Qué Llevar</h3>
+                            <ul class="checklist">
+                                <li>Kit de herramientas básicas</li>
+                                <li>Bomba de aire portátil</li>
+                                <li>Kit de primeros auxilios</li>
+                                <li>Agua y snacks</li>
+                                <li>Protector solar</li>
+                                <li>Impermeable</li>
+                                <li>Documentos (licencia, seguro)</li>
+                                <li>Dinero en efectivo</li>
+                                <li>Cargador de celular</li>
+                                <li>Candado para moto</li>
+                            </ul>
+                        </div>
+
+                        <div class="checklist-column">
+                            <h3>🔧 Kit de Emergencia</h3>
+                            <ul class="checklist">
+                                <li>Llaves Allen y destornilladores</li>
+                                <li>Llave de bujías</li>
+                                <li>Cinta americana (duct tape)</li>
+                                <li>Alambre</li>
+                                <li>Parche para llantas</li>
+                                <li>Fusibles de repuesto</li>
+                                <li>Aceite de motor (1L)</li>
+                                <li>Linterna</li>
+                                <li>Guantes de trabajo</li>
+                                <li>Número de grúa</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA -->
+                <div class="cta-box">
+                    <h3>¿Tienes un consejo para compartir?</h3>
+                    <p>
+                        La comunidad crece con el conocimiento de todos.
+                        Comparte tus tips y experiencias.
+                    </p>
+                    <a href="/blog" class="btn btn-primary">Compartir Consejo</a
+                    >
+                </div>
+            </div>
+        </section>
+
+        <Footer />
+    </body>
+</html>
+
+<style>
+    body {
+        overflow-x: hidden;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+
+    /* Page Hero */
+    .page-hero {
+        background: linear-gradient(
+            135deg,
+            hsl(220, 100%, 97%) 0%,
+            hsl(200, 100%, 96%) 100%
+        );
+        padding: 6rem 2rem 4rem;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .hero-badge {
+        display: inline-block;
+        padding: 0.5rem 1.5rem;
+        background: linear-gradient(
+            135deg,
+            hsl(220, 90%, 56%),
+            hsl(260, 90%, 60%)
+        );
+        color: white;
+        border-radius: 50px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+        box-shadow: 0 4px 20px rgba(37, 99, 235, 0.3);
+    }
+
+    .page-hero h1 {
+        font-size: clamp(2.5rem, 6vw, 4rem);
+        font-weight: 900;
+        margin: 0 0 1rem 0;
+        color: rgb(var(--black));
+    }
+
+    .page-hero p {
+        font-size: clamp(1rem, 2vw, 1.3rem);
+        color: rgb(var(--gray));
+        margin: 0;
+    }
+
+    /* Tips Section */
+    .tips-section {
+        padding: 4rem 0;
+        background: white;
+    }
+
+    .category-section {
+        margin-bottom: 5rem;
+    }
+
+    .category-header {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .category-header h2 {
+        font-size: 2.5rem;
+        font-weight: 800;
+        margin: 0 0 0.5rem 0;
+        color: rgb(var(--black));
+    }
+
+    .category-header p {
+        font-size: 1.2rem;
+        color: rgb(var(--gray));
+        margin: 0;
+    }
+
+    .tips-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 2rem;
+    }
+
+    .tip-card {
+        background: linear-gradient(
+            135deg,
+            hsl(220, 100%, 98%) 0%,
+            hsl(220, 100%, 96%) 100%
+        );
+        border: 2px solid hsl(220, 100%, 95%);
+        border-radius: 20px;
+        padding: 2rem;
+        transition: all 0.3s ease;
+    }
+
+    .tip-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 40px rgba(37, 99, 235, 0.15);
+        border-color: hsl(220, 90%, 56%);
+    }
+
+    .tip-card.safety {
+        border-color: hsl(0, 70%, 85%);
+        background: linear-gradient(
+            135deg,
+            hsl(0, 70%, 98%) 0%,
+            hsl(0, 70%, 96%) 100%
+        );
+    }
+
+    .tip-card.technique {
+        border-color: hsl(120, 60%, 85%);
+        background: linear-gradient(
+            135deg,
+            hsl(120, 60%, 98%) 0%,
+            hsl(120, 60%, 96%) 100%
+        );
+    }
+
+    .tip-icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    .tip-card h3 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin: 0 0 1rem 0;
+        color: rgb(var(--black));
+    }
+
+    .tip-intro {
+        color: rgb(var(--gray));
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+        font-style: italic;
+    }
+
+    .tip-content h4 {
+        font-size: 1rem;
+        font-weight: 600;
+        margin: 0 0 0.75rem 0;
+        color: rgb(var(--black));
+    }
+
+    .tip-content ul {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 1.5rem 0;
+    }
+
+    .tip-content li {
+        padding: 0.5rem 0 0.5rem 1.5rem;
+        color: rgb(var(--gray-dark));
+        position: relative;
+    }
+
+    .tip-content li::before {
+        content: "▸";
+        position: absolute;
+        left: 0;
+        color: hsl(220, 90%, 56%);
+        font-weight: bold;
+    }
+
+    .tip-highlight {
+        background: white;
+        border-left: 4px solid hsl(220, 90%, 56%);
+        padding: 1rem;
+        border-radius: 8px;
+        font-size: 0.9rem;
+        color: rgb(var(--gray-dark));
+    }
+
+    .tip-highlight strong {
+        color: hsl(220, 90%, 56%);
+    }
+
+    /* Checklist */
+    .checklist-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .checklist-column {
+        background: linear-gradient(
+            135deg,
+            hsl(220, 100%, 98%) 0%,
+            hsl(220, 100%, 96%) 100%
+        );
+        border: 2px solid hsl(220, 100%, 95%);
+        border-radius: 20px;
+        padding: 2rem;
+    }
+
+    .checklist-column h3 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin: 0 0 1.5rem 0;
+        color: rgb(var(--black));
+    }
+
+    .checklist {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .checklist li {
+        padding: 0.75rem 0 0.75rem 2rem;
+        color: rgb(var(--gray-dark));
+        border-bottom: 1px solid hsl(220, 100%, 93%);
+        position: relative;
+        transition: all 0.2s ease;
+    }
+
+    .checklist li:last-child {
+        border-bottom: none;
+    }
+
+    .checklist li::before {
+        content: "☐";
+        position: absolute;
+        left: 0;
+        font-size: 1.2rem;
+        color: hsl(220, 90%, 56%);
+    }
+
+    .checklist li:hover {
+        background: white;
+        padding-left: 2.5rem;
+    }
+
+    /* CTA Box */
+    .cta-box {
+        background: linear-gradient(
+            135deg,
+            hsl(220, 90%, 56%) 0%,
+            hsl(260, 90%, 60%) 100%
+        );
+        color: white;
+        padding: 3rem;
+        border-radius: 20px;
+        text-align: center;
+        box-shadow: 0 10px 40px rgba(37, 99, 235, 0.3);
+    }
+
+    .cta-box h3 {
+        font-size: 2rem;
+        font-weight: 800;
+        margin: 0 0 1rem 0;
+    }
+
+    .cta-box p {
+        font-size: 1.1rem;
+        margin: 0 0 2rem 0;
+        opacity: 0.95;
+    }
+
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 1rem 2rem;
+        border-radius: 12px;
+        font-weight: 600;
+        font-size: 1rem;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        border: 2px solid transparent;
+    }
+
+    .btn-primary {
+        background: white;
+        color: hsl(220, 90%, 56%);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .page-hero {
+            padding: 4rem 1.5rem 3rem;
+        }
+
+        .tips-section {
+            padding: 3rem 0;
+        }
+
+        .tips-grid {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .checklist-container {
+            grid-template-columns: 1fr;
+        }
+
+        .cta-box {
+            padding: 2rem 1.5rem;
+        }
+    }
+</style>

@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <!-- Volcanic Sky Gradient -->
+  <defs>
+    <linearGradient id="volcanicSky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF6B6B;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FFA07A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFD93D;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="sunGlow" cx="50%" cy="50%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FFA500;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#FF8C00;stop-opacity:0" />
+    </radialGradient>
+    <linearGradient id="smokeGradient" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#555;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#999;stop-opacity:0" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Sky -->
+  <rect width="800" height="450" fill="url(#volcanicSky)"/>
+  
+  <!-- Sun -->
+  <circle cx="650" cy="80" r="60" fill="url(#sunGlow)"/>
+  <circle cx="650" cy="80" r="45" fill="#FFD700"/>
+  
+  <!-- Volcano 1 (Fuego - Active) -->
+  <polygon points="150,350 250,120 350,350" fill="#2C3E50"/>
+  <polygon points="250,120 260,140 240,140" fill="#34495E"/>
+  
+  <!-- Smoke from Fuego -->
+  <ellipse cx="250" cy="100" rx="20" ry="30" fill="url(#smokeGradient)" opacity="0.6"/>
+  <ellipse cx="245" cy="70" rx="25" ry="35" fill="url(#smokeGradient)" opacity="0.5"/>
+  <ellipse cx="255" cy="50" rx="30" ry="40" fill="url(#smokeGradient)" opacity="0.4"/>
+  <ellipse cx="250" cy="25" rx="35" ry="45" fill="url(#smokeGradient)" opacity="0.3"/>
+  
+  <!-- Volcano 2 (Agua) -->
+  <polygon points="350,350 500,140 650,350" fill="#34495E"/>
+  <polygon points="500,140 515,155 485,155" fill="#ECF0F1" opacity="0.7"/>
+  
+  <!-- Volcano 3 (Acatenango) -->
+  <polygon points="550,350 700,100 800,350" fill="#2C3E50"/>
+  <polygon points="700,100 720,120 680,120" fill="#ECF0F1" opacity="0.8"/>
+  
+  <!-- Volcano 4 (Pacaya - distant) -->
+  <polygon points="0,350 100,200 200,350" fill="#1a1a1a" opacity="0.5"/>
+  
+  <!-- Green foothills -->
+  <ellipse cx="200" cy="350" rx="150" ry="30" fill="#27AE60" opacity="0.6"/>
+  <ellipse cx="500" cy="350" rx="200" ry="35" fill="#229954" opacity="0.5"/>
+  <ellipse cx="700" cy="350" rx="120" ry="25" fill="#27AE60" opacity="0.6"/>
+  
+  <!-- Road -->
+  <path d="M 0 380 Q 200 375 400 380 T 800 385" fill="#555" opacity="0.8"/>
+  <path d="M 0 390 Q 200 385 400 390 T 800 395" fill="#444" opacity="0.7"/>
+  
+  <!-- Road lines -->
+  <path d="M 50 385 L 100 384" stroke="#FFF" stroke-width="2" stroke-dasharray="15,15" opacity="0.5"/>
+  <path d="M 150 383 L 200 382" stroke="#FFF" stroke-width="2" stroke-dasharray="15,15" opacity="0.5"/>
+  <path d="M 250 383 L 300 384" stroke="#FFF" stroke-width="2" stroke-dasharray="15,15" opacity="0.5"/>
+  <path d="M 350 385 L 400 386" stroke="#FFF" stroke-width="2" stroke-dasharray="15,15" opacity="0.5"/>
+  <path d="M 450 387 L 500 388" stroke="#FFF" stroke-width="2" stroke-dasharray="15,15" opacity="0.5"/>
+  <path d="M 550 389 L 600 390" stroke="#FFF" stroke-width="2" stroke-dasharray="15,15" opacity="0.5"/>
+  <path d="M 650 390 L 700 389" stroke="#FFF" stroke-width="2" stroke-dasharray="15,15" opacity="0.5"/>
+  
+  <!-- Motorcycle -->
+  <g transform="translate(350, 360) scale(2.5)">
+    <!-- Wheels -->
+    <circle cx="10" cy="20" r="8" fill="#2C3E50" stroke="#E67E22" stroke-width="2"/>
+    <circle cx="50" cy="20" r="8" fill="#2C3E50" stroke="#E67E22" stroke-width="2"/>
+    <circle cx="10" cy="20" r="4" fill="#555"/>
+    <circle cx="50" cy="20" r="4" fill="#555"/>
+    
+    <!-- Frame -->
+    <path d="M 10 20 L 30 10 L 50 20" stroke="#E67E22" stroke-width="4" fill="none"/>
+    <path d="M 30 10 L 35 5" stroke="#E67E22" stroke-width="3"/>
+    <path d="M 30 10 L 30 15" stroke="#E67E22" stroke-width="2.5"/>
+    
+    <!-- Rider -->
+    <circle cx="35" cy="2" r="4" fill="#2C3E50"/>
+    <path d="M 35 6 L 35 13" stroke="#2C3E50" stroke-width="2.5"/>
+    <path d="M 35 9 L 31 11" stroke="#2C3E50" stroke-width="2"/>
+    <path d="M 35 9 L 39 12" stroke="#2C3E50" stroke-width="2"/>
+  </g>
+  
+  <!-- Birds -->
+  <path d="M 100 150 Q 105 145 110 150" stroke="#2C3E50" stroke-width="2" fill="none" opacity="0.6"/>
+  <path d="M 110 150 Q 115 145 120 150" stroke="#2C3E50" stroke-width="2" fill="none" opacity="0.6"/>
+  
+  <path d="M 600 180 Q 605 175 610 180" stroke="#2C3E50" stroke-width="2" fill="none" opacity="0.5"/>
+  <path d="M 610 180 Q 615 175 620 180" stroke="#2C3E50" stroke-width="2" fill="none" opacity="0.5"/>
+  
+  <!-- Text -->
+  <text x="400" y="420" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#2C3E50" text-anchor="middle" opacity="0.9">
+    Ruta de los Volcanes
+  </text>
+  <text x="400" y="440" font-family="Arial, sans-serif" font-size="14" fill="#34495E" text-anchor="middle" opacity="0.7">
+    🌋 Historias de Ruta • RideMotoHub Guatemala
+  </text>
+</svg>

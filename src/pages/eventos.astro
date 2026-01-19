@@ -1,0 +1,618 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+---
+
+<!doctype html>
+<html lang="es">
+    <head>
+        <BaseHead
+            title="Eventos - RideMotoHub Guatemala"
+            description="Descubre los próximos eventos, rodadas y encuentros de la comunidad motera de Guatemala. Únete a la familia RideMotoHub."
+        />
+    </head>
+    <body>
+        <Header />
+
+        <!-- Hero Section -->
+        <section class="page-hero">
+            <div class="hero-content">
+                <div class="hero-badge">📅 Eventos</div>
+                <h1>Eventos & Rodadas</h1>
+                <p>
+                    Únete a las rodadas, encuentros y eventos de la comunidad
+                    motera más grande de Guatemala
+                </p>
+            </div>
+        </section>
+
+        <!-- Upcoming Events -->
+        <section class="events-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Próximos Eventos</h2>
+                    <p>No te pierdas las próximas aventuras sobre dos ruedas</p>
+                </div>
+
+                <div class="events-grid">
+                    <!-- Caravana del Zorro -->
+                    <article class="event-card">
+                        <div class="event-image">
+                            <div class="event-badge">🔥 Próximo Evento</div>
+                            <div class="event-date-box">
+                                <span class="date-day">07</span>
+                                <span class="date-month">FEB</span>
+                            </div>
+                        </div>
+
+                        <div class="event-body">
+                            <h3 class="event-title">
+                                🦊 Caravana del Zorro - Guatemala 2026
+                            </h3>
+
+                            <div class="event-meta">
+                                <span class="meta-item">
+                                    <svg
+                                        width="16"
+                                        height="16"
+                                        viewBox="0 0 24 24"
+                                        fill="currentColor"
+                                    >
+                                        <path
+                                            d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+                                        ></path>
+                                    </svg>
+                                    Ciudad de Guatemala
+                                </span>
+                                <span class="meta-item">
+                                    <svg
+                                        width="16"
+                                        height="16"
+                                        viewBox="0 0 24 24"
+                                        fill="currentColor"
+                                    >
+                                        <path
+                                            d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"
+                                        ></path>
+                                    </svg>
+                                    7:00 AM
+                                </span>
+                                <span class="meta-item">
+                                    <svg
+                                        width="16"
+                                        height="16"
+                                        viewBox="0 0 24 24"
+                                        fill="currentColor"
+                                    >
+                                        <path
+                                            d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"
+                                        ></path>
+                                    </svg>
+                                    Evento Masivo
+                                </span>
+                            </div>
+
+                            <p class="event-description">
+                                ¡Únete al evento motero más grande de Guatemala!
+                                La legendaria Caravana del Zorro regresa este
+                                primer fin de semana de febrero. Miles de
+                                riders, música, comida y mucho más.
+                            </p>
+
+                            <div class="event-highlights-preview">
+                                <span class="highlight-tag"
+                                    >🏍️ Miles de Riders</span
+                                >
+                                <span class="highlight-tag"
+                                    >🎵 Música en Vivo</span
+                                >
+                                <span class="highlight-tag">🍔 Food Trucks</span
+                                >
+                                <span class="highlight-tag">🏆 Sorteos</span>
+                            </div>
+
+                            <div class="event-footer">
+                                <div class="event-price">
+                                    <span class="price-label">Entrada</span>
+                                    <span class="price-value">Libre</span>
+                                </div>
+                                <a
+                                    href="/eventos/caravana-del-zorro-2026"
+                                    class="btn btn-primary"
+                                >
+                                    Leer más
+                                    <svg
+                                        width="16"
+                                        height="16"
+                                        viewBox="0 0 24 24"
+                                        fill="currentColor"
+                                    >
+                                        <path
+                                            d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"
+                                        ></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Past Events -->
+                <div class="past-events">
+                    <h2>Eventos Pasados</h2>
+                    <div class="past-events-grid">
+                        <div class="past-event">
+                            <img
+                                src="https://placehold.co/400x250/2563eb/ffffff?text=Rodada+Antigua"
+                                alt="Rodada Antigua"
+                            />
+                            <div class="past-event-content">
+                                <h4>Rodada a Antigua Guatemala</h4>
+                                <p>Enero 2026 - 45 riders</p>
+                            </div>
+                        </div>
+                        <div class="past-event">
+                            <img
+                                src="https://placehold.co/400x250/7c3aed/ffffff?text=Encuentro+Anual"
+                                alt="Encuentro Anual"
+                            />
+                            <div class="past-event-content">
+                                <h4>Encuentro Anual 2025</h4>
+                                <p>Diciembre 2025 - 120 riders</p>
+                            </div>
+                        </div>
+                        <div class="past-event">
+                            <img
+                                src="https://placehold.co/400x250/2563eb/ffffff?text=Rodada+Monterrico"
+                                alt="Rodada Monterrico"
+                            />
+                            <div class="past-event-content">
+                                <h4>Rodada a Monterrico</h4>
+                                <p>Noviembre 2025 - 60 riders</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA -->
+                <div class="cta-box">
+                    <h3>¿Quieres organizar un evento?</h3>
+                    <p>
+                        Si tienes una idea para una rodada o evento, contáctanos
+                        y lo organizamos juntos.
+                    </p>
+                    <a href="/blog" class="btn btn-cta">Proponer Evento</a>
+                </div>
+            </div>
+        </section>
+
+        <Footer />
+    </body>
+</html>
+
+<style>
+    body {
+        overflow-x: hidden;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+
+    /* Page Hero */
+    .page-hero {
+        background: linear-gradient(
+            135deg,
+            hsl(220, 100%, 97%) 0%,
+            hsl(200, 100%, 96%) 100%
+        );
+        padding: 6rem 2rem 4rem;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .hero-badge {
+        display: inline-block;
+        padding: 0.5rem 1.5rem;
+        background: linear-gradient(
+            135deg,
+            hsl(220, 90%, 56%),
+            hsl(260, 90%, 60%)
+        );
+        color: white;
+        border-radius: 50px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+        box-shadow: 0 4px 20px rgba(37, 99, 235, 0.3);
+    }
+
+    .page-hero h1 {
+        font-size: clamp(2.5rem, 6vw, 4rem);
+        font-weight: 900;
+        margin: 0 0 1rem 0;
+        color: rgb(var(--black));
+    }
+
+    .page-hero p {
+        font-size: clamp(1rem, 2vw, 1.3rem);
+        color: rgb(var(--gray));
+        margin: 0;
+    }
+
+    /* Events Section */
+    .events-section {
+        padding: 4rem 0;
+        background: white;
+    }
+
+    .section-header {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .section-header h2 {
+        font-size: 2.5rem;
+        font-weight: 800;
+        margin: 0 0 0.5rem 0;
+        color: rgb(var(--black));
+    }
+
+    .section-header p {
+        font-size: 1.2rem;
+        color: rgb(var(--gray));
+        margin: 0;
+    }
+
+    .events-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        margin-bottom: 4rem;
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Event Card - New Design */
+    .event-card {
+        background: white;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s ease;
+        border: 2px solid hsl(220, 100%, 95%);
+    }
+
+    .event-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px rgba(37, 99, 235, 0.15);
+        border-color: hsl(220, 90%, 56%);
+    }
+
+    .event-image {
+        position: relative;
+        background: linear-gradient(
+            135deg,
+            hsl(220, 90%, 56%) 0%,
+            hsl(260, 90%, 60%) 100%
+        );
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .event-badge {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: rgba(255, 255, 255, 0.25);
+        backdrop-filter: blur(10px);
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 50px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .event-date-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: white;
+    }
+
+    .date-day {
+        font-size: 4rem;
+        font-weight: 900;
+        line-height: 1;
+        text-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .date-month {
+        font-size: 1.5rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .event-body {
+        padding: 2rem;
+    }
+
+    .event-title {
+        font-size: 1.8rem;
+        font-weight: 800;
+        margin: 0 0 1.5rem 0;
+        color: rgb(var(--black));
+        line-height: 1.3;
+    }
+
+    .event-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .meta-item {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.95rem;
+        color: rgb(var(--gray));
+        font-weight: 500;
+    }
+
+    .meta-item svg {
+        flex-shrink: 0;
+        opacity: 0.7;
+    }
+
+    .event-description {
+        font-size: 1.05rem;
+        line-height: 1.7;
+        color: rgb(var(--gray-dark));
+        margin-bottom: 1.5rem;
+    }
+
+    .event-highlights-preview {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        margin-bottom: 2rem;
+    }
+
+    .highlight-tag {
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        background: linear-gradient(
+            135deg,
+            hsl(220, 100%, 98%) 0%,
+            hsl(220, 100%, 96%) 100%
+        );
+        border: 1px solid hsl(220, 100%, 90%);
+        border-radius: 50px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: rgb(var(--gray-dark));
+    }
+
+    .event-footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 1.5rem;
+        border-top: 2px solid hsl(220, 100%, 95%);
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .event-price {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .price-label {
+        font-size: 0.85rem;
+        color: rgb(var(--gray));
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        font-weight: 600;
+    }
+
+    .price-value {
+        font-size: 1.5rem;
+        font-weight: 900;
+        color: hsl(120, 60%, 40%);
+    }
+
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 1rem 2rem;
+        border-radius: 12px;
+        font-weight: 600;
+        font-size: 1rem;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        border: 2px solid transparent;
+    }
+
+    .btn-primary {
+        background: linear-gradient(
+            135deg,
+            hsl(220, 90%, 56%),
+            hsl(260, 90%, 60%)
+        );
+        color: white;
+        box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+    }
+
+    .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+    }
+
+    .btn-primary svg {
+        transition: transform 0.3s ease;
+    }
+
+    .btn-primary:hover svg {
+        transform: translateX(4px);
+    }
+
+    /* Past Events */
+    .past-events {
+        margin: 4rem 0;
+    }
+
+    .past-events h2 {
+        font-size: 2rem;
+        font-weight: 800;
+        margin: 0 0 2rem 0;
+        color: rgb(var(--black));
+        text-align: center;
+    }
+
+    .past-events-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .past-event {
+        border-radius: 15px;
+        overflow: hidden;
+        background: hsl(220, 100%, 98%);
+        border: 2px solid hsl(220, 100%, 95%);
+        transition: all 0.3s ease;
+    }
+
+    .past-event:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(37, 99, 235, 0.15);
+    }
+
+    .past-event img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .past-event-content {
+        padding: 1.5rem;
+    }
+
+    .past-event-content h4 {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin: 0 0 0.5rem 0;
+        color: rgb(var(--black));
+    }
+
+    .past-event-content p {
+        color: rgb(var(--gray));
+        margin: 0;
+        font-size: 0.9rem;
+    }
+
+    /* CTA Box */
+    .cta-box {
+        background: linear-gradient(
+            135deg,
+            hsl(220, 90%, 56%) 0%,
+            hsl(260, 90%, 60%) 100%
+        );
+        color: white;
+        padding: 3rem;
+        border-radius: 20px;
+        text-align: center;
+        box-shadow: 0 10px 40px rgba(37, 99, 235, 0.3);
+    }
+
+    .cta-box h3 {
+        font-size: 2rem;
+        font-weight: 800;
+        margin: 0 0 1rem 0;
+    }
+
+    .cta-box p {
+        font-size: 1.1rem;
+        margin: 0 0 2rem 0;
+        opacity: 0.95;
+    }
+
+    .btn-cta {
+        background: white;
+        color: hsl(220, 90%, 56%);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-cta:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .page-hero {
+            padding: 4rem 1.5rem 3rem;
+        }
+
+        .events-section {
+            padding: 3rem 0;
+        }
+
+        .events-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .event-image {
+            height: 180px;
+        }
+
+        .date-day {
+            font-size: 3rem;
+        }
+
+        .date-month {
+            font-size: 1.2rem;
+        }
+
+        .event-title {
+            font-size: 1.5rem;
+        }
+
+        .event-footer {
+            flex-direction: column;
+            align-items: stretch;
+        }
+
+        .btn {
+            width: 100%;
+            justify-content: center;
+        }
+
+        .past-events-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .cta-box {
+            padding: 2rem 1.5rem;
+        }
+    }
+</style>

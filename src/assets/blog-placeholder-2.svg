@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <!-- Night Sky Gradient -->
+  <defs>
+    <linearGradient id="nightSky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0F2027;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#203A43;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2C5364;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="moonGlow" cx="50%" cy="50%">
+      <stop offset="0%" style="stop-color:#FFF;stop-opacity:0.8" />
+      <stop offset="50%" style="stop-color:#E8E8E8;stop-opacity:0.4" />
+      <stop offset="100%" style="stop-color:#E8E8E8;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Night Sky -->
+  <rect width="800" height="450" fill="url(#nightSky)"/>
+  
+  <!-- Stars -->
+  <circle cx="100" cy="50" r="1.5" fill="#FFF" opacity="0.8"/>
+  <circle cx="200" cy="80" r="1" fill="#FFF" opacity="0.6"/>
+  <circle cx="350" cy="40" r="1.5" fill="#FFF" opacity="0.9"/>
+  <circle cx="500" cy="70" r="1" fill="#FFF" opacity="0.7"/>
+  <circle cx="650" cy="30" r="1.5" fill="#FFF" opacity="0.8"/>
+  <circle cx="150" cy="120" r="1" fill="#FFF" opacity="0.6"/>
+  <circle cx="450" cy="100" r="1.5" fill="#FFF" opacity="0.7"/>
+  <circle cx="700" cy="90" r="1" fill="#FFF" opacity="0.8"/>
+  <circle cx="250" cy="60" r="1" fill="#FFF" opacity="0.9"/>
+  <circle cx="600" cy="110" r="1.5" fill="#FFF" opacity="0.6"/>
+  
+  <!-- Moon -->
+  <circle cx="650" cy="100" r="60" fill="url(#moonGlow)"/>
+  <circle cx="650" cy="100" r="40" fill="#F4F4F4"/>
+  <circle cx="645" cy="95" r="8" fill="#E0E0E0" opacity="0.5"/>
+  <circle cx="660" cy="105" r="6" fill="#E0E0E0" opacity="0.4"/>
+  <circle cx="655" cy="110" r="4" fill="#E0E0E0" opacity="0.3"/>
+  
+  <!-- Dark Mountains -->
+  <polygon points="0,350 150,250 300,350" fill="#1a1a1a" opacity="0.9"/>
+  <polygon points="200,350 400,200 600,350" fill="#0d0d0d" opacity="0.8"/>
+  <polygon points="500,350 700,230 800,350" fill="#1a1a1a" opacity="0.7"/>
+  
+  <!-- Dark Road -->
+  <path d="M 0 370 Q 200 360 400 365 T 800 370" fill="#0a0a0a"/>
+  <path d="M 0 380 Q 200 370 400 375 T 800 380" fill="#050505"/>
+  
+  <!-- Road lines (reflective) -->
+  <path d="M 50 375 L 100 373" stroke="#FFD700" stroke-width="2" stroke-dasharray="15,15" opacity="0.4"/>
+  <path d="M 150 372 L 200 370" stroke="#FFD700" stroke-width="2" stroke-dasharray="15,15" opacity="0.4"/>
+  <path d="M 250 371 L 300 372" stroke="#FFD700" stroke-width="2" stroke-dasharray="15,15" opacity="0.4"/>
+  <path d="M 350 373 L 400 375" stroke="#FFD700" stroke-width="2" stroke-dasharray="15,15" opacity="0.4"/>
+  <path d="M 450 376 L 500 377" stroke="#FFD700" stroke-width="2" stroke-dasharray="15,15" opacity="0.4"/>
+  <path d="M 550 378 L 600 378" stroke="#FFD700" stroke-width="2" stroke-dasharray="15,15" opacity="0.4"/>
+  <path d="M 650 377 L 700 376" stroke="#FFD700" stroke-width="2" stroke-dasharray="15,15" opacity="0.4"/>
+  
+  <!-- Motorcycle with headlight -->
+  <g transform="translate(300, 340) scale(2)">
+    <!-- Headlight beam -->
+    <path d="M 35 5 L 50 -20 L 55 -20 L 40 5" fill="#FFD700" opacity="0.3"/>
+    
+    <!-- Wheels -->
+    <circle cx="10" cy="20" r="8" fill="#1a1a1a" stroke="#FFD700" stroke-width="1.5"/>
+    <circle cx="50" cy="20" r="8" fill="#1a1a1a" stroke="#FFD700" stroke-width="1.5"/>
+    <circle cx="10" cy="20" r="4" fill="#333"/>
+    <circle cx="50" cy="20" r="4" fill="#333"/>
+    
+    <!-- Frame -->
+    <path d="M 10 20 L 30 10 L 50 20" stroke="#FFD700" stroke-width="3" fill="none"/>
+    <path d="M 30 10 L 35 5" stroke="#FFD700" stroke-width="2"/>
+    
+    <!-- Headlight -->
+    <circle cx="35" cy="5" r="3" fill="#FFD700" opacity="0.8"/>
+    <circle cx="35" cy="5" r="2" fill="#FFF"/>
+    
+    <!-- Rider silhouette -->
+    <circle cx="32" cy="3" r="3" fill="#1a1a1a"/>
+    <path d="M 32 6 L 32 12" stroke="#1a1a1a" stroke-width="2"/>
+    <path d="M 32 8 L 29 10" stroke="#1a1a1a" stroke-width="2"/>
+    <path d="M 32 8 L 35 11" stroke="#1a1a1a" stroke-width="2"/>
+  </g>
+  
+  <!-- Text -->
+  <text x="400" y="420" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#FFD700" text-anchor="middle" opacity="0.9">
+    Aventura Nocturna a Monterrico
+  </text>
+  <text x="400" y="440" font-family="Arial, sans-serif" font-size="14" fill="#E8E8E8" text-anchor="middle" opacity="0.7">
+    🌙 Historias de Ruta • RideMotoHub Guatemala
+  </text>
+</svg>

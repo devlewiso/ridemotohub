@@ -1,0 +1,24 @@
+# robots.txt para RideMotoHub Guatemala
+# Permitir acceso a todos los bots de búsqueda
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://ridemotohub.com/sitemap-index.xml
+
+# Bots específicos de búsqueda
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# Crawl-delay para evitar sobrecarga
+Crawl-delay: 1

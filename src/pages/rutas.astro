@@ -1,0 +1,488 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+---
+
+<!doctype html>
+<html lang="es">
+    <head>
+        <BaseHead
+            title="Rutas en Moto - RideMotoHub Guatemala"
+            description="Descubre las mejores rutas para motociclistas en Guatemala. Desde la costa hasta las montañas, encuentra tu próxima aventura sobre dos ruedas."
+        />
+    </head>
+    <body>
+        <Header />
+
+        <!-- Hero Section -->
+        <section class="page-hero">
+            <div class="hero-content">
+                <div class="hero-badge">🗺️ Rutas</div>
+                <h1>Rutas Épicas en Guatemala</h1>
+                <p>
+                    Descubre los mejores caminos y carreteras para disfrutar
+                    sobre dos ruedas
+                </p>
+            </div>
+        </section>
+
+        <!-- Routes Grid -->
+        <section class="routes-section">
+            <div class="container">
+                <div class="routes-grid">
+                    <!-- Ruta 1 -->
+                    <article class="route-card featured">
+                        <div class="route-badge">⭐ Destacada</div>
+                        <div class="route-header">
+                            <h2>Antigua - Lago de Atitlán</h2>
+                            <div class="route-meta">
+                                <span class="difficulty medium"
+                                    >🎯 Intermedio</span
+                                >
+                                <span class="distance">📏 180 km</span>
+                                <span class="duration">⏱️ 4-5 hrs</span>
+                            </div>
+                        </div>
+                        <p class="route-description">
+                            Una de las rutas más espectaculares de Guatemala.
+                            Atraviesa pueblos coloniales, montañas y termina en
+                            las orillas del majestuoso Lago de Atitlán. Ideal
+                            para riders que buscan paisajes increíbles y curvas
+                            emocionantes.
+                        </p>
+                        <div class="route-highlights">
+                            <h4>Puntos Destacados:</h4>
+                            <ul>
+                                <li>🏛️ Centro histórico de Antigua</li>
+                                <li>🌋 Vistas de volcanes activos</li>
+                                <li>🏞️ Mirador del Lago de Atitlán</li>
+                                <li>🍽️ Gastronomía local en Panajachel</li>
+                            </ul>
+                        </div>
+                        <div class="route-tips">
+                            <strong>💡 Consejo:</strong> Sal temprano para evitar
+                            el tráfico y disfrutar de la mejor luz para fotos.
+                        </div>
+                    </article>
+
+                    <!-- Ruta 2 -->
+                    <article class="route-card">
+                        <div class="route-header">
+                            <h2>Ciudad de Guatemala - Monterrico</h2>
+                            <div class="route-meta">
+                                <span class="difficulty easy">🎯 Fácil</span>
+                                <span class="distance">📏 120 km</span>
+                                <span class="duration">⏱️ 2-3 hrs</span>
+                            </div>
+                        </div>
+                        <p class="route-description">
+                            Ruta costera perfecta para un día de playa.
+                            Carretera en buen estado con poco tráfico. Ideal
+                            para riders principiantes o para un paseo relajado.
+                        </p>
+                        <div class="route-highlights">
+                            <h4>Puntos Destacados:</h4>
+                            <ul>
+                                <li>🏖️ Playas de arena negra</li>
+                                <li>🌅 Atardeceres espectaculares</li>
+                                <li>🦎 Reserva natural de tortugas</li>
+                                <li>🍤 Mariscos frescos</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- Ruta 3 -->
+                    <article class="route-card">
+                        <div class="route-header">
+                            <h2>Cobán - Semuc Champey</h2>
+                            <div class="route-meta">
+                                <span class="difficulty hard">🎯 Avanzado</span>
+                                <span class="distance">📏 220 km</span>
+                                <span class="duration">⏱️ 5-6 hrs</span>
+                            </div>
+                        </div>
+                        <p class="route-description">
+                            Ruta desafiante a través de las montañas de Alta
+                            Verapaz. Caminos sinuosos y clima variable. Solo
+                            para riders experimentados con motos adecuadas.
+                        </p>
+                        <div class="route-highlights">
+                            <h4>Puntos Destacados:</h4>
+                            <ul>
+                                <li>💎 Piscinas naturales de Semuc Champey</li>
+                                <li>🌲 Bosque nuboso</li>
+                                <li>🦜 Observación de aves exóticas</li>
+                                <li>🏞️ Cuevas y cascadas</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- Ruta 4 -->
+                    <article class="route-card">
+                        <div class="route-header">
+                            <h2>Interamericana Norte</h2>
+                            <div class="route-meta">
+                                <span class="difficulty medium"
+                                    >🎯 Intermedio</span
+                                >
+                                <span class="distance">📏 300 km</span>
+                                <span class="duration">⏱️ 6-7 hrs</span>
+                            </div>
+                        </div>
+                        <p class="route-description">
+                            La carretera Interamericana ofrece un viaje largo
+                            pero gratificante hacia el norte del país. Paisajes
+                            variados y pueblos auténticos en el camino.
+                        </p>
+                        <div class="route-highlights">
+                            <h4>Puntos Destacados:</h4>
+                            <ul>
+                                <li>🏔️ Paisajes montañosos</li>
+                                <li>🎨 Mercados de artesanías</li>
+                                <li>⛪ Iglesias coloniales</li>
+                                <li>☕ Fincas de café</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- Ruta 5 -->
+                    <article class="route-card">
+                        <div class="route-header">
+                            <h2>Ruta de los Volcanes</h2>
+                            <div class="route-meta">
+                                <span class="difficulty medium"
+                                    >🎯 Intermedio</span
+                                >
+                                <span class="distance">📏 150 km</span>
+                                <span class="duration">⏱️ 4 hrs</span>
+                            </div>
+                        </div>
+                        <p class="route-description">
+                            Circuito circular que rodea varios volcanes activos.
+                            Vistas impresionantes y oportunidades fotográficas
+                            únicas. Mejor en días despejados.
+                        </p>
+                        <div class="route-highlights">
+                            <h4>Puntos Destacados:</h4>
+                            <ul>
+                                <li>🌋 Volcán de Pacaya</li>
+                                <li>🌋 Volcán de Agua</li>
+                                <li>🌋 Volcán de Fuego</li>
+                                <li>📸 Miradores panorámicos</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- Ruta 6 -->
+                    <article class="route-card">
+                        <div class="route-header">
+                            <h2>Petén - Tikal</h2>
+                            <div class="route-meta">
+                                <span class="difficulty hard">🎯 Avanzado</span>
+                                <span class="distance">📏 500+ km</span>
+                                <span class="duration">⏱️ 2-3 días</span>
+                            </div>
+                        </div>
+                        <p class="route-description">
+                            Aventura épica hacia las ruinas mayas de Tikal.
+                            Requiere planificación cuidadosa y preparación.
+                            Mejor hacerla en grupo.
+                        </p>
+                        <div class="route-highlights">
+                            <h4>Puntos Destacados:</h4>
+                            <ul>
+                                <li>🏛️ Ruinas mayas de Tikal</li>
+                                <li>🌴 Selva tropical</li>
+                                <li>🦜 Fauna exótica</li>
+                                <li>🌟 Cielos estrellados</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Call to Action -->
+                <div class="cta-box">
+                    <h3>¿Conoces alguna ruta increíble?</h3>
+                    <p>
+                        Comparte tus rutas favoritas con la comunidad y ayuda a
+                        otros riders a descubrir nuevos caminos.
+                    </p>
+                    <a href="/blog" class="btn btn-primary">Compartir Ruta</a>
+                </div>
+            </div>
+        </section>
+
+        <Footer />
+    </body>
+</html>
+
+<style>
+    body {
+        overflow-x: hidden;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+
+    /* Page Hero */
+    .page-hero {
+        background: linear-gradient(
+            135deg,
+            hsl(220, 100%, 97%) 0%,
+            hsl(200, 100%, 96%) 100%
+        );
+        padding: 6rem 2rem 4rem;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .hero-badge {
+        display: inline-block;
+        padding: 0.5rem 1.5rem;
+        background: linear-gradient(
+            135deg,
+            hsl(220, 90%, 56%),
+            hsl(260, 90%, 60%)
+        );
+        color: white;
+        border-radius: 50px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+        box-shadow: 0 4px 20px rgba(37, 99, 235, 0.3);
+    }
+
+    .page-hero h1 {
+        font-size: clamp(2.5rem, 6vw, 4rem);
+        font-weight: 900;
+        margin: 0 0 1rem 0;
+        color: rgb(var(--black));
+    }
+
+    .page-hero p {
+        font-size: clamp(1rem, 2vw, 1.3rem);
+        color: rgb(var(--gray));
+        margin: 0;
+    }
+
+    /* Routes Section */
+    .routes-section {
+        padding: 4rem 0;
+        background: white;
+    }
+
+    .routes-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: 2rem;
+        margin-bottom: 4rem;
+    }
+
+    .route-card {
+        background: linear-gradient(
+            135deg,
+            hsl(220, 100%, 98%) 0%,
+            hsl(220, 100%, 96%) 100%
+        );
+        border: 2px solid hsl(220, 100%, 95%);
+        border-radius: 20px;
+        padding: 2rem;
+        transition: all 0.3s ease;
+        position: relative;
+    }
+
+    .route-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 40px rgba(37, 99, 235, 0.15);
+        border-color: hsl(220, 90%, 56%);
+    }
+
+    .route-card.featured {
+        border-color: hsl(45, 100%, 60%);
+        background: linear-gradient(
+            135deg,
+            hsl(45, 100%, 98%) 0%,
+            hsl(45, 100%, 96%) 100%
+        );
+    }
+
+    .route-badge {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: linear-gradient(
+            135deg,
+            hsl(45, 100%, 55%),
+            hsl(35, 100%, 50%)
+        );
+        color: white;
+        padding: 0.4rem 1rem;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .route-header h2 {
+        font-size: 1.8rem;
+        font-weight: 700;
+        margin: 0 0 1rem 0;
+        color: rgb(var(--black));
+    }
+
+    .route-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .route-meta span {
+        padding: 0.4rem 0.8rem;
+        border-radius: 8px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        background: white;
+        border: 1px solid hsl(220, 100%, 90%);
+    }
+
+    .difficulty.easy {
+        background: hsl(120, 60%, 95%);
+        color: hsl(120, 60%, 30%);
+        border-color: hsl(120, 60%, 80%);
+    }
+
+    .difficulty.medium {
+        background: hsl(45, 100%, 95%);
+        color: hsl(45, 100%, 30%);
+        border-color: hsl(45, 100%, 80%);
+    }
+
+    .difficulty.hard {
+        background: hsl(0, 70%, 95%);
+        color: hsl(0, 70%, 35%);
+        border-color: hsl(0, 70%, 80%);
+    }
+
+    .route-description {
+        color: rgb(var(--gray-dark));
+        line-height: 1.7;
+        margin-bottom: 1.5rem;
+    }
+
+    .route-highlights h4 {
+        font-size: 1rem;
+        font-weight: 600;
+        margin: 0 0 0.75rem 0;
+        color: rgb(var(--black));
+    }
+
+    .route-highlights ul {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 1rem 0;
+    }
+
+    .route-highlights li {
+        padding: 0.5rem 0;
+        color: rgb(var(--gray-dark));
+        border-bottom: 1px solid hsl(220, 100%, 93%);
+    }
+
+    .route-highlights li:last-child {
+        border-bottom: none;
+    }
+
+    .route-tips {
+        background: hsl(220, 100%, 97%);
+        border-left: 4px solid hsl(220, 90%, 56%);
+        padding: 1rem;
+        border-radius: 8px;
+        margin-top: 1rem;
+        font-size: 0.9rem;
+        color: rgb(var(--gray-dark));
+    }
+
+    .route-tips strong {
+        color: hsl(220, 90%, 56%);
+    }
+
+    /* CTA Box */
+    .cta-box {
+        background: linear-gradient(
+            135deg,
+            hsl(220, 90%, 56%) 0%,
+            hsl(260, 90%, 60%) 100%
+        );
+        color: white;
+        padding: 3rem;
+        border-radius: 20px;
+        text-align: center;
+        box-shadow: 0 10px 40px rgba(37, 99, 235, 0.3);
+    }
+
+    .cta-box h3 {
+        font-size: 2rem;
+        font-weight: 800;
+        margin: 0 0 1rem 0;
+    }
+
+    .cta-box p {
+        font-size: 1.1rem;
+        margin: 0 0 2rem 0;
+        opacity: 0.95;
+    }
+
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 1rem 2rem;
+        border-radius: 12px;
+        font-weight: 600;
+        font-size: 1rem;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        border: 2px solid transparent;
+    }
+
+    .btn-primary {
+        background: white;
+        color: hsl(220, 90%, 56%);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .page-hero {
+            padding: 4rem 1.5rem 3rem;
+        }
+
+        .routes-section {
+            padding: 3rem 0;
+        }
+
+        .routes-grid {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .cta-box {
+            padding: 2rem 1.5rem;
+        }
+    }
+</style>

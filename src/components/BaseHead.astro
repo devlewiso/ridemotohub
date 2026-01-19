@@ -1,0 +1,157 @@
+---
+// Import the global.css file here so that it is included on
+// all pages through the use of the <BaseHead /> component.
+import "../styles/global.css";
+import type { ImageMetadata } from "astro";
+import FallbackImage from "../assets/blog-placeholder-1.jpg";
+import { SITE_TITLE } from "../consts";
+
+interface Props {
+	title: string;
+	description: string;
+	image?: ImageMetadata;
+	keywords?: string;
+}
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
+const {
+	title,
+	description,
+	image = FallbackImage,
+	keywords = "motos Guatemala, motociclistas Guatemala, riders Guatemala, comunidad motera, rutas en moto Guatemala, eventos motos, consejos motociclismo, mantenimiento motos, rodadas Guatemala, motorcycle Guatemala",
+} = Astro.props;
+
+// Structured Data for SEO
+const structuredData = {
+	"@context": "https://schema.org",
+	"@type": "Organization",
+	name: "RideMotoHub Guatemala",
+	description:
+		"La comunidad que une a todos los riders de Guatemala - Todas las cilindradas, una sola pasión",
+	url: Astro.site,
+	logo: new URL("/favicon.svg", Astro.site),
+	sameAs: [
+		"https://www.instagram.com/ridemotohub",
+		"https://www.facebook.com/ridemotohub",
+	],
+	address: {
+		"@type": "PostalAddress",
+		addressCountry: "GT",
+		addressRegion: "Guatemala",
+	},
+	geo: {
+		"@type": "GeoCoordinates",
+		latitude: "14.6349",
+		longitude: "-90.5069",
+	},
+};
+---
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4BB4FP3J6H"
+></script>
+<script is:inline>
+	window.dataLayer = window.dataLayer || [];
+	function gtag() {
+		dataLayer.push(arguments);
+	}
+	gtag("js", new Date());
+	gtag("config", "G-4BB4FP3J6H");
+</script>
+
+<!-- Global Metadata -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="sitemap" href="/sitemap-index.xml" />
+<link
+	rel="alternate"
+	type="application/rss+xml"
+	title={SITE_TITLE}
+	href={new URL("rss.xml", Astro.site)}
+/>
+<meta name="generator" content={Astro.generator} />
+
+<!-- Font preloads -->
+<link
+	rel="preload"
+	href="/fonts/atkinson-regular.woff"
+	as="font"
+	type="font/woff"
+	crossorigin
+/>
+<link
+	rel="preload"
+	href="/fonts/atkinson-bold.woff"
+	as="font"
+	type="font/woff"
+	crossorigin
+/>
+
+<!-- Canonical URL -->
+<link rel="canonical" href={canonicalURL} />
+
+<!-- Primary Meta Tags -->
+<title>{title}</title>
+<meta name="title" content={title} />
+<meta name="description" content={description} />
+<meta name="keywords" content={keywords} />
+<meta name="author" content="RideMotoHub Guatemala" />
+<meta
+	name="robots"
+	content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+/>
+
+<!-- Language and Geographic Targeting -->
+<meta name="language" content="Spanish" />
+<meta name="geo.region" content="GT" />
+<meta name="geo.placename" content="Guatemala" />
+<meta name="geo.position" content="14.6349;-90.5069" />
+<meta name="ICBM" content="14.6349, -90.5069" />
+
+<!-- Additional SEO -->
+<meta name="theme-color" content="#2563eb" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta
+	name="apple-mobile-web-app-status-bar-style"
+	content="black-translucent"
+/>
+<meta name="format-detection" content="telephone=no" />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content={Astro.url} />
+<meta property="og:site_name" content="RideMotoHub Guatemala" />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={new URL(image.src, Astro.url)} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="es_GT" />
+<meta property="og:locale:alternate" content="es_ES" />
+<meta property="og:locale:alternate" content="en_US" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:url" content={Astro.url} />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={new URL(image.src, Astro.url)} />
+<meta name="twitter:creator" content="@ridemotohub" />
+<meta name="twitter:site" content="@ridemotohub" />
+
+<!-- Structured Data (JSON-LD) -->
+<script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+
+<!-- Additional Meta for International Reach -->
+<meta name="coverage" content="Worldwide" />
+<meta name="distribution" content="Global" />
+<meta name="rating" content="General" />
+<meta name="target" content="all" />
+<meta name="audience" content="all" />
+
+<!-- Mobile Optimization -->
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-title" content="RideMotoHub" />
+<meta name="application-name" content="RideMotoHub Guatemala" />
