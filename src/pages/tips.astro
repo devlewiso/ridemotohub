@@ -15,20 +15,30 @@ import Header from "../components/Header.astro";
     <body>
         <Header />
 
-        <!-- Hero Section -->
-        <section class="page-hero">
-            <div class="hero-content">
+        <!-- Hero Section con Video + Parallax -->
+        <section class="page-hero" id="hero">
+            <img
+                src="/hero-riders.jpg"
+                alt="Riders de Guatemala en moto"
+                class="hero-video"
+            />
+            <div class="hero-overlay"></div>
+            <div class="hero-content" id="hero-content">
                 <div class="hero-badge">💡 Tips & Consejos</div>
                 <h1>Guía del Rider</h1>
                 <p>
                     Todo lo que necesitas saber para rodar seguro y mantener tu
                     moto en perfecto estado
                 </p>
+                <a href="#tips" class="hero-cta">Explorar consejos</a>
+            </div>
+            <div class="hero-scroll-indicator">
+                <span></span>
             </div>
         </section>
 
         <!-- Tips Categories -->
-        <section class="tips-section">
+        <section class="tips-section" id="tips">
             <div class="container">
                 <!-- Category: Mantenimiento -->
                 <div class="category-section">
@@ -452,9 +462,45 @@ import Header from "../components/Header.astro";
     </body>
 </html>
 
-<style>
+<style is:global>
+    main {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+    }
     body {
+        margin: 0 !important;
+        padding: 0 !important;
+        background: #0d0d19 !important;
+        background-image: none !important;
+        font-size: 16px !important;
         overflow-x: hidden;
+    }
+    body > section,
+    body > div {
+        margin-top: 0 !important;
+    }
+</style>
+
+<style>
+    :root {
+        --ov-primary:        #69daff;
+        --ov-secondary:      #ac89ff;
+        --ov-tertiary:       #ff5dd7;
+        --ov-bg:             #0d0d19;
+        --ov-surface-low:    #121220;
+        --ov-surface-mid:    #181827;
+        --ov-surface-high:   #1e1e2f;
+        --ov-surface-top:    #242436;
+        --ov-on-surface:     #e9e6f9;
+        --ov-on-surface-var: #aba9ba;
+        --ov-outline-var:    #474655;
+    }
+
+    body {
+        background: var(--ov-bg);
+        color: var(--ov-on-surface);
+        font-family: 'Manrope', sans-serif;
     }
 
     .container {
@@ -463,55 +509,156 @@ import Header from "../components/Header.astro";
         padding: 0 2rem;
     }
 
-    /* Page Hero */
+    /* ===== VIDEO HERO + PARALLAX ===== */
     .page-hero {
+        position: relative;
+        min-height: 100vh;
+        margin-top: -64px;  /* pull behind sticky header (64px) */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .hero-video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        will-change: transform;
+        /* transform updated by JS parallax */
+    }
+
+    .hero-overlay {
+        position: absolute;
+        inset: 0;
         background: linear-gradient(
-            135deg,
-            hsl(220, 100%, 97%) 0%,
-            hsl(200, 100%, 96%) 100%
+            to bottom,
+            rgba(13, 13, 25, 0.45) 0%,
+            rgba(13, 13, 25, 0.72) 55%,
+            rgba(13, 13, 25, 0.97) 100%
         );
-        padding: 6rem 2rem 4rem;
-        text-align: center;
+        z-index: 1;
     }
 
     .hero-content {
-        max-width: 800px;
-        margin: 0 auto;
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        max-width: 760px;
+        padding: 0 1.5rem;
+        will-change: transform;
+        /* transform updated by JS for text counter-parallax */
     }
 
     .hero-badge {
         display: inline-block;
-        padding: 0.5rem 1.5rem;
-        background: linear-gradient(
-            135deg,
-            hsl(220, 90%, 56%),
-            hsl(260, 90%, 60%)
-        );
-        color: white;
-        border-radius: 50px;
-        font-size: 0.9rem;
-        font-weight: 600;
+        padding: 0.35rem 1rem;
+        background: rgba(105, 218, 255, 0.08);
+        border: 1px solid rgba(105, 218, 255, 0.3);
+        border-radius: 9999px;
+        font-family: 'Manrope', sans-serif;
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+        color: var(--ov-primary);
         margin-bottom: 1.5rem;
-        box-shadow: 0 4px 20px rgba(37, 99, 235, 0.3);
     }
 
-    .page-hero h1 {
-        font-size: clamp(2.5rem, 6vw, 4rem);
+    .hero-content h1 {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: clamp(3rem, 7vw, 5.5rem);
         font-weight: 900;
-        margin: 0 0 1rem 0;
-        color: rgb(var(--black));
+        letter-spacing: -0.04em;
+        line-height: 1.0;
+        margin: 0 0 1.25rem;
+        color: var(--ov-on-surface);
+        background: linear-gradient(135deg, #ffffff, #e9e6f9, #69daff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
     }
 
-    .page-hero p {
-        font-size: clamp(1rem, 2vw, 1.3rem);
-        color: rgb(var(--gray));
-        margin: 0;
+    .hero-content p {
+        font-size: clamp(1rem, 2vw, 1.2rem);
+        color: var(--ov-on-surface-var);
+        line-height: 1.7;
+        margin: 0 0 2rem;
     }
 
-    /* Tips Section */
+    .hero-cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.85rem 2rem;
+        background: linear-gradient(135deg, var(--ov-primary), var(--ov-secondary));
+        color: #003d4d;
+        font-family: 'Space Grotesk', sans-serif;
+        font-weight: 700;
+        font-size: 0.95rem;
+        border-radius: 9999px;
+        text-decoration: none;
+        box-shadow: 0 4px 20px rgba(105, 218, 255, 0.25);
+        transition: opacity 0.2s, transform 0.2s, box-shadow 0.2s;
+    }
+
+    .hero-cta::after {
+        content: '↓';
+        font-size: 1rem;
+    }
+
+    .hero-cta:hover {
+        opacity: 0.9;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 32px rgba(105, 218, 255, 0.35);
+    }
+
+    /* Scroll indicator */
+    .hero-scroll-indicator {
+        position: absolute;
+        bottom: 2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+    }
+
+    .hero-scroll-indicator span {
+        display: block;
+        width: 24px;
+        height: 40px;
+        border: 2px solid rgba(105, 218, 255, 0.4);
+        border-radius: 9999px;
+        position: relative;
+    }
+
+    .hero-scroll-indicator span::before {
+        content: '';
+        position: absolute;
+        top: 6px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 4px;
+        height: 8px;
+        background: var(--ov-primary);
+        border-radius: 9999px;
+        animation: scroll-dot 1.8s ease-in-out infinite;
+    }
+
+    @keyframes scroll-dot {
+        0%   { opacity: 1; transform: translateX(-50%) translateY(0); }
+        80%  { opacity: 0; transform: translateX(-50%) translateY(16px); }
+        100% { opacity: 0; transform: translateX(-50%) translateY(16px); }
+    }
+
+    /* ===== TIPS SECTION ===== */
     .tips-section {
-        padding: 4rem 0;
-        background: white;
+        padding: 5rem 0;
+        background: var(--ov-bg);
     }
 
     .category-section {
@@ -524,143 +671,158 @@ import Header from "../components/Header.astro";
     }
 
     .category-header h2 {
-        font-size: 2.5rem;
-        font-weight: 800;
-        margin: 0 0 0.5rem 0;
-        color: rgb(var(--black));
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: clamp(1.75rem, 3vw, 2.5rem);
+        font-weight: 900;
+        letter-spacing: -0.03em;
+        margin: 0 0 0.5rem;
+        color: var(--ov-on-surface);
     }
 
     .category-header p {
-        font-size: 1.2rem;
-        color: rgb(var(--gray));
+        font-size: 1rem;
+        color: var(--ov-on-surface-var);
         margin: 0;
     }
 
     .tips-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        gap: 2rem;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1.5rem;
     }
 
     .tip-card {
-        background: linear-gradient(
-            135deg,
-            hsl(220, 100%, 98%) 0%,
-            hsl(220, 100%, 96%) 100%
-        );
-        border: 2px solid hsl(220, 100%, 95%);
-        border-radius: 20px;
-        padding: 2rem;
-        transition: all 0.3s ease;
+        background: var(--ov-surface-mid);
+        border-radius: 16px;
+        padding: 1.75rem;
+        transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
     }
 
     .tip-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 20px 40px rgba(37, 99, 235, 0.15);
-        border-color: hsl(220, 90%, 56%);
+        transform: translateY(-4px);
+        background: var(--ov-surface-high);
+        box-shadow: 0 16px 32px rgba(105, 218, 255, 0.08);
     }
 
-    .tip-card.safety {
-        border-color: hsl(0, 70%, 85%);
-        background: linear-gradient(
-            135deg,
-            hsl(0, 70%, 98%) 0%,
-            hsl(0, 70%, 96%) 100%
-        );
+    .tip-card.safety:hover {
+        box-shadow: 0 16px 32px rgba(255, 93, 215, 0.08);
     }
 
-    .tip-card.technique {
-        border-color: hsl(120, 60%, 85%);
-        background: linear-gradient(
-            135deg,
-            hsl(120, 60%, 98%) 0%,
-            hsl(120, 60%, 96%) 100%
-        );
+    .tip-card.technique:hover {
+        box-shadow: 0 16px 32px rgba(172, 137, 255, 0.1);
     }
 
     .tip-icon {
-        font-size: 3rem;
+        font-size: 2.5rem;
         margin-bottom: 1rem;
+        display: block;
     }
 
     .tip-card h3 {
-        font-size: 1.5rem;
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 1.25rem;
         font-weight: 700;
-        margin: 0 0 1rem 0;
-        color: rgb(var(--black));
+        letter-spacing: -0.02em;
+        margin: 0 0 0.75rem;
+        color: var(--ov-on-surface);
     }
 
     .tip-intro {
-        color: rgb(var(--gray));
-        font-size: 1rem;
-        margin-bottom: 1.5rem;
+        color: var(--ov-on-surface-var);
+        font-size: 0.9rem;
+        margin-bottom: 1.25rem;
         font-style: italic;
+        line-height: 1.6;
     }
 
     .tip-content h4 {
-        font-size: 1rem;
-        font-weight: 600;
-        margin: 0 0 0.75rem 0;
-        color: rgb(var(--black));
+        font-size: 0.8rem;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: var(--ov-primary);
+        margin: 0 0 0.75rem;
     }
 
     .tip-content ul {
         list-style: none;
         padding: 0;
-        margin: 0 0 1.5rem 0;
+        margin: 0 0 1.25rem;
     }
 
     .tip-content li {
-        padding: 0.5rem 0 0.5rem 1.5rem;
-        color: rgb(var(--gray-dark));
+        padding: 0.4rem 0 0.4rem 1.25rem;
+        color: var(--ov-on-surface-var);
+        font-size: 0.9rem;
         position: relative;
+        line-height: 1.5;
     }
 
     .tip-content li::before {
         content: "▸";
         position: absolute;
         left: 0;
-        color: hsl(220, 90%, 56%);
-        font-weight: bold;
+        color: var(--ov-primary);
+        font-size: 0.75rem;
+        top: 0.55rem;
+    }
+
+    .tip-card.safety .tip-content li::before {
+        color: var(--ov-tertiary);
+    }
+
+    .tip-card.technique .tip-content li::before {
+        color: var(--ov-secondary);
     }
 
     .tip-highlight {
-        background: white;
-        border-left: 4px solid hsl(220, 90%, 56%);
-        padding: 1rem;
-        border-radius: 8px;
-        font-size: 0.9rem;
-        color: rgb(var(--gray-dark));
+        background: rgba(105, 218, 255, 0.06);
+        border-left: 3px solid rgba(105, 218, 255, 0.4);
+        padding: 0.85rem 1rem;
+        border-radius: 0 8px 8px 0;
+        font-size: 0.85rem;
+        color: var(--ov-on-surface-var);
+        line-height: 1.5;
+    }
+
+    .tip-card.safety .tip-highlight {
+        background: rgba(255, 93, 215, 0.06);
+        border-left-color: rgba(255, 93, 215, 0.4);
+    }
+
+    .tip-card.technique .tip-highlight {
+        background: rgba(172, 137, 255, 0.06);
+        border-left-color: rgba(172, 137, 255, 0.4);
     }
 
     .tip-highlight strong {
-        color: hsl(220, 90%, 56%);
+        color: var(--ov-primary);
     }
 
-    /* Checklist */
+    .tip-card.safety .tip-highlight strong { color: var(--ov-tertiary); }
+    .tip-card.technique .tip-highlight strong { color: var(--ov-secondary); }
+
+    /* ===== CHECKLIST ===== */
     .checklist-container {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 2rem;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
         margin-bottom: 3rem;
     }
 
     .checklist-column {
-        background: linear-gradient(
-            135deg,
-            hsl(220, 100%, 98%) 0%,
-            hsl(220, 100%, 96%) 100%
-        );
-        border: 2px solid hsl(220, 100%, 95%);
-        border-radius: 20px;
-        padding: 2rem;
+        background: var(--ov-surface-mid);
+        border-radius: 16px;
+        padding: 1.75rem;
     }
 
     .checklist-column h3 {
-        font-size: 1.5rem;
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 1.15rem;
         font-weight: 700;
-        margin: 0 0 1.5rem 0;
-        color: rgb(var(--black));
+        letter-spacing: -0.02em;
+        margin: 0 0 1.25rem;
+        color: var(--ov-on-surface);
     }
 
     .checklist {
@@ -670,102 +832,113 @@ import Header from "../components/Header.astro";
     }
 
     .checklist li {
-        padding: 0.75rem 0 0.75rem 2rem;
-        color: rgb(var(--gray-dark));
-        border-bottom: 1px solid hsl(220, 100%, 93%);
+        padding: 0.6rem 0 0.6rem 1.75rem;
+        color: var(--ov-on-surface-var);
+        font-size: 0.9rem;
+        border-bottom: 1px solid rgba(71, 70, 85, 0.25);
         position: relative;
-        transition: all 0.2s ease;
+        transition: color 0.2s;
     }
 
-    .checklist li:last-child {
-        border-bottom: none;
-    }
+    .checklist li:last-child { border-bottom: none; }
 
     .checklist li::before {
-        content: "☐";
+        content: "○";
         position: absolute;
         left: 0;
-        font-size: 1.2rem;
-        color: hsl(220, 90%, 56%);
+        color: var(--ov-primary);
+        font-size: 0.9rem;
     }
 
-    .checklist li:hover {
-        background: white;
-        padding-left: 2.5rem;
-    }
+    .checklist li:hover { color: var(--ov-on-surface); }
 
-    /* CTA Box */
+    /* ===== CTA Box ===== */
     .cta-box {
-        background: linear-gradient(
-            135deg,
-            hsl(220, 90%, 56%) 0%,
-            hsl(260, 90%, 60%) 100%
-        );
-        color: white;
-        padding: 3rem;
+        background: var(--ov-surface-top);
+        border: 1px solid rgba(105, 218, 255, 0.1);
+        padding: 3.5rem;
         border-radius: 20px;
         text-align: center;
-        box-shadow: 0 10px 40px rgba(37, 99, 235, 0.3);
+        box-shadow: 0 8px 40px rgba(105, 218, 255, 0.06);
     }
 
     .cta-box h3 {
-        font-size: 2rem;
-        font-weight: 800;
-        margin: 0 0 1rem 0;
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: clamp(1.5rem, 3vw, 2rem);
+        font-weight: 900;
+        letter-spacing: -0.03em;
+        margin: 0 0 0.75rem;
+        color: var(--ov-on-surface);
     }
 
     .cta-box p {
-        font-size: 1.1rem;
-        margin: 0 0 2rem 0;
-        opacity: 0.95;
+        font-size: 1rem;
+        color: var(--ov-on-surface-var);
+        margin: 0 0 2rem;
+        line-height: 1.7;
     }
 
     .btn {
         display: inline-flex;
         align-items: center;
         gap: 0.5rem;
-        padding: 1rem 2rem;
-        border-radius: 12px;
-        font-weight: 600;
-        font-size: 1rem;
+        padding: 0.85rem 2rem;
+        border-radius: 9999px;
+        font-family: 'Space Grotesk', sans-serif;
+        font-weight: 700;
+        font-size: 0.95rem;
         text-decoration: none;
-        transition: all 0.3s ease;
+        transition: all 0.2s ease;
+        border: none;
         cursor: pointer;
-        border: 2px solid transparent;
     }
 
     .btn-primary {
-        background: white;
-        color: hsl(220, 90%, 56%);
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        background: linear-gradient(135deg, var(--ov-primary), var(--ov-secondary));
+        color: #003d4d;
+        box-shadow: 0 4px 14px rgba(105, 218, 255, 0.2);
     }
 
     .btn-primary:hover {
+        opacity: 0.9;
         transform: translateY(-2px);
-        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 8px 24px rgba(105, 218, 255, 0.3);
     }
 
-    /* Responsive */
+    /* ===== Responsive ===== */
     @media (max-width: 768px) {
-        .page-hero {
-            padding: 4rem 1.5rem 3rem;
-        }
+        .page-hero { min-height: 100svh; }
 
-        .tips-section {
-            padding: 3rem 0;
-        }
+        .tips-section { padding: 3.5rem 0; }
 
         .tips-grid {
             grid-template-columns: 1fr;
-            gap: 1.5rem;
+            gap: 1rem;
         }
 
-        .checklist-container {
-            grid-template-columns: 1fr;
-        }
+        .checklist-container { grid-template-columns: 1fr; }
 
-        .cta-box {
-            padding: 2rem 1.5rem;
-        }
+        .cta-box { padding: 2rem 1.5rem; }
     }
 </style>
+
+<script>
+    // Parallax — video se mueve más lento que el scroll, texto en dirección contraria
+    const hero = document.getElementById('hero');
+    const video = hero?.querySelector('.hero-video') as HTMLElement | null;
+    const content = document.getElementById('hero-content') as HTMLElement | null;
+
+    function onScroll() {
+        if (!hero || !video || !content) return;
+        const scrollY = window.scrollY;
+        const heroH = hero.offsetHeight;
+        if (scrollY > heroH) return;
+
+        // Video: se desplaza a 40% de la velocidad de scroll (efecto parallax)
+        video.style.transform = `translateY(${scrollY * 0.4}px)`;
+        // Texto: sube ligeramente más rápido (profundidad)
+        content.style.transform = `translateY(${scrollY * 0.15}px)`;
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+</script>

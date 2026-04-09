@@ -2,7 +2,7 @@
 title: 'Aventura Nocturna: Rodada a Monterrico'
 description: 'Una rodada nocturna inesperada hacia la playa de Monterrico. Cuando el plan cambia y la aventura se vuelve épica bajo las estrellas.'
 pubDate: 'Jan 10 2026'
-heroImage: '../../assets/blog-placeholder-2.jpg'
+heroImage: '../../assets/blog-monterrico.webp'
 category: 'Historias de Ruta'
 aiGenerated: true
 ---

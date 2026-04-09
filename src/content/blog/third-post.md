@@ -2,7 +2,7 @@
 title: 'Conquistando la Interamericana: De Guatemala a Huehuetenango'
 description: 'Un viaje de 270 kilómetros a través de la Interamericana Norte. Montañas, neblina, curvas interminables y la satisfacción de conquistar una de las rutas más desafiantes del país.'
 pubDate: 'Jan 05 2026'
-heroImage: '../../assets/blog-placeholder-3.jpg'
+heroImage: '../../assets/blog-interamericana.webp'
 category: 'Historias de Ruta'
 aiGenerated: true
 ---

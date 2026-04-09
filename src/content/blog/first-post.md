@@ -2,7 +2,7 @@
 title: 'Mi Primera Ruta al Lago de Atitlán'
 description: 'La historia de cómo descubrí una de las rutas más hermosas de Guatemala en mi primera rodada larga. Una aventura inolvidable entre volcanes y curvas.'
 pubDate: 'Jan 15 2026'
-heroImage: '../../assets/blog-placeholder-1.jpg'
+heroImage: '../../assets/blog-atitlan.webp'
 category: 'Historias de Ruta'
 aiGenerated: true
 ---

@@ -10,104 +10,540 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
 const posts = (await getCollection('blog')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
+
+const featured = posts[0];
+const rest = posts.slice(1);
+
+const categories: Record<string, number> = {};
+posts.forEach(p => {
+	const cat = (p.data as any).category ?? 'General';
+	categories[cat] = (categories[cat] ?? 0) + 1;
+});
+
+const archive: Record<string, number> = {};
+posts.forEach(p => {
+	const key = p.data.pubDate.toLocaleDateString('es-GT', { month: 'long', year: 'numeric' });
+	archive[key] = (archive[key] ?? 0) + 1;
+});
+
+const popular = posts.slice(0, 3);
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-		<style>
+		<BaseHead title={`Blog | ${SITE_TITLE}`} description={SITE_DESCRIPTION} />
+
+		<!-- Reset global.css constraints for this page -->
+		<style is:global>
+			@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap');
+
+			:root {
+				--ov-primary:        #69daff;
+				--ov-secondary:      #ac89ff;
+				--ov-tertiary:       #ff5dd7;
+				--ov-bg:             #0d0d19;
+				--ov-surface-low:    #121220;
+				--ov-surface-mid:    #181827;
+				--ov-surface-high:   #1e1e2f;
+				--ov-surface-top:    #242436;
+				--ov-on-surface:     #e9e6f9;
+				--ov-on-surface-var: #aba9ba;
+				--ov-outline-var:    #474655;
+			}
+
+			body {
+				background: var(--ov-bg) !important;
+				color: var(--ov-on-surface) !important;
+				font-family: 'Manrope', sans-serif !important;
+				font-size: 16px !important;
+				margin: 0 !important;
+				padding: 0 !important;
+				background-image: none !important;
+			}
+
 			main {
-				width: 960px;
+				width: 100% !important;
+				max-width: 100% !important;
+				margin: 0 !important;
+				padding: 0 !important;
 			}
-			ul {
-				display: flex;
-				flex-wrap: wrap;
-				gap: 2rem;
-				list-style-type: none;
-				margin: 0;
-				padding: 0;
-			}
-			ul li {
-				width: calc(50% - 1rem);
-			}
-			ul li * {
-				text-decoration: none;
-				transition: 0.2s ease;
-			}
-			ul li:first-child {
-				width: 100%;
-				margin-bottom: 1rem;
+
+			/* Neutralizar border-radius global en imágenes del blog */
+			.blog-img img,
+			.blog-img { border-radius: 0 !important; }
+		</style>
+
+		<style>
+			/* ── Page hero ── */
+			.page-hero {
+				position: relative;
+				padding: 5rem 2rem 4rem;
 				text-align: center;
+				overflow: hidden;
+				background: var(--ov-bg);
 			}
-			ul li:first-child img {
-				width: 100%;
+			.page-hero::before {
+				content: '';
+				position: absolute;
+				top: -80px; left: 50%;
+				transform: translateX(-50%);
+				width: 600px; height: 300px;
+				background: radial-gradient(ellipse, rgba(105,218,255,0.07) 0%, transparent 70%);
+				pointer-events: none;
 			}
-			ul li:first-child .title {
-				font-size: 2.369rem;
+			.page-hero-label {
+				display: inline-flex;
+				align-items: center;
+				gap: 0.5rem;
+				padding: 0.35rem 1rem;
+				background: rgba(36,36,54,0.6);
+				border: 1px solid rgba(105,218,255,0.2);
+				border-radius: 9999px;
+				font-size: 0.72rem;
+				font-weight: 700;
+				letter-spacing: 0.08em;
+				text-transform: uppercase;
+				color: var(--ov-primary);
+				margin-bottom: 1.25rem;
 			}
-			ul li img {
-				margin-bottom: 0.5rem;
-				border-radius: 12px;
+			.page-hero-label .dot {
+				width: 6px; height: 6px;
+				border-radius: 50%;
+				background: var(--ov-primary);
+				animation: pulse-dot 2s ease-in-out infinite;
 			}
-			ul li a {
-				display: block;
-			}
-			.title {
-				margin: 0;
-				color: rgb(var(--black));
+			.page-hero h1 {
+				font-family: 'Space Grotesk', sans-serif;
+				font-size: clamp(2.5rem, 6vw, 4rem);
+				font-weight: 900;
+				letter-spacing: -0.04em;
+				color: var(--ov-on-surface);
+				margin: 0 0 0.75rem;
 				line-height: 1;
 			}
-			.date {
-				margin: 0;
-				color: rgb(var(--gray));
+			.page-hero p {
+				font-size: 1rem;
+				color: var(--ov-on-surface-var);
+				max-width: 480px;
+				margin: 0 auto;
+				line-height: 1.6;
 			}
-			ul li a:hover h4,
-			ul li a:hover .date {
-				color: rgb(var(--accent));
+
+			/* ── Layout grid ── */
+			.blog-layout {
+				max-width: 1280px;
+				margin: 0 auto;
+				padding: 2.5rem 2rem 6rem;
+				display: grid;
+				grid-template-columns: minmax(0, 1fr) 300px;
+				gap: 2.5rem;
+				align-items: start;
 			}
-			ul a:hover img {
-				box-shadow: var(--box-shadow);
+
+			/* ── Featured post ── */
+			.featured-post {
+				display: block;
+				text-decoration: none;
+				background: var(--ov-surface-mid);
+				border-radius: 20px;
+				overflow: hidden;
+				margin-bottom: 2rem;
+				transition: transform 0.3s ease, box-shadow 0.3s ease;
 			}
-			@media (max-width: 720px) {
-				ul {
-					gap: 0.5em;
-				}
-				ul li {
-					width: 100%;
-					text-align: center;
-				}
-				ul li:first-child {
-					margin-bottom: 0;
-				}
-				ul li:first-child .title {
-					font-size: 1.563em;
-				}
+			.featured-post:hover {
+				transform: translateY(-4px);
+				box-shadow: 0 24px 48px rgba(105,218,255,0.08);
+			}
+			.featured-img {
+				position: relative;
+				width: 100%;
+				aspect-ratio: 16 / 7;
+				overflow: hidden;
+			}
+			.featured-img img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				display: block;
+				border-radius: 0 !important;
+				filter: brightness(0.82);
+				transition: transform 0.5s ease;
+			}
+			.featured-post:hover .featured-img img { transform: scale(1.03); }
+			.featured-img::after {
+				content: '';
+				position: absolute;
+				bottom: 0; left: 0; right: 0;
+				height: 50%;
+				background: linear-gradient(to bottom, transparent, rgba(24,24,39,0.95));
+				pointer-events: none;
+			}
+			.featured-body { padding: 1.5rem 1.75rem 1.75rem; }
+
+			.cat-badge {
+				display: inline-block;
+				padding: 0.28rem 0.8rem;
+				background: rgba(105,218,255,0.1);
+				border: 1px solid rgba(105,218,255,0.22);
+				border-radius: 9999px;
+				font-size: 0.7rem;
+				font-weight: 700;
+				letter-spacing: 0.07em;
+				text-transform: uppercase;
+				color: var(--ov-primary);
+				margin-bottom: 0.7rem;
+			}
+			.featured-title {
+				font-family: 'Space Grotesk', sans-serif;
+				font-size: clamp(1.3rem, 2.5vw, 1.9rem);
+				font-weight: 800;
+				letter-spacing: -0.03em;
+				color: var(--ov-on-surface);
+				line-height: 1.15;
+				margin: 0 0 0.65rem;
+			}
+			.featured-desc {
+				color: var(--ov-on-surface-var);
+				font-size: 0.9rem;
+				line-height: 1.65;
+				margin: 0 0 1.25rem;
+				display: -webkit-box;
+				-webkit-line-clamp: 2;
+				-webkit-box-orient: vertical;
+				overflow: hidden;
+			}
+			.post-footer {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				gap: 0.75rem;
+			}
+			.post-date {
+				font-size: 0.78rem;
+				color: var(--ov-on-surface-var);
+			}
+			.read-btn {
+				display: inline-flex;
+				align-items: center;
+				gap: 0.35rem;
+				padding: 0.45rem 1rem;
+				background: linear-gradient(135deg, var(--ov-primary), var(--ov-secondary));
+				color: #003d4d;
+				font-family: 'Space Grotesk', sans-serif;
+				font-size: 0.78rem;
+				font-weight: 700;
+				border-radius: 9999px;
+				box-shadow: 0 4px 14px rgba(105,218,255,0.18);
+				transition: transform 0.2s, box-shadow 0.2s;
+			}
+			.featured-post:hover .read-btn {
+				transform: scale(1.04);
+				box-shadow: 0 6px 20px rgba(105,218,255,0.32);
+			}
+
+			/* ── Posts grid ── */
+			.posts-grid {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 1.25rem;
+			}
+			.post-card {
+				display: block;
+				text-decoration: none;
+				background: var(--ov-surface-mid);
+				border-radius: 14px;
+				overflow: hidden;
+				transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+			}
+			.post-card:hover {
+				transform: translateY(-4px);
+				background: var(--ov-surface-high);
+				box-shadow: 0 14px 30px rgba(105,218,255,0.07);
+			}
+			.card-img {
+				width: 100%;
+				aspect-ratio: 16 / 9;
+				overflow: hidden;
+			}
+			.card-img img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				display: block;
+				border-radius: 0 !important;
+				filter: brightness(0.82);
+				transition: transform 0.4s ease;
+			}
+			.post-card:hover .card-img img { transform: scale(1.05); }
+			.card-body { padding: 1.1rem 1.15rem 1.25rem; }
+			.card-title {
+				font-family: 'Space Grotesk', sans-serif;
+				font-size: 0.95rem;
+				font-weight: 700;
+				letter-spacing: -0.02em;
+				color: var(--ov-on-surface);
+				line-height: 1.3;
+				margin: 0.45rem 0 0.4rem;
+				display: -webkit-box;
+				-webkit-line-clamp: 2;
+				-webkit-box-orient: vertical;
+				overflow: hidden;
+			}
+			.card-desc {
+				font-size: 0.78rem;
+				color: var(--ov-on-surface-var);
+				line-height: 1.55;
+				margin: 0 0 0.65rem;
+				display: -webkit-box;
+				-webkit-line-clamp: 2;
+				-webkit-box-orient: vertical;
+				overflow: hidden;
+			}
+
+			/* ── Sidebar ── */
+			.sidebar {
+				position: sticky;
+				top: 80px;
+				display: flex;
+				flex-direction: column;
+				gap: 1.25rem;
+			}
+			.widget {
+				background: var(--ov-surface-low);
+				border-radius: 14px;
+				padding: 1.25rem;
+			}
+			.widget-title {
+				font-family: 'Space Grotesk', sans-serif;
+				font-size: 0.7rem;
+				font-weight: 700;
+				letter-spacing: 0.1em;
+				text-transform: uppercase;
+				color: var(--ov-on-surface-var);
+				margin: 0 0 1rem;
+				display: flex;
+				align-items: center;
+				gap: 0.5rem;
+			}
+			.widget-title::after {
+				content: '';
+				flex: 1;
+				height: 1px;
+				background: rgba(71,70,85,0.35);
+			}
+			.cat-list, .archive-list, .popular-list {
+				list-style: none;
+				margin: 0; padding: 0;
+				display: flex;
+				flex-direction: column;
+				gap: 0.25rem;
+			}
+			.cat-item, .archive-item {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				padding: 0.5rem 0.65rem;
+				border-radius: 8px;
+				font-size: 0.85rem;
+				color: var(--ov-on-surface-var);
+				text-decoration: none;
+				transition: background 0.2s, color 0.2s;
+			}
+			.cat-item:hover, .archive-item:hover {
+				background: rgba(105,218,255,0.06);
+				color: var(--ov-on-surface);
+			}
+			.cat-left {
+				display: flex;
+				align-items: center;
+				gap: 0.55rem;
+			}
+			.cat-dot {
+				width: 6px; height: 6px;
+				border-radius: 50%;
+				background: var(--ov-primary);
+				flex-shrink: 0;
+			}
+			.count-badge {
+				font-size: 0.68rem;
+				font-weight: 700;
+				color: var(--ov-on-surface-var);
+				background: var(--ov-surface-top);
+				padding: 0.12rem 0.5rem;
+				border-radius: 9999px;
+			}
+			.archive-item { text-transform: capitalize; }
+
+			/* Popular */
+			.popular-list { gap: 0.85rem; }
+			.popular-item {
+				display: flex;
+				gap: 0.75rem;
+				align-items: center;
+				text-decoration: none;
+				transition: opacity 0.2s;
+			}
+			.popular-item:hover { opacity: 0.75; }
+			.popular-thumb {
+				width: 56px; height: 56px;
+				border-radius: 9px;
+				overflow: hidden;
+				flex-shrink: 0;
+			}
+			.popular-thumb img {
+				width: 100%; height: 100%;
+				object-fit: cover;
+				display: block;
+				border-radius: 9px !important;
+				filter: brightness(0.82);
+			}
+			.popular-title {
+				font-family: 'Space Grotesk', sans-serif;
+				font-size: 0.78rem;
+				font-weight: 700;
+				color: var(--ov-on-surface);
+				line-height: 1.3;
+				margin: 0 0 0.2rem;
+				display: -webkit-box;
+				-webkit-line-clamp: 2;
+				-webkit-box-orient: vertical;
+				overflow: hidden;
+			}
+			.popular-date { font-size: 0.68rem; color: var(--ov-on-surface-var); }
+
+			@keyframes pulse-dot {
+				0%, 100% { opacity: 1; }
+				50% { opacity: 0.3; }
+			}
+
+			@media (max-width: 1024px) {
+				.blog-layout { grid-template-columns: 1fr; }
+				.sidebar { position: static; }
+			}
+			@media (max-width: 600px) {
+				.posts-grid { grid-template-columns: 1fr; }
+				.blog-layout { padding: 2rem 1.25rem 4rem; }
+				.page-hero { padding: 3rem 1.25rem 2rem; }
 			}
 		</style>
 	</head>
 	<body>
 		<Header />
 		<main>
-			<section>
-				<ul>
-					{
-						posts.map((post) => (
-							<li>
-								<a href={`/blog/${post.id}/`}>
-									{post.data.heroImage && (
-										<Image width={720} height={360} src={post.data.heroImage} alt="" />
-									)}
-									<h4 class="title">{post.data.title}</h4>
-									<p class="date">
-										<FormattedDate date={post.data.pubDate} />
-									</p>
-								</a>
-							</li>
-						))
-					}
-				</ul>
-			</section>
+			<!-- Page hero -->
+			<div class="page-hero">
+				<div class="page-hero-label">
+					<span class="dot"></span>
+					Comunidad RideMotoHub
+				</div>
+				<h1>Blog</h1>
+				<p>Historias, rutas y tips desde Guatemala y más allá</p>
+			</div>
+
+			<!-- Blog layout -->
+			<div class="blog-layout">
+
+				<!-- Posts column -->
+				<div>
+					<!-- Featured -->
+					<a href={`/blog/${featured.id}/`} class="featured-post">
+						{featured.data.heroImage && (
+							<div class="featured-img">
+								<Image width={1200} height={525} src={featured.data.heroImage} alt={featured.data.title} />
+							</div>
+						)}
+						<div class="featured-body">
+							<div class="cat-badge">{(featured.data as any).category ?? 'General'}</div>
+							<h2 class="featured-title">{featured.data.title}</h2>
+							<p class="featured-desc">{featured.data.description}</p>
+							<div class="post-footer">
+								<span class="post-date"><FormattedDate date={featured.data.pubDate} /></span>
+								<span class="read-btn">
+									Leer artículo
+									<svg width="13" height="13" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+								</span>
+							</div>
+						</div>
+					</a>
+
+					<!-- Grid -->
+					<div class="posts-grid">
+						{rest.map((post) => (
+							<a href={`/blog/${post.id}/`} class="post-card">
+								{post.data.heroImage && (
+									<div class="card-img">
+										<Image width={600} height={338} src={post.data.heroImage} alt={post.data.title} />
+									</div>
+								)}
+								<div class="card-body">
+									<div class="cat-badge">{(post.data as any).category ?? 'General'}</div>
+									<h3 class="card-title">{post.data.title}</h3>
+									<p class="card-desc">{post.data.description}</p>
+									<span class="post-date"><FormattedDate date={post.data.pubDate} /></span>
+								</div>
+							</a>
+						))}
+					</div>
+				</div>
+
+				<!-- Sidebar -->
+				<aside class="sidebar">
+
+					<div class="widget">
+						<h4 class="widget-title">Categorías</h4>
+						<ul class="cat-list">
+							{Object.entries(categories).map(([cat, count]) => (
+								<li>
+									<a class="cat-item" href="#">
+										<span class="cat-left">
+											<span class="cat-dot"></span>
+											{cat}
+										</span>
+										<span class="count-badge">{count}</span>
+									</a>
+								</li>
+							))}
+						</ul>
+					</div>
+
+					<div class="widget">
+						<h4 class="widget-title">Archivo</h4>
+						<ul class="archive-list">
+							{Object.entries(archive).map(([month, count]) => (
+								<li>
+									<a class="archive-item" href="#">
+										<span>{month}</span>
+										<span class="count-badge">{count}</span>
+									</a>
+								</li>
+							))}
+						</ul>
+					</div>
+
+					<div class="widget">
+						<h4 class="widget-title">Más leídos</h4>
+						<ul class="popular-list">
+							{popular.map((post) => (
+								<li>
+									<a href={`/blog/${post.id}/`} class="popular-item">
+										{post.data.heroImage && (
+											<div class="popular-thumb">
+												<Image width={112} height={112} src={post.data.heroImage} alt={post.data.title} />
+											</div>
+										)}
+										<div>
+											<p class="popular-title">{post.data.title}</p>
+											<span class="popular-date"><FormattedDate date={post.data.pubDate} /></span>
+										</div>
+									</a>
+								</li>
+							))}
+						</ul>
+					</div>
+
+				</aside>
+			</div>
 		</main>
 		<Footer />
 	</body>

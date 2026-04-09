@@ -2,7 +2,7 @@
 title: 'Ruta de los Volcanes: Un Día Entre Gigantes'
 description: 'La historia de cómo recorrí el circuito de volcanes más impresionante de Guatemala en un solo día. Pacaya, Agua, Fuego y Acatenango desde la perspectiva de dos ruedas.'
 pubDate: 'Dec 28 2025'
-heroImage: '../../assets/blog-placeholder-4.jpg'
+heroImage: '../../assets/blog-volcanes.webp'
 category: 'Historias de Ruta'
 aiGenerated: true
 ---
