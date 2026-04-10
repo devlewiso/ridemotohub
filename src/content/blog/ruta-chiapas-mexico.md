@@ -2,7 +2,7 @@
 title: 'Ruta por Chiapas en Moto: De San Cristóbal a Palenque'
 description: 'Guía completa para rodar por Chiapas México. Desde San Cristóbal de las Casas hasta Palenque: rutas, distancias, consejos y qué ver en esta aventura fronteriza.'
 pubDate: 'Jan 28 2026'
-heroImage: '../../assets/blog-atitlan.webp'
+heroImage: '../../assets/blog-chiapas-mexico.webp'
 category: 'Rutas Internacionales'
 aiGenerated: false
 ---

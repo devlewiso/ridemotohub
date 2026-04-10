@@ -2,7 +2,7 @@
 title: 'Los 10 Errores que Cometen los Riders Principiantes'
 description: 'Evita los errores más comunes de los motociclistas nuevos en Guatemala. Consejos para principiantes sobre seguridad, técnica y心态 en la carretera.'
 pubDate: 'Feb 8 2026'
-heroImage: '../../assets/blog-atitlan.webp'
+heroImage: '../../assets/blog-errores-principiantes.webp'
 category: 'Tips & Consejos'
 aiGenerated: false
 ---

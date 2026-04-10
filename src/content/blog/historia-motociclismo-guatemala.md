@@ -2,7 +2,7 @@
 title: 'La Historia del Motociclismo en Guatemala'
 description: 'Desde los primeros motores hasta hoy: la evolución del motociclismo en Guatemala. Cómo una industria creciente transformó la movilidad y la cultura Guatemalteca.'
 pubDate: 'Jan 25 2026'
-heroImage: '../../assets/blog-atitlan.webp'
+heroImage: '../../assets/blog-historia-motociclismo.webp'
 category: 'Cultura Motera'
 aiGenerated: false
 ---

@@ -2,7 +2,7 @@
 title: 'Mujeres Riders en Guatemala: La Comunidad que está Transformando el Motociclismo'
 description: 'Conociendo a las motociclistas Guatemaltecas que están rompiendo estereotipos y construyendo una comunidad inclusiva en el mundo de las dos ruedas.'
 pubDate: 'Feb 2 2026'
-heroImage: '../../assets/blog-atitlan.webp'
+heroImage: '../../assets/blog-mujeres-riders.webp'
 category: 'Cultura Motera'
 aiGenerated: false
 ---

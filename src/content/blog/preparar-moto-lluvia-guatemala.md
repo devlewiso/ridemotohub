@@ -2,7 +2,7 @@
 title: 'Cómo Preparar Tu Moto para la Temporada de Lluvia en Guatemala'
 description: 'Guía completa para preparar tu moto antes de la temporada de lluvias. Neumáticos, frenos, luces y consejos de seguridad para rodar seguro en Guatemala.'
 pubDate: 'Jan 22 2026'
-heroImage: '../../assets/blog-atitlan.webp'
+heroImage: '../../assets/blog-lluvia-guatemala.webp'
 category: 'Tips & Consejos'
 aiGenerated: false
 ---

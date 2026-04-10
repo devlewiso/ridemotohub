@@ -2,7 +2,7 @@
 title: 'Cambio de Aceite y Filtro: Guía Paso a Paso para Cualquier Moto'
 description: 'Tutorial completo para cambiar el aceite de tu moto en casa. Qué aceite usar, herramientas necesarias, y tips de mantenimiento para mantener tu motor saludable.'
 pubDate: 'Jan 30 2026'
-heroImage: '../../assets/blog-atitlan.webp'
+heroImage: '../../assets/blog-cambio-aceite.webp'
 category: 'Mecánica'
 aiGenerated: false
 ---

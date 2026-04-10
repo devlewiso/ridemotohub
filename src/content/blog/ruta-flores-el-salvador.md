@@ -2,7 +2,7 @@
 title: 'Ruta de las Flores en El Salvador: La Aventura Centroamericana'
 description: 'Recorre La Ruta de las Flores en moto desde Guatemala. Guía completa: distancias, pasos fronterizos, qué visitar y consejos para esta aventura de pueblos Coloridos.'
 pubDate: 'Feb 10 2026'
-heroImage: '../../assets/blog-atitlan.webp'
+heroImage: '../../assets/blog-ruta-flores.webp'
 category: 'Rutas Internacionales'
 aiGenerated: false
 ---

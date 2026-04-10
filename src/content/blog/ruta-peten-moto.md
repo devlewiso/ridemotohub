@@ -2,7 +2,7 @@
 title: 'Ruta al Petén: Cruzando Guatemala en Moto'
 description: 'La aventura definitiva: recorrer Guatemala de sur a norte hasta Tikal. Distancias, consejos, mejores puntos de descanso y qué esperar en esta ruta épica.'
 pubDate: 'Jan 20 2026'
-heroImage: '../../assets/blog-atitlan.webp'
+heroImage: '../../assets/blog-peten-moto.webp'
 category: 'Rutas Guatemala'
 aiGenerated: false
 ---

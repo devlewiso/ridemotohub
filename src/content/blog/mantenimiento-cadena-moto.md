@@ -2,7 +2,7 @@
 title: 'Mantenimiento de Cadena: Limpieza, Lubricación y Ajuste'
 description: 'Guía completa para mantener la cadena de tu moto en óptimas condiciones. Aprende a limpiarla, lubricarla y ajustarla correctamente para prolongar su vida útil.'
 pubDate: 'Feb 12 2026'
-heroImage: '../../assets/blog-atitlan.webp'
+heroImage: '../../assets/blog-mantenimiento-cadena.webp'
 category: 'Mecánica'
 aiGenerated: false
 ---

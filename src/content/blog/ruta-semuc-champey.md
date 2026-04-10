@@ -2,7 +2,7 @@
 title: 'Ruta a Semuc Champey: La Aventura hacia las Piscinas Naturales'
 description: 'Guía completa para llegar a Semuc Champey en moto desde Guatemala. Carreteras, distancias, consejos y qué esperar en esta ruta de aventura natural.'
 pubDate: 'Feb 5 2026'
-heroImage: '../../assets/blog-atitlan.webp'
+heroImage: '../../assets/blog-semuc-champey.webp'
 category: 'Rutas Guatemala'
 aiGenerated: false
 ---
