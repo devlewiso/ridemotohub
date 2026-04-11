@@ -18,8 +18,8 @@ import Header from "../components/Header.astro";
         <!-- Hero Section -->
         <section class="page-hero">
             <div class="hero-content">
-                <div class="hero-badge">🔒 Privacidad</div>
-                <h1>Política de Privacidad</h1>
+                <span class="hero-badge">🔒 Privacidad</span>
+                <h1>Política de <span class="gradient-text">Privacidad</span></h1>
                 <p>Tu privacidad es importante para nosotros</p>
                 <p class="last-updated">Última actualización: Enero 18, 2026</p>
             </div>
@@ -419,7 +419,9 @@ import Header from "../components/Header.astro";
                 </section>
 
                 <div class="back-link">
-                    <a href="/">← Volver al Inicio</a>
+                    <a href="/" class="btn-primary">
+                        ← Volver al Inicio
+                    </a>
                 </div>
             </div>
         </main>
@@ -428,9 +430,41 @@ import Header from "../components/Header.astro";
     </body>
 </html>
 
-<style>
+<style is:global>
+    :root {
+        --ov-primary:        #69daff;
+        --ov-primary-dim:    #00c0ea;
+        --ov-secondary:      #ac89ff;
+        --ov-tertiary:       #ff5dd7;
+        --ov-bg:             #0d0d19;
+        --ov-surface-low:    #121220;
+        --ov-surface-mid:    #181827;
+        --ov-surface-high:   #1e1e2f;
+        --ov-surface-top:    #242436;
+        --ov-surface-bright: #2a2a3e;
+        --ov-on-surface:     #e9e6f9;
+        --ov-on-surface-var: #aba9ba;
+        --ov-outline:        #757484;
+        --ov-outline-var:    #474655;
+        --ov-tint:           #69daff;
+    }
+    main { width: 100% !important; max-width: 100% !important; padding: 0 !important; }
     body {
-        overflow-x: hidden;
+        margin: 0 !important; padding: 0 !important;
+        background: #0d0d19 !important;
+        background-image: none !important;
+        font-size: 16px !important;
+        color: #e9e6f9 !important;
+    }
+</style>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap');
+
+    body {
+        background: var(--ov-bg);
+        color: var(--ov-on-surface);
+        font-family: 'Manrope', sans-serif;
     }
 
     .container {
@@ -439,106 +473,111 @@ import Header from "../components/Header.astro";
         padding: 0 2rem;
     }
 
-    /* Page Hero */
-    .page-hero {
-        background: linear-gradient(
-            135deg,
-            hsl(220, 100%, 97%) 0%,
-            hsl(200, 100%, 96%) 100%
-        );
-        padding: 6rem 2rem 4rem;
-        text-align: center;
+    .gradient-text {
+        background: linear-gradient(135deg, var(--ov-primary), var(--ov-secondary));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
     }
 
-    .hero-content {
-        max-width: 800px;
-        margin: 0 auto;
+    /* Page Hero */
+    .page-hero {
+        background: var(--ov-surface-low);
+        padding: 8rem 2rem 5rem;
+        text-align: center;
+        margin-top: -64px;
+        padding-top: calc(7rem + 64px);
     }
+
+    .hero-content { max-width: 640px; margin: 0 auto; }
 
     .hero-badge {
         display: inline-block;
-        padding: 0.5rem 1.5rem;
-        background: linear-gradient(
-            135deg,
-            hsl(220, 90%, 56%),
-            hsl(260, 90%, 60%)
-        );
-        color: white;
-        border-radius: 50px;
-        font-size: 0.9rem;
-        font-weight: 600;
+        padding: 0.35rem 1rem;
+        background: rgba(105, 218, 255, 0.08);
+        border: 1px solid rgba(105, 218, 255, 0.25);
+        border-radius: 9999px;
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+        color: var(--ov-primary);
         margin-bottom: 1.5rem;
-        box-shadow: 0 4px 20px rgba(37, 99, 235, 0.3);
     }
 
     .page-hero h1 {
-        font-size: clamp(2.5rem, 6vw, 3.5rem);
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: clamp(2.5rem, 6vw, 4rem);
         font-weight: 900;
-        margin: 0 0 1rem 0;
-        color: rgb(var(--black));
+        letter-spacing: -0.04em;
+        line-height: 1.05;
+        margin: 0 0 1rem;
+        color: var(--ov-on-surface);
     }
 
     .page-hero p {
-        font-size: clamp(1rem, 2vw, 1.2rem);
-        color: rgb(var(--gray));
+        font-size: 1.05rem;
+        color: var(--ov-on-surface-var);
+        line-height: 1.7;
         margin: 0.5rem 0;
     }
 
     .last-updated {
         font-size: 0.9rem !important;
         font-style: italic;
-        opacity: 0.8;
+        opacity: 0.7;
     }
 
     /* Legal Content */
     .legal-content {
         padding: 4rem 0;
-        background: white;
+        background: var(--ov-bg);
     }
 
     .intro-section {
         margin-bottom: 3rem;
         padding: 2rem;
-        background: linear-gradient(
-            135deg,
-            hsl(220, 100%, 98%) 0%,
-            hsl(220, 100%, 96%) 100%
-        );
-        border-radius: 15px;
-        border: 2px solid hsl(220, 100%, 95%);
+        background: var(--ov-surface-mid);
+        border-radius: 16px;
+        border: 1px solid rgba(105, 218, 255, 0.1);
     }
 
     .intro-text {
-        font-size: 1.1rem;
+        font-size: 1.05rem;
         line-height: 1.8;
-        color: rgb(var(--gray-dark));
+        color: var(--ov-on-surface-var);
         margin-bottom: 1rem;
     }
+
+    .intro-text:last-child { margin-bottom: 0; }
 
     .legal-section {
         margin-bottom: 3rem;
     }
 
     .legal-section h2 {
-        font-size: 2rem;
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 1.6rem;
         font-weight: 800;
+        letter-spacing: -0.02em;
         margin: 0 0 1.5rem 0;
-        color: rgb(var(--black));
+        color: var(--ov-on-surface);
         padding-bottom: 0.5rem;
-        border-bottom: 3px solid hsl(220, 90%, 56%);
+        border-bottom: 2px solid var(--ov-primary);
     }
 
     .legal-section h3 {
-        font-size: 1.4rem;
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 1.2rem;
         font-weight: 700;
-        margin: 2rem 0 1rem 0;
-        color: rgb(var(--gray-dark));
+        margin: 1.5rem 0 1rem 0;
+        color: var(--ov-on-surface);
     }
 
     .legal-section p {
-        font-size: 1.05rem;
+        font-size: 1rem;
         line-height: 1.8;
-        color: rgb(var(--gray-dark));
+        color: var(--ov-on-surface-var);
         margin-bottom: 1rem;
     }
 
@@ -549,50 +588,43 @@ import Header from "../components/Header.astro";
 
     .legal-section li {
         margin-bottom: 0.75rem;
-        color: rgb(var(--gray-dark));
-        font-size: 1.05rem;
+        color: var(--ov-on-surface-var);
+        font-size: 1rem;
     }
 
     .legal-section a {
-        color: hsl(220, 90%, 56%);
+        color: var(--ov-primary);
         text-decoration: none;
         font-weight: 600;
-        transition: color 0.3s ease;
+        transition: color 0.2s ease;
     }
 
     .legal-section a:hover {
-        color: hsl(260, 90%, 60%);
+        color: var(--ov-secondary);
         text-decoration: underline;
     }
 
     .ai-tag {
         display: inline-block;
         padding: 0.25rem 0.75rem;
-        background: linear-gradient(
-            135deg,
-            hsl(260, 90%, 60%),
-            hsl(280, 90%, 65%)
-        );
-        color: white;
+        background: linear-gradient(135deg, var(--ov-secondary), var(--ov-tertiary));
+        color: var(--ov-bg);
         border-radius: 20px;
         font-size: 0.85rem;
         font-weight: 600;
     }
 
     .contact-box {
-        background: linear-gradient(
-            135deg,
-            hsl(220, 100%, 98%) 0%,
-            hsl(220, 100%, 96%) 100%
-        );
-        border: 2px solid hsl(220, 100%, 95%);
-        border-radius: 15px;
+        background: var(--ov-surface-mid);
+        border: 1px solid rgba(105, 218, 255, 0.1);
+        border-radius: 16px;
         padding: 2rem;
         margin-top: 1.5rem;
     }
 
     .contact-box p {
         margin: 0.5rem 0;
+        color: var(--ov-on-surface-var);
     }
 
     .back-link {
@@ -600,31 +632,32 @@ import Header from "../components/Header.astro";
         margin: 3rem 0;
     }
 
-    .back-link a {
-        display: inline-block;
-        padding: 1rem 2rem;
-        background: linear-gradient(
-            135deg,
-            hsl(220, 90%, 56%),
-            hsl(260, 90%, 60%)
-        );
-        color: white;
+    .btn-primary {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.85rem 1.75rem;
+        background: linear-gradient(135deg, var(--ov-primary), var(--ov-secondary));
+        color: #003d4d;
+        font-family: 'Space Grotesk', sans-serif;
+        font-weight: 700;
+        font-size: 0.95rem;
+        border-radius: 9999px;
         text-decoration: none;
-        border-radius: 10px;
-        font-weight: 600;
-        transition: all 0.3s ease;
-        box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+        box-shadow: 0 4px 20px rgba(105, 218, 255, 0.25);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
-    .back-link a:hover {
+    .btn-primary:hover {
         transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+        box-shadow: 0 6px 24px rgba(105, 218, 255, 0.35);
     }
 
     /* Responsive */
     @media (max-width: 768px) {
         .page-hero {
-            padding: 4rem 1.5rem 3rem;
+            padding: 6rem 1.5rem 3rem;
+            padding-top: calc(5rem + 64px);
         }
 
         .legal-content {
@@ -636,11 +669,15 @@ import Header from "../components/Header.astro";
         }
 
         .legal-section h2 {
-            font-size: 1.6rem;
+            font-size: 1.4rem;
         }
 
         .legal-section h3 {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
+        }
+
+        .container {
+            padding: 0 1.25rem;
         }
     }
 </style>

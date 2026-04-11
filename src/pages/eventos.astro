@@ -74,127 +74,6 @@ import Header from "../components/Header.astro";
                     </div>
                 </article>
 
-                <!-- Más eventos próximos -->
-                <div class="events-grid">
-                    <article class="event-card">
-                        <div class="event-date-badge">
-                            <span class="month">MAR</span>
-                            <span class="day">15</span>
-                        </div>
-                        <div class="event-card-content">
-                            <span class="event-type">🏔️ Rodada</span>
-                            <h4>Ruta al Volcán de Fuego</h4>
-                            <p class="event-location"> Antigua Guatemala → Escuintla</p>
-                            <p class="event-desc">Rueda hacia uno de los volcanes más activos de Guatemala. Vista espectaculares y mucha adrenalina.</p>
-                            <span class="event-participants">60 riders confirmados</span>
-                        </div>
-                    </article>
-
-                    <article class="event-card">
-                        <div class="event-date-badge">
-                            <span class="month">MAR</span>
-                            <span class="day">29</span>
-                        </div>
-                        <div class="event-card-content">
-                            <span class="event-type">🎉 Meetup</span>
-                            <h4>Motoencuentro Xela</h4>
-                            <p class="event-location">Quetzaltenango</p>
-                            <p class="event-desc">El encuentro mensual de riders del altiplano. Música, comida y networking motero.</p>
-                            <span class="event-participants">120 riders confirmados</span>
-                        </div>
-                    </article>
-
-                    <article class="event-card">
-                        <div class="event-date-badge">
-                            <span class="month">ABR</span>
-                            <span class="day">12</span>
-                        </div>
-                        <div class="event-card-content">
-                            <span class="event-type">🌊 Rodada</span>
-                            <h4>Ruta a Monterrico</h4>
-                            <p class="event-location">Ciudad Guatemala → Monterrico</p>
-                            <p class="event-desc">Rodea hacia la costa pacífica. Playa, mariscos frescos y atardecer frente al mar.</p>
-                            <span class="event-participants">85 riders confirmados</span>
-                        </div>
-                    </article>
-
-                    <article class="event-card">
-                        <div class="event-date-badge">
-                            <span class="month">ABR</span>
-                            <span class="day">26</span>
-                        </div>
-                        <div class="event-card-content">
-                            <span class="event-type">🏆 Competencia</span>
-                            <h4>Enduro Championship GT</h4>
-                            <p class="event-location">San Pedro La Laguna</p>
-                            <p class="event-desc">Competencia de enduro autour del lago Atitlán. Todas las cilindradas bienvenidas.</p>
-                            <span class="event-participants">45 competidores</span>
-                        </div>
-                    </article>
-
-                    <article class="event-card">
-                        <div class="event-date-badge">
-                            <span class="month">MAY</span>
-                            <span class="day">03</span>
-                        </div>
-                        <div class="event-card-content">
-                            <span class="event-type">❤️ Caravana</span>
-                            <h4>Rodada Solidaria Petén</h4>
-                            <p class="event-location">Ciudad Guatemala → Flores</p>
-                            <p class="event-desc">Caravana benéfica llevando donaciones a comunidades necesitadas del norte. ¡Únete!</p>
-                            <span class="event-participants">40 riders confirmados</span>
-                        </div>
-                    </article>
-
-                    <article class="event-card">
-                        <div class="event-date-badge">
-                            <span class="month">MAY</span>
-                            <span class="day">17</span>
-                        </div>
-                        <div class="event-card-content">
-                            <span class="event-type">🎤 Evento</span>
-                            <h4>Moto Fest Guatemala</h4>
-                            <p class="event-location">Zona 10, Guatemala City</p>
-                            <p class="event-desc">Festival de música, stunt shows, custom bikes y mercado de partes. El evento del año.</p>
-                            <span class="event-participants">500+ asistentes</span>
-                        </div>
-                    </article>
-                </div>
-
-                <!-- Eventos pasados -->
-                <div class="past-section">
-                    <div class="section-header">
-                        <span class="section-label">Historial</span>
-                        <h2>Eventos pasados</h2>
-                    </div>
-                    <div class="past-grid">
-                        <div class="past-card">
-                            <div class="past-thumb past-thumb-1"></div>
-                            <div class="past-info">
-                                <h4>Rodada a Antigua Guatemala</h4>
-                                <p>Enero 2026</p>
-                                <span class="riders-count">45 riders</span>
-                            </div>
-                        </div>
-                        <div class="past-card">
-                            <div class="past-thumb past-thumb-2"></div>
-                            <div class="past-info">
-                                <h4>Encuentro Anual 2025</h4>
-                                <p>Diciembre 2025</p>
-                                <span class="riders-count">120 riders</span>
-                            </div>
-                        </div>
-                        <div class="past-card">
-                            <div class="past-thumb past-thumb-3"></div>
-                            <div class="past-info">
-                                <h4>Rodada a Monterrico</h4>
-                                <p>Noviembre 2025</p>
-                                <span class="riders-count">60 riders</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
                 <!-- CTA -->
                 <div class="cta-box">
                     <h3>¿Quieres organizar un evento?</h3>
@@ -486,67 +365,6 @@ import Header from "../components/Header.astro";
     .btn-primary svg { transition: transform 0.2s; }
     .btn-primary:hover svg { transform: translateX(4px); }
 
-    /* ── Pasados ── */
-    .past-section { margin-bottom: 4rem; }
-
-    .past-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1.25rem;
-    }
-
-    .past-card {
-        background: var(--ov-surface-mid);
-        border-radius: 14px;
-        overflow: hidden;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .past-card:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 12px 28px rgba(172, 137, 255, 0.08);
-    }
-
-    .past-thumb {
-        height: 140px;
-        background-size: cover;
-        background-position: center;
-    }
-
-    .past-thumb-1 { background: linear-gradient(135deg, rgba(105,218,255,0.3), rgba(172,137,255,0.3)), var(--ov-surface-top); }
-    .past-thumb-2 { background: linear-gradient(135deg, rgba(172,137,255,0.3), rgba(255,93,215,0.3)), var(--ov-surface-top); }
-    .past-thumb-3 { background: linear-gradient(135deg, rgba(105,218,255,0.2), rgba(105,218,100,0.2)), var(--ov-surface-top); }
-
-    .past-info {
-        padding: 1.25rem;
-    }
-
-    .past-info h4 {
-        font-family: 'Space Grotesk', sans-serif;
-        font-size: 0.95rem;
-        font-weight: 700;
-        letter-spacing: -0.01em;
-        color: var(--ov-on-surface);
-        margin: 0 0 0.35rem;
-    }
-
-    .past-info p {
-        font-size: 0.8rem;
-        color: var(--ov-on-surface-var);
-        margin: 0 0 0.5rem;
-    }
-
-    .riders-count {
-        display: inline-block;
-        padding: 0.2rem 0.65rem;
-        background: rgba(105, 218, 255, 0.08);
-        border: 1px solid rgba(105, 218, 255, 0.2);
-        border-radius: 9999px;
-        font-size: 0.72rem;
-        font-weight: 700;
-        color: var(--ov-primary);
-    }
-
     /* CTA */
     .cta-box {
         background: var(--ov-surface-top);
@@ -606,8 +424,6 @@ import Header from "../components/Header.astro";
         }
 
         .date-day { font-size: 2rem; }
-
-        .past-grid { grid-template-columns: 1fr; }
 
         .cta-box { padding: 2.5rem 1.5rem; }
     }
