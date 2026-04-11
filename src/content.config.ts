@@ -19,6 +19,12 @@ const blog = defineCollection({
 			category: z.string().optional(),
 			// Whether the content was AI-generated
 			aiGenerated: z.boolean().optional(),
+			// Author information
+			author: z.object({
+				name: z.string(),
+				since: z.number().optional(), // Rider since year
+				bio: z.string().optional(),
+			}).optional(),
 		}),
 });
 

@@ -6,6 +6,10 @@ heroImage: '../../assets/blog-tramites-moto.webp'
 category: 'Legal'
 aiGenerated: false
 imageAlt: 'Documentos de emplacamiento de moto en Guatemala - tarjeta de circulación, placas, SOAT y RTV sobre escritorio'
+author:
+  name: 'Ana Martínez'
+  since: 2018
+  bio: 'Especialista en trámites vehiculares y rider apasionada por las rutas largas'
 ---
 
 ## Introducción

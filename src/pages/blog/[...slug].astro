@@ -13,8 +13,33 @@ type Props = CollectionEntry<'blog'>;
 
 const post = Astro.props;
 const { Content } = await render(post);
+
+// Get all posts for related posts logic
+const allPosts = await getCollection('blog');
+
+// Calculate word count from content
+const contentText = post.body || '';
+const wordCount = contentText.split(/\s+/).filter(word => word.length > 0).length;
+
+// Find related posts by category (excluding current post)
+const currentCategory = (post.data as any).category;
+const relatedPosts = allPosts
+	.filter(p => p.id !== post.id) // Exclude current post
+	.filter(p => currentCategory ? (p.data as any).category === currentCategory : true)
+	.sort(() => Math.random() - 0.5) // Shuffle
+	.slice(0, 4); // Take 4 random posts from same category
+
+// If not enough related by category, fill with random posts
+if (relatedPosts.length < 4) {
+	const otherPosts = allPosts
+		.filter(p => p.id !== post.id)
+		.filter(p => !relatedPosts.find(rp => rp.id === p.id))
+		.sort(() => Math.random() - 0.5)
+		.slice(0, 4 - relatedPosts.length);
+	relatedPosts.push(...otherPosts);
+}
 ---
 
-<BlogPost {...post.data} slug={post.id}>
+<BlogPost {...post.data} slug={post.id} relatedPosts={relatedPosts} wordCount={wordCount}>
 	<Content />
 </BlogPost>

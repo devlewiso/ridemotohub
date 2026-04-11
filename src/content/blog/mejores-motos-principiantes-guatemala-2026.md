@@ -6,6 +6,10 @@ heroImage: '../../assets/blog-principiantes.webp'
 category: 'Tips & Consejos'
 aiGenerated: false
 imageAlt: 'Collage de motos para principiantes en Guatemala 2026 - Honda XR150L, Yamaha MT-15, KTM Duke 200 y Suzuki GSX-R150 mostradas en carreteras guatemaltecas'
+author:
+  name: 'Carlos Ramírez'
+  since: 2015
+  bio: 'Mecánico de motos y rider con más de 9 años de experiencia en rutas guatemaltecas'
 ---
 
 ## Introducción

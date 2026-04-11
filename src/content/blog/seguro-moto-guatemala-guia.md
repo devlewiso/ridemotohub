@@ -6,6 +6,10 @@ heroImage: '../../assets/blog-seguro-moto.webp'
 category: 'Tips & Consejos'
 aiGenerated: false
 imageAlt: 'Póliza de seguro SOAT y seguro de robo para motocicletas en Guatemala mostrando cobertura y protección'
+author:
+  name: 'Luis Hernández'
+  since: 2012
+  bio: 'Experto en seguros y rider que ha recorrido toda Centroamérica en moto'
 ---
 
 ## Introducción
