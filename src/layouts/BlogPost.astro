@@ -6,14 +6,45 @@ import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import Header from '../components/Header.astro';
 
-type Props = CollectionEntry<'blog'>['data'];
+interface Props extends CollectionEntry<'blog'>['data'] {
+	slug?: string;
+}
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, slug } = Astro.props;
+
+// Schema.org BlogPosting structured data
+const blogSchema = {
+	"@context": "https://schema.org",
+	"@type": "BlogPosting",
+	headline: title,
+	description: description,
+	image: heroImage ? new URL(heroImage.src, Astro.site) : null,
+	datePublished: pubDate.toISOString(),
+	dateModified: updatedDate ? updatedDate.toISOString() : pubDate.toISOString(),
+	author: {
+		"@type": "Person",
+		name: "RideMotoHub Guatemala",
+		url: Astro.site,
+	},
+	publisher: {
+		"@type": "Organization",
+		name: "RideMotoHub Guatemala",
+		logo: {
+			"@type": "ImageObject",
+			url: new URL("/favicon.svg", Astro.site),
+		},
+	},
+	mainEntityOfPage: {
+		"@type": "WebPage",
+		"@id": new URL(`/blog/${slug}/`, Astro.site),
+	},
+};
 ---
 
 <html lang="es">
 	<head>
-		<BaseHead title={title} description={description} />
+		<BaseHead title={title} description={description} image={heroImage} />
+		<script type="application/ld+json" set:html={JSON.stringify(blogSchema)} />
 		<style>
 			@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap');
 
@@ -261,6 +292,28 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				<!-- Contenido -->
 				<div class="prose">
 					<slot />
+
+					<!-- Internal Links Section -->
+					<div class="related-posts" style="margin-top: 3rem; padding: 1.5rem; background: var(--ov-surface-mid); border-radius: 12px; border: 1px solid rgba(105, 218, 255, 0.1);">
+						<h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 1.2rem; color: var(--ov-on-surface); margin-bottom: 1rem;">📚 También te puede interesar</h3>
+						<div class="related-links" style="display: flex; flex-wrap: wrap; gap: 0.75rem;">
+							<a href="/blog/cambio-aceite-moto-guia" style="padding: 0.5rem 1rem; background: rgba(105, 218, 255, 0.1); border-radius: 8px; color: var(--ov-primary); text-decoration: none; font-size: 0.9rem; border: none;">🔧 Cambio de aceite</a>
+							<a href="/blog/mantenimiento-cadena-moto" style="padding: 0.5rem 1rem; background: rgba(105, 218, 255, 0.1); border-radius: 8px; color: var(--ov-primary); text-decoration: none; font-size: 0.9rem; border: none;">⛓️ Mantenimiento de cadena</a>
+							<a href="/blog/ruta-peten-moto" style="padding: 0.5rem 1rem; background: rgba(172, 137, 255, 0.1); border-radius: 8px; color: var(--ov-secondary); text-decoration: none; font-size: 0.9rem; border: none;">🗺️ Ruta a Petén</a>
+							<a href="/blog/ruta-semuc-champey" style="padding: 0.5rem 1rem; background: rgba(172, 137, 255, 0.1); border-radius: 8px; color: var(--ov-secondary); text-decoration: none; font-size: 0.9rem; border: none;">💎 Semuc Champey</a>
+						</div>
+					</div>
+
+					<!-- CTAs -->
+					<div class="post-ctas" style="margin-top: 2.5rem; text-align: center; padding: 2rem; background: linear-gradient(135deg, rgba(105, 218, 255, 0.08), rgba(172, 137, 255, 0.08)); border-radius: 16px; border: 1px solid rgba(105, 218, 255, 0.15);">
+						<h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 1.3rem; color: var(--ov-on-surface); margin-bottom: 1rem;">🏍️ ¿Te gustó este contenido?</h3>
+						<p style="color: var(--ov-on-surface-var); margin-bottom: 1.5rem;">Compartilo con la comunidad y seguinos para más</p>
+						<div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
+							<a href="https://chat.whatsapp.com/ridemotohub" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; background: #25d366; color: #000; border-radius: 9999px; text-decoration: none; font-weight: 600; font-size: 0.95rem;">📱 Unirme al WhatsApp</a>
+							<a href="/blog" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; background: linear-gradient(135deg, var(--ov-primary), var(--ov-secondary)); color: #003d4d; border-radius: 9999px; text-decoration: none; font-weight: 600; font-size: 0.95rem;">📖 Más artículos</a>
+							<a href="https://www.instagram.com/ridemotohub" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; background: var(--ov-surface-mid); color: var(--ov-on-surface); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 9999px; text-decoration: none; font-weight: 600; font-size: 0.95rem;">📸 Seguir en Instagram</a>
+						</div>
+					</div>
 				</div>
 			</article>
 		</main>
