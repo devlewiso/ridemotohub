@@ -5,6 +5,7 @@ pubDate: 'Dec 28 2025'
 heroImage: '../../assets/blog-volcanes.webp'
 category: 'Historias de Ruta'
 aiGenerated: true
+imageAlt: 'Moto en ruta de volcanes de Guatemala con vista panorámica de volcanes Pacaya Agua y Fuego alineados en horizonte'
 ---
 
 🤖 **Creado con Inteligencia Artificial**

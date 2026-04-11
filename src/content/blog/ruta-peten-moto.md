@@ -5,6 +5,7 @@ pubDate: 'Jan 20 2026'
 heroImage: '../../assets/blog-peten-moto.webp'
 category: 'Rutas Guatemala'
 aiGenerated: false
+imageAlt: 'Motocicleta en ruta hacia Tikal Petén cruzando selva guatemalteca con templo maya al fondo al atardecer'
 ---
 
 ## La Ruta Más Larga de Guatemala

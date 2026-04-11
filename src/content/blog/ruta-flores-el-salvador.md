@@ -5,6 +5,7 @@ pubDate: 'Feb 10 2026'
 heroImage: '../../assets/blog-ruta-flores.webp'
 category: 'Rutas Internacionales'
 aiGenerated: false
+imageAlt: 'Moto estacionada en Ruta de las Flores El Salvador con casas coloridas coloniales y jardines de flores de fondo'
 ---
 
 ## Por Qué La Ruta de las Flores es Imperdible

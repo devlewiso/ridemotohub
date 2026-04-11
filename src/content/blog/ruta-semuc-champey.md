@@ -5,6 +5,7 @@ pubDate: 'Feb 5 2026'
 heroImage: '../../assets/blog-semuc-champey.webp'
 category: 'Rutas Guatemala'
 aiGenerated: false
+imageAlt: 'Piscinas naturales turquesas de Semuc Champey en Alta Verapaz Guatemala con moto estacionada cerca del río Cahabón'
 ---
 
 ## Por Qué Ir a Semuc Champey

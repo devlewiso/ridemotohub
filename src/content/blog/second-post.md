@@ -5,6 +5,7 @@ pubDate: 'Jan 10 2026'
 heroImage: '../../assets/blog-monterrico.webp'
 category: 'Historias de Ruta'
 aiGenerated: true
+imageAlt: 'Atardecer en playa Monterrico Guatemala con moto estacionada en arena negra volcánica y olas del Pacífico'
 ---
 
 🤖 **Creado con Inteligencia Artificial**

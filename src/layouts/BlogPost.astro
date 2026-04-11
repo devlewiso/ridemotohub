@@ -10,7 +10,10 @@ interface Props extends CollectionEntry<'blog'>['data'] {
 	slug?: string;
 }
 
-const { title, description, pubDate, updatedDate, heroImage, slug } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, slug, imageAlt, category } = Astro.props;
+
+// Generate SEO-optimized alt text
+const optimizedAlt = imageAlt || `${category ? category + ' - ' : ''}${title} - RideMotoHub Guatemala`;
 
 // Schema.org BlogPosting structured data
 const blogSchema = {
@@ -272,7 +275,7 @@ const blogSchema = {
 			<article>
 				<!-- Hero full viewport con título encima -->
 				<div class="hero-section">
-					{heroImage && <Image width={1920} height={1080} src={heroImage} alt={title} />}
+					{heroImage && <Image width={1920} height={1080} src={heroImage} alt={optimizedAlt} loading="eager" decoding="async" />}
 					<div class="post-header">
 						<div class="post-meta">
 							<span>RideMotoHub</span>

@@ -5,6 +5,7 @@ pubDate: 'Feb 2 2026'
 heroImage: '../../assets/blog-mujeres-riders.webp'
 category: 'Cultura Motera'
 aiGenerated: false
+imageAlt: 'Mujer motociclista guatemalteca con equipo de protección y casco posando junto a su moto en carretera'
 ---
 
 ## Un Mundo Históricamente Masculino

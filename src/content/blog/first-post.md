@@ -5,6 +5,7 @@ pubDate: 'Jan 15 2026'
 heroImage: '../../assets/blog-atitlan.webp'
 category: 'Historias de Ruta'
 aiGenerated: true
+imageAlt: 'Vista panorámica del Lago de Atitlán con volcanes San Pedro y Atitlán al fondo desde carretera en moto'
 ---
 
 🤖 **Creado con Inteligencia Artificial**

@@ -5,6 +5,7 @@ pubDate: 'Jan 30 2026'
 heroImage: '../../assets/blog-cambio-aceite.webp'
 category: 'Mecánica'
 aiGenerated: false
+imageAlt: 'Mecánico cambiando aceite de moto en taller - drenando aceite usado y reemplazando filtro en Guatemala'
 ---
 
 ## Por Qué es Importante el Cambio de Aceite
@@ -116,6 +117,29 @@ Marcas recomendadas: Motul, Castrol, Shell, Repsol (disponibles en Guatemala).
 - El filtro de aceite SIEMPRE con cada cambio
 - La arandela del tapón de drenaje
 - Desechar el aceite viejo correctamente (no en el drenaje)
+
+## Precios en Guatemala 💰
+
+**Cambio de aceite completo (incluye aceite + filtro + mano de obra):**
+- **En taller:** Q. 250 - 450
+- **DIY (tú mismo):** Q. 150 - 300 (solo materiales)
+
+**Aceite solo (1 litro):**
+- Mineral: Q. 35 - 50
+- Semi-sintético: Q. 60 - 85
+- Sintético: Q. 100 - 150
+
+## Marcas y Modelos Recomendados 🏍️
+
+**Ideal para motos populares en Guatemala:**
+- **Yamaha MT-03 / R3:** 10W-40 semi-sintético, 1.8L
+- **KTM 250 / 390:** 10W-50 sintético, 1.5L
+- **Honda CB500 / CBR500:** 10W-30 semi-sintético, 2.8L
+- **Suzuki GSX-R150:** 10W-40 semi-sintético, 1.1L
+- **Kawasaki Z400 / Ninja 400:** 10W-40 semi-sintético, 1.9L
+- **Honda XR150 / CBF150:** 20W-50 mineral, 1.0L
+
+*Consulta tu manual del propietario para la especificación exacta de tu moto.*
 
 ## Dónde Comprar en Guatemala
 

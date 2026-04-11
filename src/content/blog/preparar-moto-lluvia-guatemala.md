@@ -5,6 +5,7 @@ pubDate: 'Jan 22 2026'
 heroImage: '../../assets/blog-lluvia-guatemala.webp'
 category: 'Tips & Consejos'
 aiGenerated: false
+imageAlt: 'Moto con neumáticos de lluvia circulando en carretera mojada de Guatemala durante temporada de invierno con equipamiento impermeable'
 ---
 
 ## Por Qué Preparar Tu Moto para la Lluvia

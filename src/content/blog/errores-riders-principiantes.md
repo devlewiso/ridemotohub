@@ -5,6 +5,7 @@ pubDate: 'Feb 8 2026'
 heroImage: '../../assets/blog-errores-principiantes.webp'
 category: 'Tips & Consejos'
 aiGenerated: false
+imageAlt: 'Rider principiante con equipo de protección completo casco chaqueta y guantes evitando errores comunes de novatos en motocicleta'
 ---
 
 ## Por Qué Estos Errores Son Tan Comunes
@@ -25,6 +26,21 @@ El error más grave y más común. Muchos principiantes creen que "solo voy a la
 - Guantes
 - Pantalón largo (jeans mínimo)
 - Zapatos cerrados (no sandalias)
+
+**💰 Precios aproximados en Guatemala:**
+- **Cascos:**
+  - Básico certificado: Q. 450 - 800
+  - Intermedio (HJC, LS2): Q. 900 - 1,500
+  - Premium (AGV, Shoei): Q. 2,500 - 6,000+
+- **Chaqueta con protecciones:** Q. 500 - 1,200
+- **Guantes:** Q. 150 - 400
+- **Botas de moto:** Q. 600 - 1,500
+- **Pantalón con protección:** Q. 400 - 900
+
+**Marcas disponibles en Guatemala:**
+- Cascos: HJC, LS2, MT Helmets, AGV, Shoei
+- Chaquetas: Alpinestars, Dainese, Komine (importadas)
+- Guantes: Alpinestars, Dainese, Five
 
 ## Error #2: No Revisar la Moto Antes de Salir
 

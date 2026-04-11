@@ -5,6 +5,7 @@ pubDate: 'Jan 25 2026'
 heroImage: '../../assets/blog-historia-motociclismo.webp'
 category: 'Cultura Motera'
 aiGenerated: false
+imageAlt: 'Motocicletas clásicas y modernas en exposición histórica del motociclismo guatemalteco desde décadas pasadas hasta hoy'
 ---
 
 ## Los Inicios: Décadas de 1950-1960

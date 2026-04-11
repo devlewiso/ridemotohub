@@ -5,6 +5,7 @@ pubDate: 'Jan 05 2026'
 heroImage: '../../assets/blog-interamericana.webp'
 category: 'Historias de Ruta'
 aiGenerated: true
+imageAlt: 'Moto circulando por carretera Interamericana hacia Huehuetenango con montañas neblinosas de fondo en Guatemala'
 ---
 
 🤖 **Creado con Inteligencia Artificial**

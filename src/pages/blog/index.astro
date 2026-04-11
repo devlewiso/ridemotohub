@@ -450,7 +450,7 @@ const popular = posts.slice(0, 3);
 					<a href={`/blog/${featured.id}/`} class="featured-post">
 						{featured.data.heroImage && (
 							<div class="featured-img">
-								<Image width={1200} height={525} src={featured.data.heroImage} alt={featured.data.title} />
+								<Image width={1200} height={525} src={featured.data.heroImage} alt={featured.data.imageAlt || `${featured.data.title} - RideMotoHub`} loading="eager" decoding="async" />
 							</div>
 						)}
 						<div class="featured-body">
@@ -473,7 +473,7 @@ const popular = posts.slice(0, 3);
 							<a href={`/blog/${post.id}/`} class="post-card">
 								{post.data.heroImage && (
 									<div class="card-img">
-										<Image width={600} height={338} src={post.data.heroImage} alt={post.data.title} />
+										<Image width={600} height={338} src={post.data.heroImage} alt={post.data.imageAlt || `${post.data.title} - RideMotoHub`} loading="lazy" decoding="async" />
 									</div>
 								)}
 								<div class="card-body">
@@ -529,7 +529,7 @@ const popular = posts.slice(0, 3);
 									<a href={`/blog/${post.id}/`} class="popular-item">
 										{post.data.heroImage && (
 											<div class="popular-thumb">
-												<Image width={112} height={112} src={post.data.heroImage} alt={post.data.title} />
+												<Image width={112} height={112} src={post.data.heroImage} alt={post.data.imageAlt || `${post.data.title} - RideMotoHub`} loading="lazy" decoding="async" />
 											</div>
 										)}
 										<div>

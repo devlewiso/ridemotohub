@@ -5,6 +5,7 @@ pubDate: 'Jan 28 2026'
 heroImage: '../../assets/blog-chiapas-mexico.webp'
 category: 'Rutas Internacionales'
 aiGenerated: false
+imageAlt: 'Moto estacionada en ruta de montaña de San Cristóbal a Palenque Chiapas México con paisaje selvático'
 ---
 
 ## Por Qué Chiapas es Ideal para Rodar
