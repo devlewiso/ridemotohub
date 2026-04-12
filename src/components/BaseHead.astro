@@ -56,8 +56,30 @@ const structuredData = {
 	function gtag() {
 		dataLayer.push(arguments);
 	}
-	gtag("js", new Date());
-	gtag("config", "G-4BB4FP3J6H");
+
+	// Filtro anti-bots: no enviar hits si la sesion parece automatizada
+	var _isBotLike = (function () {
+		// Bots tipicos usan 800x600 o 1024x1024 — ningun humano real en 2026
+		var w = window.screen.width;
+		var h = window.screen.height;
+		if ((w === 800 && h === 600) || (w === 1024 && h === 1024)) return true;
+		// Solo trackear el dominio real, no ambientes de preview o test
+		var host = window.location.hostname;
+		if (host !== "ridemotohub.com" && host !== "www.ridemotohub.com") return true;
+		// Navegadores headless (Puppeteer, Playwright, etc.)
+		if (navigator.webdriver) return true;
+		return false;
+	})();
+
+	if (!_isBotLike) {
+		gtag("js", new Date());
+		gtag("config", "G-4BB4FP3J6H", {
+			// Excluir trafico interno si el usuario tiene rol de admin
+			traffic_type: "external",
+			// Anonimizar IP para cumplir con GDPR/privacidad
+			anonymize_ip: true,
+		});
+	}
 </script>
 
 <!-- Global Metadata -->

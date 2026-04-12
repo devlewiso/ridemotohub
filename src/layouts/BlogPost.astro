@@ -512,6 +512,56 @@ const postAuthor = author || { name: "RideMotoHub Team", since: 2020 };
 				border: 1px solid rgba(255, 255, 255, 0.1);
 			}
 
+			/* Share Bar */
+			.share-bar {
+				margin-top: 2.5rem;
+				padding: 1.5rem;
+				background: var(--ov-surface-mid);
+				border-radius: 12px;
+				border: 1px solid rgba(71, 70, 85, 0.5);
+				display: flex;
+				align-items: center;
+				gap: 1rem;
+				flex-wrap: wrap;
+			}
+
+			.share-label {
+				font-family: 'Space Grotesk', sans-serif;
+				font-size: 0.85rem;
+				font-weight: 700;
+				letter-spacing: 0.08em;
+				text-transform: uppercase;
+				color: var(--ov-on-surface-var);
+				white-space: nowrap;
+			}
+
+			.share-buttons {
+				display: flex;
+				gap: 0.75rem;
+				flex-wrap: wrap;
+			}
+
+			.share-btn {
+				display: inline-flex;
+				align-items: center;
+				gap: 0.45rem;
+				padding: 0.55rem 1.1rem;
+				border-radius: 9999px;
+				text-decoration: none;
+				font-weight: 600;
+				font-size: 0.88rem;
+				transition: all 0.2s;
+				cursor: pointer;
+				border: none;
+			}
+
+			.share-btn:hover { transform: scale(1.05); opacity: 0.92; }
+
+			.share-whatsapp { background: #25d366; color: #000; }
+			.share-facebook { background: #1877f2; color: #fff; }
+			.share-twitter  { background: #000; color: #fff; }
+			.share-copy     { background: var(--ov-surface-high); color: var(--ov-on-surface); border: 1px solid rgba(255,255,255,0.1); }
+
 			/* Comments Section */
 			.comments-section {
 				margin-top: 3rem;
@@ -615,6 +665,29 @@ const postAuthor = author || { name: "RideMotoHub Team", since: 2020 };
 								</div>
 							)}
 
+						<!-- Share Bar -->
+						<div class="share-bar">
+							<span class="share-label">Compartir</span>
+							<div class="share-buttons">
+								<a id="share-whatsapp" class="share-btn share-whatsapp" target="_blank" rel="noopener">
+									<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.136.562 4.14 1.542 5.877L0 24l6.293-1.515A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.808 9.808 0 01-5.017-1.38l-.36-.214-3.733.899.933-3.637-.235-.374A9.818 9.818 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
+									WhatsApp
+								</a>
+								<a id="share-facebook" class="share-btn share-facebook" target="_blank" rel="noopener">
+									<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+									Facebook
+								</a>
+								<a id="share-twitter" class="share-btn share-twitter" target="_blank" rel="noopener">
+									<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+									X
+								</a>
+								<button id="share-copy" class="share-btn share-copy">
+									<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+									Copiar link
+								</button>
+							</div>
+						</div>
+
 						<!-- CTAs -->
 						<div class="post-ctas">
 							<h3>🏍️ ¿Te gustó este contenido?</h3>
@@ -688,6 +761,30 @@ const postAuthor = author || { name: "RideMotoHub Team", since: 2020 };
 					headings.forEach(heading => observer.observe(heading));
 				}
 			});
+
+			// Share buttons
+			(function () {
+				var url   = encodeURIComponent(window.location.href);
+				var title = encodeURIComponent(document.title);
+
+				var wa = document.getElementById('share-whatsapp');
+				var fb = document.getElementById('share-facebook');
+				var tw = document.getElementById('share-twitter');
+				var cp = document.getElementById('share-copy');
+
+				if (wa) wa.href = 'https://wa.me/?text=' + title + '%20' + url;
+				if (fb) fb.href = 'https://www.facebook.com/sharer/sharer.php?u=' + url;
+				if (tw) tw.href = 'https://twitter.com/intent/tweet?text=' + title + '&url=' + url + '&via=ridemotohub';
+
+				if (cp) {
+					cp.addEventListener('click', function () {
+						navigator.clipboard.writeText(window.location.href).then(function () {
+							cp.textContent = '✓ Copiado';
+							setTimeout(function () { cp.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg> Copiar link'; }, 2000);
+						});
+					});
+				}
+			})();
 
 			// Disqus Comments
 			var disqus_config = function () {

@@ -1,6 +1,6 @@
 ---
 title: 'Mantenimiento de Cadena: Limpieza, Lubricación y Ajuste'
-description: 'Guía completa para mantener la cadena de tu moto en óptimas condiciones. Aprende a limpiarla, lubricarla y ajustarla correctamente para prolongar su vida útil.'
+description: 'Guía completa de mantenimiento preventivo de moto antes de viajar: cadena, aceite, frenos, llantas y más. Checklist completo para rutas guatemaltecas.'
 pubDate: 'Feb 12 2026'
 heroImage: '../../assets/blog-mantenimiento-cadena.webp'
 category: 'Mecánica'
@@ -199,6 +199,47 @@ Una cadena muy apretada o muy floja causa problemas.
 
 *Consejo: Invierte en una buena cadena O-ring. Las cadenas económicas sin sellos duran la mitad.*
 
+## Mantenimiento Preventivo de Moto Antes de Viajar
+
+Si vas a salir de ruta larga, la cadena es solo uno de los puntos del checklist. Antes de cualquier viaje revisa estos puntos para salir con la tranquilidad de que tu moto está lista:
+
+### Checklist Completo Pre-Viaje
+
+**Cadena (tema de este post):**
+- [ ] Tensión correcta (2-3 cm de juego)
+- [ ] Limpia y lubricada
+- [ ] Sin eslabones dañados
+
+**Motor:**
+- [ ] Nivel de aceite (entre mínimo y máximo)
+- [ ] Fecha del último cambio (no pasar de 5,000 km)
+- [ ] Sin fugas visibles en la tapa del motor
+
+**Frenos:**
+- [ ] Nivel de líquido de frenos (reservorio delantero y trasero)
+- [ ] Pastillas con material suficiente (mínimo 2mm)
+- [ ] Frenos responden firme sin hundirse
+
+**Llantas:**
+- [ ] Presión correcta (ver manual de tu moto, generalmente 28-32 PSI delantero, 32-36 PSI trasero)
+- [ ] Desgaste parejo, sin grietas en los costados
+- [ ] Sin clavos ni objetos incrustados
+
+**Luces y electricidad:**
+- [ ] Luces delanteras, trasera y de freno funcionando
+- [ ] Intermitentes operativos
+- [ ] Batería sin sulfatación visible
+
+**Documentos:**
+- [ ] Licencia vigente
+- [ ] Tarjeta de circulación
+- [ ] SOAT vigente
+- [ ] Si cruzas frontera: permiso de salida del vehículo
+
+**Tiempo estimado del checklist completo:** 20-30 minutos antes de salir.
+
+---
+
 ## Conclusión
 
 El mantenimiento de la cadena es simple pero requiere consistencia. Dedica unos minutos después de cada ride largo o cada semana si usas la moto diariamente.
@@ -220,4 +261,4 @@ Una cadena bien mantenida significa:
 
 ---
 
-*¿Tienes dudas sobre el mantenimiento de tu cadena? Pregunta en los comentarios. 🏍️*
+*¿Tienes dudas sobre el mantenimiento de tu cadena? Pregunta en los comentarios.*

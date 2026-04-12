@@ -1,0 +1,32 @@
+# Redirects 301 - URLs del sitio anterior
+# Formato: /url-vieja /url-nueva 301
+
+# Motos / Compra
+/motos-de-guatemala/                                                          /blog/mejores-motos-principiantes-guatemala-2026/  301
+/como-elegir-tu-primera-moto-sin-caer-en-el-marketing/                       /blog/mejores-motos-principiantes-guatemala-2026/  301
+
+# Rutas
+/las-mejores-rutas-en-moto-por-guatemala-del-altiplano-al-pacifico/          /rutas/  301
+/las-mejores-rutas-en-moto-por-guatemala-del-altiplano-al-pacifico-2/        /rutas/  301
+/rutas-de-montana-en-guatemala/                                               /rutas/  301
+
+# Mantenimiento
+/preparacion-de-la-moto-para-viajes-largos-en-carretera/                     /blog/mantenimiento-cadena-moto/  301
+/the-ultimate-guide-to-motorcycle-maintenance/                                /blog/mantenimiento-cadena-moto/  301
+/ultimate-guide-to-motorcycle-performance-upgrades-for-speed-enthusiasts/    /blog/cambio-aceite-moto-guia/    301
+/aumento-de-la-cilindrada-y-potencia-en-las-motocicletas/                    /blog/mantenimiento-cadena-moto/  301
+/vale-la-pena-modificar-el-escape-de-fabrica-guia-para-motos-urbanas-como-la-mt-03/  /tips/  301
+
+# Historia / Cultura
+/the-evolution-of-motorcycles-from-past-to-future/                           /blog/historia-motociclismo-guatemala/  301
+/top-trends-in-motorcycle-innovation/                                         /blog/historia-motociclismo-guatemala/  301
+/la-cultura-motera-en-guatemala-informalidad-pasion-y-desafios/              /blog/historia-motociclismo-guatemala/  301
+/the-power-of-brotherhood-more-than-a-hobby/                                 /about/  301
+
+# Equipamiento / Tips
+/understanding-motorcycle-helmet-safety-ratings/                              /tips/  301
+/estilo-sobre-ruedas-moda-y-proteccion-para-motociclistas/                   /tips/  301
+/los-mejores-cascos-y-accesorios-para-cada-tipo-de-viaje/                    /tips/  301
+
+# Comunidad
+/ridemotohub-la-red-que-une-a-todos-los-motociclistas-de-guatemala/          /about/  301
