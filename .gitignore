@@ -3,3 +3,8 @@ node_modules
 .astro/
 dist/
 .claude/
+.googleservices/
+context.md
+IMAGES-README.md
+IMAGES-WEBP-GUIDE.md
+SEO-README.md
