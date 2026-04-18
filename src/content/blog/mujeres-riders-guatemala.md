@@ -12,7 +12,7 @@ imageAlt: 'Mujer motociclista guatemalteca con equipo de protección y casco pos
 
 Durante décadas, el motociclismo fue visto como un espacio exclusivamente masculino. Las mujeres que se interesaban en las motos frecuentemente enfrentaban comentarios de asombro, desprecio, o simplemente eran ignoradas. Pero eso está cambiando rápidamente en Guatemala.
 
-Hoy, cada vez más mujeres están subiendo a sus motos, no solo como pasajeras, sino como conductorass legitimas. Hay una explosión de comunidad, apoyo, y visibilidad que está transformando la cultura motera Guatemalteca.
+Hoy, cada vez más mujeres están subiendo a sus motos, no solo como pasajeras, sino como conductoras legítimas. Hay una explosión de comunidad, apoyo, y visibilidad que está transformando la cultura motera Guatemalteca.
 
 ## La Nueva Generación de Riders
 
@@ -91,7 +91,7 @@ Las women riders Guatemaltecas se toman en serio la seguridad:
 - Pantalón con protección o jeans gruesos
 - Botas específicas para moto
 
-Marcas populares entre她们: Alpinestars, Fox, Shift, Thor, y opciones más económicas como elementos de tienda local.
+Marcas populares entre ellas: Alpinestars, Fox, Shift, Thor, y opciones más económicas como elementos de tienda local.
 
 ## Cómo Unirse a la Comunidad
 

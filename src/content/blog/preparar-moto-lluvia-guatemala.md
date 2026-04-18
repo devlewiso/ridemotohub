@@ -10,7 +10,7 @@ imageAlt: 'Moto con neumáticos de lluvia circulando en carretera mojada de Guat
 
 ## Por Qué Preparar Tu Moto para la Lluvia
 
-En Guatemala, la temporada de lluvias va de mayo a noviembre, y si eres rider, esto representa un cambio significativo en cómo conduces y cómo preparas tu moto. Las公路 se vuelven más resbalosas, la visibilidad disminuye, y los tiempos de frenado aumentan drásticamente.
+En Guatemala, la temporada de lluvias va de mayo a noviembre, y si eres rider, esto representa un cambio significativo en cómo conduces y cómo preparas tu moto. Las carreteras se vuelven más resbalosas, la visibilidad disminuye, y los tiempos de frenado aumentan drásticamente.
 
 Pero no te preocupes: con la preparación adecuada, puedes seguir rodando de manera segura durante todo el año. Aquí te damos la guía completa.
 
@@ -27,7 +27,7 @@ Los neumáticos son tu único contacto con la carretera. En lluvia, un buen set 
 - Si vas a rodar mucho en lluvia, considera neumáticos con mejor drenado de agua
 - Las llantas mixtas (70% calle, 30% off-road) funcionan bien en nuestras carreteras mojadas
 
-## 2. Sistema de Frenos: Tu Mejor朋友
+## 2. Sistema de Frenos: Tu Mejor Aliado
 
 En mojado, la distancia de frenado puede aumentar hasta un 50%. Por eso tus frenos deben estar en perfectas condiciones.
 
@@ -113,6 +113,10 @@ Algunas zonas son más problematicas que otras:
 - Valle de Guatemala (cuando no hay lluvia intensa)
 - Antigua (si no hay alerta de lluvia)
 - Parts de Quetzaltenango cuando el clima lo permita
+
+## Más Consejos para Riders
+
+Consulta nuestra sección de [Tips & Consejos](/tips/) para técnicas de conducción defensiva, frenado de emergencia y todo lo que necesitas saber para rodar seguro en Guatemala. Y no olvides que la cadena también sufre más en época de lluvia: revisa la [guía de mantenimiento de cadena](/blog/mantenimiento-cadena-moto/).
 
 ## Conclusión
 

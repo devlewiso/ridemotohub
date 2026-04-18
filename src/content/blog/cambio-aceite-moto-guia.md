@@ -10,7 +10,7 @@ imageAlt: 'Mecánico cambiando aceite de moto en taller - drenando aceite usado 
 
 ## Por Qué es Importante el Cambio de Aceite
 
-El aceite es la sangre de tu motor. Lubrica las partes móviles, reduce la fricción, ayuda a cools down los componentes, y evita que el desgaste destruya tu motor. En una moto, donde el motor está expuesto a condiciones extremas, mantener el aceite en buen estado es crítico.
+El aceite es la sangre de tu motor. Lubrica las partes móviles, reduce la fricción, ayuda a enfriar los componentes, y evita que el desgaste destruya tu motor. En una moto, donde el motor está expuesto a condiciones extremas, mantener el aceite en buen estado es crítico.
 
 Un aceite sucio o gastado puede causar:
 - Desgaste prematuro de piezas internas
@@ -54,7 +54,7 @@ La mayoría de los fabricantes recomiendan cambiar el aceite cada 3,000-5,000 km
 2. Con la llave adecuada, gira el tapón en sentido antihorario.
 3. Deja que el aceite fluya completamente (2-3 minutos).
 4. Una vez drenado, limpia el tapón y la rosca con un trapo.
-5. Instala una nueva arandela (si tu modelo la usa) y закрой el tapón. Aprieta bien pero no exageres (generalmente 20-30 Nm).
+5. Instala una nueva arandela (si tu modelo la usa) y cierra el tapón. Aprieta bien pero no exageres (generalmente 20-30 Nm).
 
 ## Paso 3: Cambia el Filtro de Aceite
 
@@ -104,7 +104,7 @@ Marcas recomendadas: Motul, Castrol, Shell, Repsol (disponibles en Guatemala).
 
 **Frecuencia de cambio:**
 - Uso normal: cada 5,000 km
-- Uso intensivo (tráfico,尘土, temperaturas extremas): cada 3,000-4,000 km
+- Uso intensivo (tráfico, tierra/polvo, temperaturas extremas): cada 3,000-4,000 km
 - Uso ocasional: mínimo anual
 
 **Señales de que necesitas cambio urgente:**
@@ -148,9 +148,13 @@ Marcas recomendadas: Motul, Castrol, Shell, Repsol (disponibles en Guatemala).
 - Agencias de marcas (para aceite específico de tu moto)
 - Online: mercado.com.gt, shops de Facebook
 
+## Otros Mantenimientos que No Debes Olvidar
+
+El aceite es fundamental, pero no es el único componente que necesita atención regular. Si ya dominas el cambio de aceite, el siguiente paso es aprender sobre el [mantenimiento de la cadena: limpieza, lubricación y ajuste de tensión](/blog/mantenimiento-cadena-moto/). Una cadena en mal estado puede transmitir mal la potencia que tu motor recién lubricado genera.
+
 ## Conclusión
 
-Cambiar el aceite de tu moto es una de las mantenimiento más importantes y que puedes hacer en casa con herramientas básicas. No requiere experiencia especializada, solo cuidado y atención.
+Cambiar el aceite de tu moto es uno de los mantenimientos más importantes y que puedes hacer en casa con herramientas básicas. No requiere experiencia especializada, solo cuidado y atención.
 
 Invertir tiempo en mantener el aceite de tu moto te ahorrará dinero en reparaciones mayores y extenderá la vida de tu motor.
 
@@ -161,7 +165,7 @@ Invertir tiempo en mantener el aceite de tu moto te ahorrará dinero en reparaci
 - [ ] Aceite y filtro nuevos adquiridos
 - [ ] Superficie nivelada para trabajar
 - [ ] Motor calentado antes de drenar
-- [ ]新旧 filtro instalado correctamente
+- [ ] Nuevo filtro instalado correctamente
 - [ ] Nivel de aceite verificado después de llenar
 
 ---

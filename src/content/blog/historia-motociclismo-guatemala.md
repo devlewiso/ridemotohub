@@ -31,7 +31,7 @@ El cambio más significativo llegó con la entrada de las motocicletas de origen
 Esto transformó completamente el panorama del motociclismo en Guatemala:
 - Más personas pudieron comprar su primera moto
 - Las motos se convirtieron en herramienta de trabajo (repartidores, taxistas)
-- появиeron nuevos perfiles de riders: trabajadores diario que dependían de la moto
+- surgieron nuevos perfiles de riders: trabajadores que dependían de la moto a diario
 
 Simultáneamente, las marcas japonesas y algunas europeas continuaron ofreciendo opciones de mayor cilindrada para quienes buscaban performance y status.
 

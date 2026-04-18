@@ -2,6 +2,34 @@
 import BaseHead from "../components/BaseHead.astro";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
+
+const eventSchema = {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    name: "Caravana del Zorro — Guatemala 2026",
+    startDate: "2026-02-07T07:00:00-06:00",
+    endDate: "2026-02-07T20:00:00-06:00",
+    eventStatus: "https://schema.org/EventScheduled",
+    eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+    description: "El evento motero más grande de Guatemala. La legendaria Caravana del Zorro regresa este primer fin de semana de febrero. Miles de riders, música en vivo, comida y mucho más.",
+    isAccessibleForFree: true,
+    location: {
+        "@type": "Place",
+        name: "Ciudad de Guatemala",
+        address: {
+            "@type": "PostalAddress",
+            addressLocality: "Ciudad de Guatemala",
+            addressRegion: "Guatemala",
+            addressCountry: "GT",
+        },
+    },
+    organizer: {
+        "@type": "Organization",
+        name: "RideMotoHub Guatemala",
+        url: "https://ridemotohub.com",
+    },
+    url: "https://ridemotohub.com/eventos/caravana-del-zorro-2026",
+};
 ---
 
 <!doctype html>
@@ -11,6 +39,7 @@ import Header from "../components/Header.astro";
             title="Eventos - RideMotoHub Guatemala"
             description="Descubre los próximos eventos, rodadas y encuentros de la comunidad motera de Guatemala. Únete a la familia RideMotoHub."
         />
+        <script type="application/ld+json" set:html={JSON.stringify(eventSchema)} />
     </head>
     <body>
         <Header />
@@ -29,8 +58,8 @@ import Header from "../components/Header.astro";
             <div class="container">
 
                 <div class="section-header">
-                    <span class="section-label">Próximos eventos</span>
-                    <h2>No te quedes fuera</h2>
+                    <span class="section-label">Calendario 2026</span>
+                    <h2>Próximos Eventos en Guatemala</h2>
                 </div>
 
                 <!-- Caravana del Zorro — evento destacado -->
@@ -81,6 +110,90 @@ import Header from "../components/Header.astro";
                     <a href="/blog" class="btn-cta">Proponer evento</a>
                 </div>
 
+            </div>
+        </section>
+
+        <!-- Historial de Eventos -->
+        <section class="events-section past-events-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">Comunidad activa</span>
+                    <h2>Eventos Pasados</h2>
+                </div>
+                <div class="past-events-grid">
+                    <article class="past-event-card">
+                        <div class="past-event-date">
+                            <span class="past-day">14</span>
+                            <span class="past-month">DIC</span>
+                            <span class="past-year">2025</span>
+                        </div>
+                        <div class="past-event-info">
+                            <h3>Rodada Navideña 2025</h3>
+                            <p>Ciudad de Guatemala</p>
+                            <span class="past-badge">✓ Realizado</span>
+                        </div>
+                    </article>
+                    <article class="past-event-card">
+                        <div class="past-event-date">
+                            <span class="past-day">15</span>
+                            <span class="past-month">SEP</span>
+                            <span class="past-year">2025</span>
+                        </div>
+                        <div class="past-event-info">
+                            <h3>Rodada de Independencia 2025</h3>
+                            <p>Ciudad de Guatemala — Antigua</p>
+                            <span class="past-badge">✓ Realizado</span>
+                        </div>
+                    </article>
+                    <article class="past-event-card">
+                        <div class="past-event-date">
+                            <span class="past-day">08</span>
+                            <span class="past-month">FEB</span>
+                            <span class="past-year">2025</span>
+                        </div>
+                        <div class="past-event-info">
+                            <h3>Caravana del Zorro 2025</h3>
+                            <p>Ciudad de Guatemala</p>
+                            <span class="past-badge">✓ Realizado</span>
+                        </div>
+                    </article>
+                    <article class="past-event-card">
+                        <div class="past-event-date">
+                            <span class="past-day">01</span>
+                            <span class="past-month">NOV</span>
+                            <span class="past-year">2024</span>
+                        </div>
+                        <div class="past-event-info">
+                            <h3>Rodada al Lago de Atitlán</h3>
+                            <p>Guatemala City — Panajachel</p>
+                            <span class="past-badge">✓ Realizado</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Explorar más -->
+        <section class="explore-more">
+            <div class="container">
+                <p class="explore-label">Explorar más</p>
+                <div class="explore-grid">
+                    <a href="/rutas" class="explore-card">
+                        <span class="explore-icon">🗺️</span>
+                        <span class="explore-title">Rutas en Moto</span>
+                        <span class="explore-desc">Las mejores rutas de Guatemala para riders</span>
+                    </a>
+                    <a href="/tips" class="explore-card">
+                        <span class="explore-icon">💡</span>
+                        <span class="explore-title">Tips & Consejos</span>
+                        <span class="explore-desc">Mantenimiento, seguridad y técnicas de conducción</span>
+                    </a>
+                    <a href="/blog" class="explore-card">
+                        <span class="explore-icon">📝</span>
+                        <span class="explore-title">Blog</span>
+                        <span class="explore-desc">Historias, guías y cultura motera desde Guatemala</span>
+                    </a>
+                </div>
             </div>
         </section>
 
@@ -408,6 +521,81 @@ import Header from "../components/Header.astro";
 
     .btn-cta:hover { opacity: 0.9; transform: translateY(-2px); }
 
+    /* ── Past Events ── */
+    .past-events-section {
+        background: var(--ov-surface-low);
+        border-top: 1px solid rgba(71, 70, 85, 0.3);
+    }
+
+    .past-events-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .past-event-card {
+        display: flex;
+        align-items: center;
+        gap: 1.25rem;
+        padding: 1.25rem 1.5rem;
+        background: var(--ov-surface-mid);
+        border-radius: 14px;
+        border: 1px solid rgba(71, 70, 85, 0.3);
+        opacity: 0.75;
+        transition: opacity 0.2s;
+    }
+    .past-event-card:hover { opacity: 1; }
+
+    .past-event-date {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-width: 48px;
+        text-align: center;
+    }
+
+    .past-day {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 1.6rem;
+        font-weight: 900;
+        line-height: 1;
+        color: var(--ov-on-surface-var);
+    }
+
+    .past-month {
+        font-size: 0.65rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        color: var(--ov-on-surface-var);
+        text-transform: uppercase;
+    }
+
+    .past-year {
+        font-size: 0.6rem;
+        color: var(--ov-outline-var);
+    }
+
+    .past-event-info h3 {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: var(--ov-on-surface);
+        margin: 0 0 0.2rem;
+    }
+
+    .past-event-info p {
+        font-size: 0.78rem;
+        color: var(--ov-on-surface-var);
+        margin: 0 0 0.4rem;
+    }
+
+    .past-badge {
+        font-size: 0.68rem;
+        font-weight: 700;
+        color: #69da64;
+        letter-spacing: 0.05em;
+    }
+
     /* Responsive */
     @media (max-width: 768px) {
         .event-featured {
@@ -426,5 +614,62 @@ import Header from "../components/Header.astro";
         .date-day { font-size: 2rem; }
 
         .cta-box { padding: 2.5rem 1.5rem; }
+        .explore-grid { grid-template-columns: 1fr; }
+        .past-events-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ── Explorar más ── */
+    .explore-more {
+        background: var(--ov-surface-low);
+        padding: 4rem 0;
+        border-top: 1px solid rgba(71, 70, 85, 0.3);
+    }
+
+    .explore-label {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--ov-on-surface-var);
+        text-align: center;
+        margin: 0 0 1.5rem;
+    }
+
+    .explore-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+
+    .explore-card {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+        padding: 1.5rem;
+        background: var(--ov-surface-mid);
+        border-radius: 14px;
+        text-decoration: none;
+        transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+    }
+    .explore-card:hover {
+        transform: translateY(-4px);
+        background: var(--ov-surface-high);
+        box-shadow: 0 12px 28px rgba(105, 218, 255, 0.07);
+    }
+
+    .explore-icon { font-size: 1.5rem; }
+
+    .explore-title {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: var(--ov-on-surface);
+    }
+
+    .explore-desc {
+        font-size: 0.8rem;
+        color: var(--ov-on-surface-var);
+        line-height: 1.5;
     }
 </style>

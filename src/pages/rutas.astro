@@ -29,126 +29,132 @@ import Header from "../components/Header.astro";
             <div class="container">
 
                 <!-- Ruta Destacada -->
-                <article class="route-card featured">
-                    <div class="route-flag">⭐ Destacada</div>
-                    <div class="route-main">
-                        <div class="route-info">
-                            <h2>Antigua — Lago de Atitlán</h2>
-                            <div class="route-meta">
-                                <span class="pill pill-medium">🎯 Intermedio</span>
-                                <span class="pill pill-neutral">📏 180 km</span>
-                                <span class="pill pill-neutral">⏱️ 4–5 hrs</span>
+                <section class="routes-group">
+                    <h2 class="routes-group-title">Ruta Destacada del Mes</h2>
+                    <article class="route-card featured">
+                        <div class="route-flag">⭐ Recomendada</div>
+                        <div class="route-main">
+                            <div class="route-info">
+                                <h3>Antigua — Lago de Atitlán</h3>
+                                <div class="route-meta">
+                                    <span class="pill pill-medium">🎯 Intermedio</span>
+                                    <span class="pill pill-neutral">📏 180 km</span>
+                                    <span class="pill pill-neutral">⏱️ 4–5 hrs</span>
+                                </div>
+                                <p>Una de las rutas más espectaculares de Guatemala. Atraviesa pueblos coloniales, montañas y termina en las orillas del majestuoso Lago de Atitlán. Ideal para riders que buscan paisajes increíbles y curvas emocionantes.</p>
+                                <div class="route-tip">
+                                    <span class="tip-label">💡 Consejo</span>
+                                    Sal temprano para evitar el tráfico y disfrutar de la mejor luz para fotos.
+                                </div>
                             </div>
-                            <p>Una de las rutas más espectaculares de Guatemala. Atraviesa pueblos coloniales, montañas y termina en las orillas del majestuoso Lago de Atitlán. Ideal para riders que buscan paisajes increíbles y curvas emocionantes.</p>
-                            <div class="route-tip">
-                                <span class="tip-label">💡 Consejo</span>
-                                Sal temprano para evitar el tráfico y disfrutar de la mejor luz para fotos.
+                            <div class="route-highlights">
+                                <h4>Puntos destacados</h4>
+                                <ul>
+                                    <li>🏛️ Centro histórico de Antigua</li>
+                                    <li>🌋 Vistas de volcanes activos</li>
+                                    <li>🏞️ Mirador del Lago de Atitlán</li>
+                                    <li>🍽️ Gastronomía local en Panajachel</li>
+                                </ul>
                             </div>
                         </div>
-                        <div class="route-highlights">
-                            <h4>Puntos destacados</h4>
-                            <ul>
-                                <li>🏛️ Centro histórico de Antigua</li>
-                                <li>🌋 Vistas de volcanes activos</li>
-                                <li>🏞️ Mirador del Lago de Atitlán</li>
-                                <li>🍽️ Gastronomía local en Panajachel</li>
-                            </ul>
-                        </div>
+                    </article>
+                </section>
+
+                <!-- Todas las Rutas -->
+                <section class="routes-group">
+                    <h2 class="routes-group-title">Todas las Rutas en Moto</h2>
+                    <div class="routes-grid">
+                        <article class="route-card">
+                            <div class="route-info">
+                                <h3>Ciudad de Guatemala — Monterrico</h3>
+                                <div class="route-meta">
+                                    <span class="pill pill-easy">🎯 Fácil</span>
+                                    <span class="pill pill-neutral">📏 120 km</span>
+                                    <span class="pill pill-neutral">⏱️ 2–3 hrs</span>
+                                </div>
+                                <p>Ruta costera perfecta para un día de playa. Carretera en buen estado con poco tráfico. Ideal para riders principiantes o un paseo relajado.</p>
+                                <ul class="highlights-list">
+                                    <li>🏖️ Playas de arena negra</li>
+                                    <li>🌅 Atardeceres espectaculares</li>
+                                    <li>🦎 Reserva natural de tortugas</li>
+                                    <li>🍤 Mariscos frescos</li>
+                                </ul>
+                            </div>
+                        </article>
+
+                        <article class="route-card">
+                            <div class="route-info">
+                                <h3>Cobán — Semuc Champey</h3>
+                                <div class="route-meta">
+                                    <span class="pill pill-hard">🎯 Avanzado</span>
+                                    <span class="pill pill-neutral">📏 220 km</span>
+                                    <span class="pill pill-neutral">⏱️ 5–6 hrs</span>
+                                </div>
+                                <p>Ruta desafiante a través de las montañas de Alta Verapaz. Caminos sinuosos y clima variable. Solo para riders experimentados con motos adecuadas.</p>
+                                <ul class="highlights-list">
+                                    <li>💎 Piscinas naturales de Semuc Champey</li>
+                                    <li>🌲 Bosque nuboso</li>
+                                    <li>🦜 Observación de aves exóticas</li>
+                                    <li>🏞️ Cuevas y cascadas</li>
+                                </ul>
+                            </div>
+                        </article>
+
+                        <article class="route-card">
+                            <div class="route-info">
+                                <h3>Interamericana Norte — Huehuetenango</h3>
+                                <div class="route-meta">
+                                    <span class="pill pill-medium">🎯 Intermedio</span>
+                                    <span class="pill pill-neutral">📏 300 km</span>
+                                    <span class="pill pill-neutral">⏱️ 6–7 hrs</span>
+                                </div>
+                                <p>La carretera Interamericana ofrece un viaje largo pero gratificante hacia el norte del país. Paisajes variados y pueblos auténticos en el camino.</p>
+                                <ul class="highlights-list">
+                                    <li>🏔️ Paisajes montañosos</li>
+                                    <li>🎨 Mercados de artesanías</li>
+                                    <li>⛪ Iglesias coloniales</li>
+                                    <li>☕ Fincas de café</li>
+                                </ul>
+                            </div>
+                        </article>
+
+                        <article class="route-card">
+                            <div class="route-info">
+                                <h3>Circuito de los Volcanes</h3>
+                                <div class="route-meta">
+                                    <span class="pill pill-medium">🎯 Intermedio</span>
+                                    <span class="pill pill-neutral">📏 150 km</span>
+                                    <span class="pill pill-neutral">⏱️ 4 hrs</span>
+                                </div>
+                                <p>Circuito circular que rodea varios volcanes activos. Vistas impresionantes y oportunidades fotográficas únicas. Mejor en días despejados.</p>
+                                <ul class="highlights-list">
+                                    <li>🌋 Volcán de Pacaya</li>
+                                    <li>🌋 Volcán de Agua</li>
+                                    <li>🌋 Volcán de Fuego</li>
+                                    <li>📸 Miradores panorámicos</li>
+                                </ul>
+                            </div>
+                        </article>
+
+                        <article class="route-card">
+                            <div class="route-info">
+                                <h3>Petén — Ruinas de Tikal</h3>
+                                <div class="route-meta">
+                                    <span class="pill pill-hard">🎯 Avanzado</span>
+                                    <span class="pill pill-neutral">📏 500+ km</span>
+                                    <span class="pill pill-neutral">⏱️ 2–3 días</span>
+                                </div>
+                                <p>Aventura épica hacia las ruinas mayas de Tikal. Requiere planificación cuidadosa. Mejor hacerla en grupo con preparación previa.</p>
+                                <ul class="highlights-list">
+                                    <li>🏛️ Ruinas mayas de Tikal</li>
+                                    <li>🌴 Selva tropical</li>
+                                    <li>🦜 Fauna exótica</li>
+                                    <li>🌟 Cielos estrellados</li>
+                                </ul>
+                            </div>
+                        </article>
                     </div>
-                </article>
-
-                <!-- Grid rutas -->
-                <div class="routes-grid">
-                    <article class="route-card">
-                        <div class="route-info">
-                            <h2>Ciudad de Guatemala — Monterrico</h2>
-                            <div class="route-meta">
-                                <span class="pill pill-easy">🎯 Fácil</span>
-                                <span class="pill pill-neutral">📏 120 km</span>
-                                <span class="pill pill-neutral">⏱️ 2–3 hrs</span>
-                            </div>
-                            <p>Ruta costera perfecta para un día de playa. Carretera en buen estado con poco tráfico. Ideal para riders principiantes o un paseo relajado.</p>
-                            <ul class="highlights-list">
-                                <li>🏖️ Playas de arena negra</li>
-                                <li>🌅 Atardeceres espectaculares</li>
-                                <li>🦎 Reserva natural de tortugas</li>
-                                <li>🍤 Mariscos frescos</li>
-                            </ul>
-                        </div>
-                    </article>
-
-                    <article class="route-card">
-                        <div class="route-info">
-                            <h2>Cobán — Semuc Champey</h2>
-                            <div class="route-meta">
-                                <span class="pill pill-hard">🎯 Avanzado</span>
-                                <span class="pill pill-neutral">📏 220 km</span>
-                                <span class="pill pill-neutral">⏱️ 5–6 hrs</span>
-                            </div>
-                            <p>Ruta desafiante a través de las montañas de Alta Verapaz. Caminos sinuosos y clima variable. Solo para riders experimentados con motos adecuadas.</p>
-                            <ul class="highlights-list">
-                                <li>💎 Piscinas naturales de Semuc Champey</li>
-                                <li>🌲 Bosque nuboso</li>
-                                <li>🦜 Observación de aves exóticas</li>
-                                <li>🏞️ Cuevas y cascadas</li>
-                            </ul>
-                        </div>
-                    </article>
-
-                    <article class="route-card">
-                        <div class="route-info">
-                            <h2>Interamericana Norte</h2>
-                            <div class="route-meta">
-                                <span class="pill pill-medium">🎯 Intermedio</span>
-                                <span class="pill pill-neutral">📏 300 km</span>
-                                <span class="pill pill-neutral">⏱️ 6–7 hrs</span>
-                            </div>
-                            <p>La carretera Interamericana ofrece un viaje largo pero gratificante hacia el norte del país. Paisajes variados y pueblos auténticos en el camino.</p>
-                            <ul class="highlights-list">
-                                <li>🏔️ Paisajes montañosos</li>
-                                <li>🎨 Mercados de artesanías</li>
-                                <li>⛪ Iglesias coloniales</li>
-                                <li>☕ Fincas de café</li>
-                            </ul>
-                        </div>
-                    </article>
-
-                    <article class="route-card">
-                        <div class="route-info">
-                            <h2>Ruta de los Volcanes</h2>
-                            <div class="route-meta">
-                                <span class="pill pill-medium">🎯 Intermedio</span>
-                                <span class="pill pill-neutral">📏 150 km</span>
-                                <span class="pill pill-neutral">⏱️ 4 hrs</span>
-                            </div>
-                            <p>Circuito circular que rodea varios volcanes activos. Vistas impresionantes y oportunidades fotográficas únicas. Mejor en días despejados.</p>
-                            <ul class="highlights-list">
-                                <li>🌋 Volcán de Pacaya</li>
-                                <li>🌋 Volcán de Agua</li>
-                                <li>🌋 Volcán de Fuego</li>
-                                <li>📸 Miradores panorámicos</li>
-                            </ul>
-                        </div>
-                    </article>
-
-                    <article class="route-card">
-                        <div class="route-info">
-                            <h2>Petén — Tikal</h2>
-                            <div class="route-meta">
-                                <span class="pill pill-hard">🎯 Avanzado</span>
-                                <span class="pill pill-neutral">📏 500+ km</span>
-                                <span class="pill pill-neutral">⏱️ 2–3 días</span>
-                            </div>
-                            <p>Aventura épica hacia las ruinas mayas de Tikal. Requiere planificación cuidadosa. Mejor hacerla en grupo con preparación previa.</p>
-                            <ul class="highlights-list">
-                                <li>🏛️ Ruinas mayas de Tikal</li>
-                                <li>🌴 Selva tropical</li>
-                                <li>🦜 Fauna exótica</li>
-                                <li>🌟 Cielos estrellados</li>
-                            </ul>
-                        </div>
-                    </article>
-                </div>
+                </section>
 
                 <!-- CTA -->
                 <div class="cta-box">
@@ -157,6 +163,30 @@ import Header from "../components/Header.astro";
                     <a href="/blog" class="btn-cta">Compartir ruta</a>
                 </div>
 
+            </div>
+        </section>
+
+        <!-- Explorar más -->
+        <section class="explore-more">
+            <div class="container">
+                <p class="explore-label">Explorar más</p>
+                <div class="explore-grid">
+                    <a href="/eventos" class="explore-card">
+                        <span class="explore-icon">📅</span>
+                        <span class="explore-title">Eventos & Rodadas</span>
+                        <span class="explore-desc">Próximas rodadas y encuentros de la comunidad</span>
+                    </a>
+                    <a href="/tips" class="explore-card">
+                        <span class="explore-icon">💡</span>
+                        <span class="explore-title">Tips & Consejos</span>
+                        <span class="explore-desc">Mantenimiento, seguridad y técnicas de conducción</span>
+                    </a>
+                    <a href="/blog" class="explore-card">
+                        <span class="explore-icon">📝</span>
+                        <span class="explore-title">Blog</span>
+                        <span class="explore-desc">Historias, guías y cultura motera desde Guatemala</span>
+                    </a>
+                </div>
             </div>
         </section>
 
@@ -311,7 +341,29 @@ import Header from "../components/Header.astro";
     }
 
     /* Contenido de ruta */
-    .route-info h2 {
+    /* Section H2 titles */
+    .routes-group { margin-bottom: 3rem; }
+
+    .routes-group-title {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--ov-primary);
+        margin: 0 0 1.25rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+    }
+    .routes-group-title::after {
+        content: '';
+        flex: 1;
+        height: 1px;
+        background: rgba(105, 218, 255, 0.15);
+    }
+
+    .route-info h3 {
         font-family: 'Space Grotesk', sans-serif;
         font-size: clamp(1.1rem, 2vw, 1.4rem);
         font-weight: 700;
@@ -320,7 +372,7 @@ import Header from "../components/Header.astro";
         margin: 0 0 0.85rem;
     }
 
-    .route-card.featured .route-info h2 {
+    .route-card.featured .route-info h3 {
         font-size: clamp(1.4rem, 2.5vw, 1.9rem);
     }
 
@@ -472,5 +524,61 @@ import Header from "../components/Header.astro";
     @media (max-width: 768px) {
         .routes-grid { grid-template-columns: 1fr; }
         .cta-box { padding: 2.5rem 1.5rem; }
+        .explore-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ── Explorar más ── */
+    .explore-more {
+        background: var(--ov-surface-low);
+        padding: 4rem 0;
+        border-top: 1px solid rgba(71, 70, 85, 0.3);
+    }
+
+    .explore-label {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--ov-on-surface-var);
+        text-align: center;
+        margin: 0 0 1.5rem;
+    }
+
+    .explore-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+
+    .explore-card {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+        padding: 1.5rem;
+        background: var(--ov-surface-mid);
+        border-radius: 14px;
+        text-decoration: none;
+        transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+    }
+    .explore-card:hover {
+        transform: translateY(-4px);
+        background: var(--ov-surface-high);
+        box-shadow: 0 12px 28px rgba(105, 218, 255, 0.07);
+    }
+
+    .explore-icon { font-size: 1.5rem; }
+
+    .explore-title {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: var(--ov-on-surface);
+    }
+
+    .explore-desc {
+        font-size: 0.8rem;
+        color: var(--ov-on-surface-var);
+        line-height: 1.5;
     }
 </style>

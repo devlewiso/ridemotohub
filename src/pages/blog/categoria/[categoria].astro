@@ -1,0 +1,335 @@
+---
+import { Image } from 'astro:assets';
+import { getCollection } from 'astro:content';
+import BaseHead from '../../../components/BaseHead.astro';
+import Footer from '../../../components/Footer.astro';
+import FormattedDate from '../../../components/FormattedDate.astro';
+import Header from '../../../components/Header.astro';
+import { SITE_TITLE } from '../../../consts';
+
+function categorySlug(cat: string): string {
+	return cat
+		.toLowerCase()
+		.normalize('NFD')
+		.replace(/[\u0300-\u036f]/g, '')
+		.replace(/&/g, 'y')
+		.replace(/\s+/g, '-')
+		.replace(/[^a-z0-9-]/g, '');
+}
+
+export async function getStaticPaths() {
+	function categorySlug(cat: string): string {
+		return cat
+			.toLowerCase()
+			.normalize('NFD')
+			.replace(/[\u0300-\u036f]/g, '')
+			.replace(/&/g, 'y')
+			.replace(/\s+/g, '-')
+			.replace(/[^a-z0-9-]/g, '');
+	}
+
+	const posts = await getCollection('blog');
+	const categoriesSet = new Set<string>();
+	posts.forEach(p => {
+		const cat = (p.data as any).category ?? 'General';
+		categoriesSet.add(cat);
+	});
+
+	return Array.from(categoriesSet).map(cat => ({
+		params: { categoria: categorySlug(cat) },
+		props: { categoryName: cat },
+	}));
+}
+
+interface Props {
+	categoryName: string;
+}
+
+const { categoryName } = Astro.props;
+
+const allPosts = await getCollection('blog');
+const posts = allPosts
+	.filter(p => ((p.data as any).category ?? 'General') === categoryName)
+	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const categoryIcons: Record<string, string> = {
+	'Mecánica': '🔧',
+	'Tips & Consejos': '💡',
+	'Cultura Motera': '🏍️',
+	'Rutas Guatemala': '🗺️',
+	'Historias de Ruta': '📖',
+	'Rutas': '🗺️',
+	'Legal': '⚖️',
+	'Rutas Internacionales': '🌎',
+	'General': '📝',
+};
+
+const icon = categoryIcons[categoryName] ?? '📝';
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<BaseHead
+			title={`${categoryName} | Blog | ${SITE_TITLE}`}
+			description={`Artículos de ${categoryName} en RideMotoHub. Contenido para la comunidad motera de Guatemala.`}
+		/>
+
+		<style is:global>
+			@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap');
+
+			:root {
+				--ov-primary:        #69daff;
+				--ov-secondary:      #ac89ff;
+				--ov-tertiary:       #ff5dd7;
+				--ov-bg:             #0d0d19;
+				--ov-surface-low:    #121220;
+				--ov-surface-mid:    #181827;
+				--ov-surface-high:   #1e1e2f;
+				--ov-surface-top:    #242436;
+				--ov-on-surface:     #e9e6f9;
+				--ov-on-surface-var: #aba9ba;
+				--ov-outline-var:    #474655;
+			}
+
+			body {
+				background: var(--ov-bg) !important;
+				color: var(--ov-on-surface) !important;
+				font-family: 'Manrope', sans-serif !important;
+				font-size: 16px !important;
+				margin: 0 !important;
+				padding: 0 !important;
+				background-image: none !important;
+			}
+
+			main {
+				width: 100% !important;
+				max-width: 100% !important;
+				margin: 0 !important;
+				padding: 0 !important;
+			}
+		</style>
+
+		<style>
+			/* ── Page hero ── */
+			.page-hero {
+				position: relative;
+				padding: 5rem 2rem 4rem;
+				text-align: center;
+				overflow: hidden;
+				background: var(--ov-bg);
+			}
+			.page-hero::before {
+				content: '';
+				position: absolute;
+				top: -80px; left: 50%;
+				transform: translateX(-50%);
+				width: 600px; height: 300px;
+				background: radial-gradient(ellipse, rgba(172,137,255,0.07) 0%, transparent 70%);
+				pointer-events: none;
+			}
+			.breadcrumb-nav {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 0.4rem;
+				font-size: 0.78rem;
+				color: var(--ov-on-surface-var);
+				margin-bottom: 1.5rem;
+			}
+			.breadcrumb-nav a {
+				color: var(--ov-primary);
+				text-decoration: none;
+				transition: opacity 0.2s;
+			}
+			.breadcrumb-nav a:hover { opacity: 0.75; }
+			.breadcrumb-nav .sep { opacity: 0.4; }
+			.cat-icon {
+				font-size: 3rem;
+				margin-bottom: 0.75rem;
+			}
+			.page-hero h1 {
+				font-family: 'Space Grotesk', sans-serif;
+				font-size: clamp(2rem, 5vw, 3.5rem);
+				font-weight: 900;
+				letter-spacing: -0.04em;
+				color: var(--ov-on-surface);
+				margin: 0 0 0.5rem;
+				line-height: 1;
+			}
+			.post-count {
+				font-size: 0.85rem;
+				color: var(--ov-on-surface-var);
+				margin: 0;
+			}
+			.post-count strong {
+				color: var(--ov-primary);
+			}
+
+			/* ── Grid ── */
+			.posts-section {
+				max-width: 1200px;
+				margin: 0 auto;
+				padding: 2.5rem 2rem 6rem;
+			}
+			.posts-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+				gap: 1.5rem;
+			}
+			.post-card {
+				display: block;
+				text-decoration: none;
+				background: var(--ov-surface-mid);
+				border-radius: 14px;
+				overflow: hidden;
+				transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+			}
+			.post-card:hover {
+				transform: translateY(-4px);
+				background: var(--ov-surface-high);
+				box-shadow: 0 14px 30px rgba(105,218,255,0.07);
+			}
+			.card-img {
+				width: 100%;
+				aspect-ratio: 16 / 9;
+				overflow: hidden;
+			}
+			.card-img img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				display: block;
+				border-radius: 0 !important;
+				filter: brightness(0.82);
+				transition: transform 0.4s ease;
+			}
+			.post-card:hover .card-img img { transform: scale(1.05); }
+			.card-body { padding: 1.2rem 1.3rem 1.4rem; }
+			.cat-badge {
+				display: inline-block;
+				padding: 0.28rem 0.8rem;
+				background: rgba(172,137,255,0.1);
+				border: 1px solid rgba(172,137,255,0.22);
+				border-radius: 9999px;
+				font-size: 0.7rem;
+				font-weight: 700;
+				letter-spacing: 0.07em;
+				text-transform: uppercase;
+				color: var(--ov-secondary);
+				margin-bottom: 0.65rem;
+			}
+			.card-title {
+				font-family: 'Space Grotesk', sans-serif;
+				font-size: 1.05rem;
+				font-weight: 700;
+				letter-spacing: -0.02em;
+				color: var(--ov-on-surface);
+				line-height: 1.3;
+				margin: 0 0 0.5rem;
+				display: -webkit-box;
+				-webkit-line-clamp: 2;
+				-webkit-box-orient: vertical;
+				overflow: hidden;
+			}
+			.card-desc {
+				font-size: 0.82rem;
+				color: var(--ov-on-surface-var);
+				line-height: 1.55;
+				margin: 0 0 0.85rem;
+				display: -webkit-box;
+				-webkit-line-clamp: 2;
+				-webkit-box-orient: vertical;
+				overflow: hidden;
+			}
+			.post-date {
+				font-size: 0.75rem;
+				color: var(--ov-on-surface-var);
+			}
+
+			/* ── Back to blog ── */
+			.back-link {
+				display: inline-flex;
+				align-items: center;
+				gap: 0.4rem;
+				color: var(--ov-primary);
+				text-decoration: none;
+				font-size: 0.85rem;
+				font-weight: 600;
+				margin-bottom: 2rem;
+				transition: opacity 0.2s;
+			}
+			.back-link:hover { opacity: 0.75; }
+
+			/* ── Empty state ── */
+			.empty-state {
+				text-align: center;
+				padding: 4rem 2rem;
+				color: var(--ov-on-surface-var);
+			}
+			.empty-state p { font-size: 1rem; }
+
+			@media (max-width: 600px) {
+				.posts-section { padding: 2rem 1.25rem 4rem; }
+				.page-hero { padding: 3rem 1.25rem 2.5rem; }
+				.posts-grid { grid-template-columns: 1fr; }
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<div class="page-hero">
+				<nav class="breadcrumb-nav" aria-label="Ruta de navegación">
+					<a href="/">Inicio</a>
+					<span class="sep">/</span>
+					<a href="/blog">Blog</a>
+					<span class="sep">/</span>
+					<span>{categoryName}</span>
+				</nav>
+				<div class="cat-icon">{icon}</div>
+				<h1>{categoryName}</h1>
+				<p class="post-count"><strong>{posts.length}</strong> {posts.length === 1 ? 'artículo' : 'artículos'} en esta categoría</p>
+			</div>
+
+			<div class="posts-section">
+				<a href="/blog" class="back-link">
+					<svg width="16" height="16" viewBox="0 0 20 20" fill="none"><path d="M12.5 5L7.5 10L12.5 15" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+					Ver todos los artículos
+				</a>
+
+				{posts.length > 0 ? (
+					<div class="posts-grid">
+						{posts.map((post) => (
+							<a href={`/blog/${post.id}/`} class="post-card">
+								{post.data.heroImage && (
+									<div class="card-img">
+										<Image
+											width={640}
+											height={360}
+											src={post.data.heroImage}
+											alt={post.data.imageAlt || `${post.data.title} - RideMotoHub`}
+											loading="lazy"
+											decoding="async"
+										/>
+									</div>
+								)}
+								<div class="card-body">
+									<div class="cat-badge">{(post.data as any).category ?? 'General'}</div>
+									<h2 class="card-title">{post.data.title}</h2>
+									<p class="card-desc">{post.data.description}</p>
+									<span class="post-date"><FormattedDate date={post.data.pubDate} /></span>
+								</div>
+							</a>
+						))}
+					</div>
+				) : (
+					<div class="empty-state">
+						<p>No hay artículos en esta categoría aún.</p>
+					</div>
+				)}
+			</div>
+		</main>
+		<Footer />
+	</body>
+</html>

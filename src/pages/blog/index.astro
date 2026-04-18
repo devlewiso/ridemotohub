@@ -20,6 +20,16 @@ posts.forEach(p => {
 	categories[cat] = (categories[cat] ?? 0) + 1;
 });
 
+function categorySlug(cat: string): string {
+	return cat
+		.toLowerCase()
+		.normalize('NFD')
+		.replace(/[\u0300-\u036f]/g, '')
+		.replace(/&/g, 'y')
+		.replace(/\s+/g, '-')
+		.replace(/[^a-z0-9-]/g, '');
+}
+
 const archive: Record<string, number> = {};
 posts.forEach(p => {
 	const key = p.data.pubDate.toLocaleDateString('es-GT', { month: 'long', year: 'numeric' });
@@ -495,7 +505,7 @@ const popular = posts.slice(0, 3);
 						<ul class="cat-list">
 							{Object.entries(categories).map(([cat, count]) => (
 								<li>
-									<a class="cat-item" href="#">
+									<a class="cat-item" href={`/blog/categoria/${categorySlug(cat)}/`}>
 										<span class="cat-left">
 											<span class="cat-dot"></span>
 											{cat}

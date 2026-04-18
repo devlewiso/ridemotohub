@@ -36,11 +36,11 @@ Antes de emprender este viaje, hay cosas que debes preparar:
 
 **Ciudad de Guatemala → Quillab (320 km)**
 
-El primer día es largo pero gratificante. Sales de la capital por la Ruta 5 hacia El Rancho, y de ahí继续 hacia Fray Bartolomé de las Casas. Esta parte de la ruta te va mostrando cómo el paisaje va cambiando gradualmente.
+El primer día es largo pero gratificante. Sales de la capital por la Ruta 5 hacia El Rancho, y de ahí hacia Fray Bartolomé de las Casas. Esta parte de la ruta te va mostrando cómo el paisaje va cambiando gradualmente.
 
-En Quiché making una parada para comer. Hay varios lugares donde puedes probar comida local. El mercado municipal es una buena opción para comida económica y auténtica.
+En Quiché haz una parada para comer. Hay varios lugares donde puedes probar comida local. El mercado municipal es una buena opción para comida económica y auténtica.
 
-De Quiché hacia Uspantán la carretera se vuelve más sinuosa. Aquí es donde начинаешь a sentir que realmente estás en el interior del país. Las montañas, los pueblos con techos de lamina, los niños jugando en el camino.
+De Quiché hacia Uspantán la carretera se vuelve más sinuosa. Aquí es donde empiezas a sentir que realmente estás en el interior del país. Las montañas, los pueblos con techos de lamina, los niños jugando en el camino.
 
 **Distancia día 1:** 320 km  
 **Tiempo estimado:** 6-7 horas (sin contar paradas)  
@@ -88,6 +88,10 @@ El horario ideal para visitar Tikal es muy temprano en la mañana o al atardecer
 - Quillab: Hotels básicos desde Q150
 - Flores: Hoteles desde Q200, algunos con vista al lago
 - Tikal: Puedes quedarte en el parque (hay áreas de camping)
+
+## Antes de Salir: Prepara Tu Moto
+
+Una ruta de 500+ km exige que tu moto esté en perfectas condiciones. Revisa el [mantenimiento de cadena](/blog/mantenimiento-cadena-moto/) y el [cambio de aceite](/blog/cambio-aceite-moto-guia/) antes de partir. También puedes explorar otras [rutas en moto por Guatemala](/rutas/) para planear tu siguiente aventura.
 
 ## Reflexión Final
 

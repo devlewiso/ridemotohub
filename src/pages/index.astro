@@ -1,8 +1,15 @@
 ---
+import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
 import BaseHead from "../components/BaseHead.astro";
 import Footer from "../components/Footer.astro";
+import FormattedDate from "../components/FormattedDate.astro";
 import Header from "../components/Header.astro";
 import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
+
+const recentPosts = (await getCollection("blog"))
+	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+	.slice(0, 3);
 ---
 
 <!doctype html>
@@ -19,10 +26,8 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
 				<div class="hero-badge">🏍️ Guatemala</div>
 				<h1 class="hero-title">
 					<span class="gradient-text">RideMotoHub</span>
+					<span class="hero-title-tagline">La comunidad motera más grande de Guatemala</span>
 				</h1>
-				<p class="hero-subtitle">
-					La comunidad que une a todos los riders de Guatemala
-				</p>
 				<p class="hero-description">
 					Desde 125cc hasta 1000cc+, todos somos parte de la misma
 					familia. Únete a la comunidad motera más grande de
@@ -46,6 +51,11 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
 						</svg>
 					</a>
 					<a href="/about" class="btn btn-secondary">Conoce Más</a>
+				</div>
+				<div class="hero-quick-links">
+					<a href="/rutas" class="quick-link">🗺️ Rutas</a>
+					<a href="/eventos" class="quick-link">📅 Eventos</a>
+					<a href="/tips" class="quick-link">💡 Tips</a>
 				</div>
 			</div>
 			<div class="hero-image-overlay">
@@ -88,7 +98,7 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
 						</p>
 					</div>
 
-					<div class="feature-card">
+					<a href="/rutas" class="feature-card feature-card-link">
 						<div class="feature-icon">🗺️</div>
 						<h3>Rutas Épicas</h3>
 						<p>
@@ -96,25 +106,28 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
 							costa hasta las montañas. Rodadas organizadas cada
 							semana.
 						</p>
-					</div>
+						<span class="feature-link-hint">Ver rutas →</span>
+					</a>
 
-					<div class="feature-card">
+					<a href="/eventos" class="feature-card feature-card-link">
 						<div class="feature-icon">📅</div>
 						<h3>Eventos & Rodadas</h3>
 						<p>
 							Participa en eventos exclusivos, rodadas grupales y
 							encuentros de la comunidad motera guatemalteca.
 						</p>
-					</div>
+						<span class="feature-link-hint">Ver eventos →</span>
+					</a>
 
-					<div class="feature-card">
+					<a href="/tips" class="feature-card feature-card-link">
 						<div class="feature-icon">💡</div>
 						<h3>Tips & Consejos</h3>
 						<p>
 							Aprende sobre mantenimiento, seguridad vial, y
 							mejores prácticas de riders experimentados.
 						</p>
-					</div>
+						<span class="feature-link-hint">Ver tips →</span>
+					</a>
 
 					<div class="feature-card">
 						<div class="feature-icon">📸</div>
@@ -174,6 +187,47 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
 							Más Información
 						</a>
 					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Recent Posts Section -->
+		<section class="recent-posts">
+			<div class="container">
+				<h2 class="section-title">Últimos del Blog</h2>
+				<p class="section-subtitle">
+					Rutas, tips y cultura motera desde Guatemala
+				</p>
+				<div class="posts-preview-grid">
+					{recentPosts.map((post) => (
+						<a href={`/blog/${post.id}/`} class="post-preview-card">
+							{post.data.heroImage && (
+								<div class="post-preview-img">
+									<Image
+										width={600}
+										height={338}
+										src={post.data.heroImage}
+										alt={post.data.imageAlt || `${post.data.title} - RideMotoHub`}
+										loading="lazy"
+										decoding="async"
+									/>
+								</div>
+							)}
+							<div class="post-preview-body">
+								{post.data.category && (
+									<span class="post-preview-cat">{post.data.category}</span>
+								)}
+								<h3 class="post-preview-title">{post.data.title}</h3>
+								<p class="post-preview-desc">{post.data.description}</p>
+								<span class="post-preview-date">
+									<FormattedDate date={post.data.pubDate} />
+								</span>
+							</div>
+						</a>
+					))}
+				</div>
+				<div class="posts-preview-cta">
+					<a href="/blog" class="btn btn-secondary">Ver todos los artículos →</a>
 				</div>
 			</div>
 		</section>
@@ -571,6 +625,166 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
 		50%       { box-shadow: 0 0 24px rgba(105, 218, 255, 0.22); }
 	}
 
+	/* ── Hero quick links ── */
+	.hero-quick-links {
+		display: flex;
+		justify-content: center;
+		gap: 0.75rem;
+		margin-top: 1.5rem;
+		flex-wrap: wrap;
+	}
+
+	.quick-link {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.35rem;
+		padding: 0.4rem 1.1rem;
+		background: rgba(36, 36, 54, 0.5);
+		border: 1px solid rgba(71, 70, 85, 0.5);
+		border-radius: 9999px;
+		font-family: 'Space Grotesk', sans-serif;
+		font-size: 0.82rem;
+		font-weight: 600;
+		color: var(--ov-on-surface-var);
+		text-decoration: none;
+		transition: all 0.2s ease;
+	}
+	.quick-link:hover {
+		border-color: rgba(105, 218, 255, 0.4);
+		color: var(--ov-primary);
+		background: rgba(105, 218, 255, 0.06);
+	}
+
+	/* ── Feature cards linkable ── */
+	.feature-card-link {
+		text-decoration: none;
+		display: flex;
+		flex-direction: column;
+	}
+	.feature-card-link:hover {
+		transform: translateY(-6px);
+		background: var(--ov-surface-high);
+		box-shadow: 0 20px 40px rgba(105, 218, 255, 0.08);
+	}
+	.feature-link-hint {
+		display: block;
+		margin-top: auto;
+		padding-top: 1rem;
+		font-family: 'Space Grotesk', sans-serif;
+		font-size: 0.8rem;
+		font-weight: 700;
+		color: var(--ov-primary);
+		opacity: 0;
+		transition: opacity 0.2s ease;
+	}
+	.feature-card-link:hover .feature-link-hint { opacity: 1; }
+
+	/* ── Hero title tagline ── */
+	.hero-title-tagline {
+		display: block;
+		font-family: 'Space Grotesk', sans-serif;
+		font-size: clamp(1.1rem, 2.5vw, 1.55rem);
+		font-weight: 600;
+		letter-spacing: -0.02em;
+		color: var(--ov-on-surface);
+		opacity: 0.88;
+		margin-top: 0.55rem;
+	}
+
+	/* ── Recent Posts ── */
+	.recent-posts {
+		padding: 6rem 0;
+		background: var(--ov-bg);
+	}
+
+	.posts-preview-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 1.5rem;
+		margin-top: 3rem;
+	}
+
+	.post-preview-card {
+		display: block;
+		text-decoration: none;
+		background: var(--ov-surface-mid);
+		border-radius: 16px;
+		overflow: hidden;
+		transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease, background 0.3s ease;
+	}
+	.post-preview-card:hover {
+		transform: translateY(-6px);
+		background: var(--ov-surface-high);
+		box-shadow: 0 20px 40px rgba(105, 218, 255, 0.08);
+	}
+
+	.post-preview-img {
+		width: 100%;
+		aspect-ratio: 16 / 9;
+		overflow: hidden;
+	}
+	.post-preview-img img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		display: block;
+		filter: brightness(0.82);
+		transition: transform 0.4s ease;
+	}
+	.post-preview-card:hover .post-preview-img img { transform: scale(1.05); }
+
+	.post-preview-body { padding: 1.25rem 1.4rem 1.5rem; }
+
+	.post-preview-cat {
+		display: inline-block;
+		padding: 0.25rem 0.75rem;
+		background: rgba(105, 218, 255, 0.1);
+		border: 1px solid rgba(105, 218, 255, 0.2);
+		border-radius: 9999px;
+		font-size: 0.68rem;
+		font-weight: 700;
+		letter-spacing: 0.07em;
+		text-transform: uppercase;
+		color: var(--ov-primary);
+		margin-bottom: 0.6rem;
+	}
+
+	.post-preview-title {
+		font-family: 'Space Grotesk', sans-serif;
+		font-size: 1.05rem;
+		font-weight: 700;
+		letter-spacing: -0.02em;
+		color: var(--ov-on-surface);
+		line-height: 1.3;
+		margin: 0 0 0.5rem 0;
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+	}
+
+	.post-preview-desc {
+		font-family: 'Manrope', sans-serif;
+		font-size: 0.85rem;
+		color: var(--ov-on-surface-var);
+		line-height: 1.6;
+		margin: 0 0 0.75rem 0;
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+	}
+
+	.post-preview-date {
+		font-size: 0.75rem;
+		color: var(--ov-on-surface-var);
+	}
+
+	.posts-preview-cta {
+		text-align: center;
+		margin-top: 2.5rem;
+	}
+
 	/* ── Responsive ── */
 	@media (max-width: 768px) {
 		.hero { min-height: 80vh; padding: 3rem 1.5rem; }
@@ -581,6 +795,8 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
 		.cta-section { padding: 4rem 0; }
 		.cta-buttons { flex-direction: column; }
 		.btn { width: 100%; justify-content: center; }
+		.recent-posts { padding: 4rem 0; }
+		.posts-preview-grid { grid-template-columns: 1fr; gap: 1rem; }
 	}
 </style>
 

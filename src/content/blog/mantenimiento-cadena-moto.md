@@ -116,7 +116,7 @@ Una cadena muy apretada o muy floja causa problemas.
 6. Verifica que la rueda esté alineada
 7. Aprieta la tuerca del eje
 
-**Importante:** Ajusta siempre ambos lados равномерно para mantener la alineación.
+**Importante:** Ajusta siempre ambos lados uniformemente para mantener la alineación.
 
 ## Errores Comunes a Evitar
 
@@ -239,6 +239,10 @@ Si vas a salir de ruta larga, la cadena es solo uno de los puntos del checklist.
 **Tiempo estimado del checklist completo:** 20-30 minutos antes de salir.
 
 ---
+
+## El Mantenimiento Como Hábito
+
+La cadena es solo una parte del sistema. Si ya tienes claro el mantenimiento de cadena, complementa con el [cambio de aceite y filtro paso a paso](/blog/cambio-aceite-moto-guia/): son las dos tareas de mantenimiento preventivo que más impacto tienen en la vida de tu moto. Y si estás preparando un viaje largo, revisa también nuestra guía de [rutas en moto por Guatemala](/rutas/) para elegir tu próxima aventura.
 
 ## Conclusión
 

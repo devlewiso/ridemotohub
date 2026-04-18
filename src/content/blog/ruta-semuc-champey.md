@@ -130,9 +130,13 @@ Antes de salir, verifica:
 - **Cadena:** El polvo y el agua afectan, lubrica antes
 - **Neumáticos:** Que tengan buen dibujo para el ripio
 
+## Antes de Emprender la Ruta
+
+Los últimos kilómetros de ripio exigen que tu moto esté bien preparada. Revisa la [guía de mantenimiento de cadena](/blog/mantenimiento-cadena-moto/) y el [cambio de aceite](/blog/cambio-aceite-moto-guia/) antes de salir. Si buscas más aventuras, revisa todas las [rutas en moto por Guatemala](/rutas/).
+
 ## Reflexión
 
-Ir a Semuc Champey en moto es una de las experiencias más gratificantes que puedes tener en Guatemala. El camino es parte de la aventura, y llegar a esas piscinas de agua cristalina después de несколько horas de camino vale cada kilómetro.
+Ir a Semuc Champey en moto es una de las experiencias más gratificantes que puedes tener en Guatemala. El camino es parte de la aventura, y llegar a esas piscinas de agua cristalina después de varias horas de camino vale cada kilómetro.
 
 No te pierdas esta ruta si eres amante de la naturaleza y las aventuras.
 

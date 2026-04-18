@@ -11,6 +11,60 @@ import Header from "../components/Header.astro";
             title="Tips & Consejos - RideMotoHub Guatemala"
             description="Aprende sobre mantenimiento, seguridad vial, técnicas de conducción y más. Consejos de expertos para riders en Guatemala."
         />
+        <script type="application/ld+json" set:html={JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "¿Cada cuánto se debe cambiar el aceite de una moto en Guatemala?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Para motos de calle en Guatemala se recomienda cambiar el aceite cada 3,000–5,000 km. En motos deportivas cada 2,000–3,000 km, y en motos de trail cada 4,000–6,000 km. Cambia el aceite cuando el motor esté tibio para que fluya mejor y arrastre más impurezas."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "¿Con qué frecuencia debo lubricar la cadena de mi moto?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Limpia la cadena cada 500–800 km y lubrica después de cada limpieza. En carreteras de ripio o bajo lluvia, hazlo con mayor frecuencia. Nunca uses WD-40 como lubricante permanente; utiliza un spray específico para cadenas O-ring."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "¿Cómo debo conducir mi moto bajo lluvia en Guatemala?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Reduce la velocidad al menos un 30–40%, evita las líneas pintadas y tapas de alcantarilla, aumenta la distancia de frenado y usa movimientos suaves y progresivos. Los primeros 15 minutos de lluvia son los más resbalosos porque el agua mezcla el aceite con el asfalto."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "¿Qué equipo de protección es obligatorio para circular en moto en Guatemala?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "En Guatemala es obligatorio portar casco certificado. Adicionalmente se recomienda usar chaqueta con protecciones en hombros, codos y espalda, guantes con protección de nudillos, botas con tobillera antideslizante y pantalones con protecciones en rodillas y caderas."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "¿Cómo frenar correctamente en una moto?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Usa ambos frenos simultáneamente aplicando aproximadamente 70% de fuerza en el freno delantero y 30% en el trasero. Aplica presión de forma progresiva, nunca brusca. Mantén la moto vertical y dirige la mirada hacia donde quieres ir. Practica en un lugar seguro hasta que sea un reflejo automático."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "¿Qué debo revisar en mi moto antes de un viaje largo en Guatemala?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Antes de salir revisa: presión de neumáticos, nivel de aceite, frenos (pastillas y líquido), luces y direccionales, tensión y lubricación de cadena, batería y sistema eléctrico. Lleva kit de herramientas básico, botiquín, agua, dinero en efectivo y documentos (licencia, tarjeta de circulación, SOAT vigente)."
+                    }
+                }
+            ]
+        })} />
     </head>
     <body>
         <Header />
@@ -454,6 +508,30 @@ import Header from "../components/Header.astro";
                     </p>
                     <a href="/blog" class="btn btn-primary">Compartir Consejo</a
                     >
+                </div>
+            </div>
+        </section>
+
+        <!-- Explorar más -->
+        <section class="explore-more">
+            <div class="container">
+                <p class="explore-label">Explorar más</p>
+                <div class="explore-grid">
+                    <a href="/rutas" class="explore-card">
+                        <span class="explore-icon">🗺️</span>
+                        <span class="explore-title">Rutas en Moto</span>
+                        <span class="explore-desc">Las mejores rutas de Guatemala para riders</span>
+                    </a>
+                    <a href="/eventos" class="explore-card">
+                        <span class="explore-icon">📅</span>
+                        <span class="explore-title">Eventos & Rodadas</span>
+                        <span class="explore-desc">Próximas rodadas y encuentros de la comunidad</span>
+                    </a>
+                    <a href="/blog" class="explore-card">
+                        <span class="explore-icon">📝</span>
+                        <span class="explore-title">Blog</span>
+                        <span class="explore-desc">Historias, guías y cultura motera desde Guatemala</span>
+                    </a>
                 </div>
             </div>
         </section>
@@ -919,6 +997,62 @@ import Header from "../components/Header.astro";
         .checklist-container { grid-template-columns: 1fr; }
 
         .cta-box { padding: 2rem 1.5rem; }
+        .explore-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ── Explorar más ── */
+    .explore-more {
+        background: var(--ov-surface-low);
+        padding: 4rem 0;
+        border-top: 1px solid rgba(71, 70, 85, 0.3);
+    }
+
+    .explore-label {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--ov-on-surface-var);
+        text-align: center;
+        margin: 0 0 1.5rem;
+    }
+
+    .explore-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+
+    .explore-card {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+        padding: 1.5rem;
+        background: var(--ov-surface-mid);
+        border-radius: 14px;
+        text-decoration: none;
+        transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+    }
+    .explore-card:hover {
+        transform: translateY(-4px);
+        background: var(--ov-surface-high);
+        box-shadow: 0 12px 28px rgba(105, 218, 255, 0.07);
+    }
+
+    .explore-icon { font-size: 1.5rem; }
+
+    .explore-title {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: var(--ov-on-surface);
+    }
+
+    .explore-desc {
+        font-size: 0.8rem;
+        color: var(--ov-on-surface-var);
+        line-height: 1.5;
     }
 </style>
 
