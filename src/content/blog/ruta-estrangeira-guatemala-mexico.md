@@ -1,8 +1,8 @@
 ---
-title: Cruzando Fronteras: De Guatemala a México en Dos Ruedas
-description: Consejos prácticos, aduanas y las mejores carreteras para viajar desde Guatemala hacia el sur de México.
-pubDate: 2026-07-25
-category: Rutas
+title: "Cruzando Fronteras: De Guatemala a México en Dos Ruedas"
+description: "Consejos prácticos, aduanas y las mejores carreteras para viajar desde Guatemala hacia el sur de México."
+pubDate: "2026-07-25"
+category: "Rutas"
 ---
 
 # Guatemala a México en Moto

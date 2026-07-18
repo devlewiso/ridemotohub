@@ -1,8 +1,8 @@
 ---
-title: Guía de Seguridad para Rodadas Nocturnas en la Capital
-description: Cómo mantener la visibilidad y la seguridad cuando ruedas de noche por la Ciudad de Guatemala y alrededores.
-pubDate: 2026-08-03
-category: Tips
+title: "Guía de Seguridad para Rodadas Nocturnas en la Capital"
+description: "Cómo mantener la visibilidad y la seguridad cuando ruedas de noche por la Ciudad de Guatemala y alrededores."
+pubDate: "2026-08-03"
+category: "Tips"
 ---
 
 # Rodadas Nocturnas: Seguridad y Visibilidad

@@ -1,8 +1,8 @@
 ---
-title: Accesorios de Seguridad Imprescindibles para el Rider Moderno
-description: Más allá del casco: protectores, chaquetas y gadgets que pueden salvarte la vida en una caída.
-pubDate: 2026-08-01
-category: Tips
+title: "Accesorios de Seguridad Imprescindibles para el Rider Moderno"
+description: "Más allá del casco: protectores, chaquetas y gadgets que pueden salvarte la vida en una caída."
+pubDate: "2026-08-01"
+category: "Tips"
 ---
 
 # Accesorios de Seguridad

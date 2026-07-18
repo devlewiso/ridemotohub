@@ -1,8 +1,8 @@
 ---
-title: Mantenimiento de Moto según el Clima de Guatemala
-description: Cómo afecta la humedad de la costa y el frío de los altiplanos a tu moto, y qué hacer para evitar el desgaste prematuro.
-pubDate: 2026-07-28
-category: Tips
+title: "Mantenimiento de Moto según el Clima de Guatemala"
+description: "Cómo afecta la humedad de la costa y el frío de los altiplanos a tu moto, y qué hacer para evitar el desgaste prematuro."
+pubDate: "2026-07-28"
+category: "Tips"
 ---
 
 # Mantenimiento y Clima en GT

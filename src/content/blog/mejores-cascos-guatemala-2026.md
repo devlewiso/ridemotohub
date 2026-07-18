@@ -1,8 +1,8 @@
 ---
-title: Guía de Cascos en Guatemala 2026: Seguridad y Presupuesto
-description: Análisis de las mejores marcas de cascos disponibles en el mercado guatemalteco, desde opciones económicas hasta certificaciones ECE 22.06.
-pubDate: 2026-07-20
-category: Tips
+title: "Guía de Cascos en Guatemala 2026: Seguridad y Presupuesto"
+description: "Análisis de las mejores marcas de cascos disponibles en el mercado guatemalteco, desde opciones económicas hasta certificaciones ECE 22.06."
+pubDate: "2026-07-20"
+category: "Tips"
 ---
 
 # Guía de Cascos en Guatemala 2026

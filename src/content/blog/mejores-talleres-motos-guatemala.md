@@ -1,8 +1,8 @@
 ---
-title: Cómo Encontrar un Taller de Confianza en Guatemala
-description: Tips para identificar un taller honesto y evitar las 'estafas' comunes en la reparación de motocicletas.
-pubDate: 2026-08-12
-category: Tips
+title: "Cómo Encontrar un Taller de Confianza en Guatemala"
+description: "Tips para identificar un taller honesto y evitar las 'estafas' comunes en la reparación de motocicletas."
+pubDate: "2026-08-12"
+category: "Tips"
 ---
 
 # Buscando el Taller Ideal

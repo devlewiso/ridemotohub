@@ -1,8 +1,8 @@
 ---
-title: ¿Motos Eléctricas en Guatemala? Realidad y Desafíos
-description: Analizamos si la infraestructura eléctrica de GT está lista para la transición y cuáles son las mejores opciones actuales.
-pubDate: 2026-08-06
-category: Opinión
+title: "¿Motos Eléctricas en Guatemala? Realidad y Desafíos"
+description: "Analizamos si la infraestructura eléctrica de GT está lista para la transición y cuáles son las mejores opciones actuales."
+pubDate: "2026-08-06"
+category: "Opinión"
 ---
 
 # El Futuro Eléctrico en GT
