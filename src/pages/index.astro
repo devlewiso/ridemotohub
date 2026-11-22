@@ -16,6 +16,7 @@ const recentPosts = (await getCollection("blog"))
 <html lang="es">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<link rel="preload" as="image" href="/hero-tips-poster-1280.webp" fetchpriority="high" />
 	</head>
 	<body>
 		<Header />
@@ -62,14 +63,14 @@ const recentPosts = (await getCollection("blog"))
 				<video
 					class="hero-bg-image"
 					id="hero-parallax-img"
-					autoplay
 					muted
 					loop
 					playsinline
-					poster="/hero-tips-poster.webp"
-				>
-					<source src="/hero-tips.mp4" type="video/mp4" />
-				</video>
+					preload="none"
+					poster="/hero-tips-poster-1280.webp"
+					data-src="/hero-tips-720.mp4"
+					aria-hidden="true"
+				></video>
 			</div>
 			<div class="hero-decoration">
 				<div class="decoration-circle circle-1"></div>
@@ -237,7 +238,6 @@ const recentPosts = (await getCollection("blog"))
 </html>
 
 <style>
-		@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap');
 		
 	/* ── Obsidian Velocity Design Tokens ── */
 	:root {
@@ -799,6 +799,25 @@ const recentPosts = (await getCollection("blog"))
 		.posts-preview-grid { grid-template-columns: 1fr; gap: 1rem; }
 	}
 </style>
+
+<script>
+	// El video del hero solo se baja en pantallas grandes y sin ahorro de datos; en celular queda la imagen.
+	const video = document.getElementById('hero-parallax-img') as HTMLVideoElement | null;
+	const conexion = (navigator as Navigator & { connection?: { saveData?: boolean } }).connection;
+	if (
+		video?.dataset.src &&
+		matchMedia('(min-width: 768px)').matches &&
+		!matchMedia('(prefers-reduced-motion: reduce)').matches &&
+		!conexion?.saveData
+	) {
+		const cargar = () => {
+			video.src = video.dataset.src!;
+			video.play().catch(() => {});
+		};
+		if (document.readyState === 'complete') cargar();
+		else addEventListener('load', cargar, { once: true });
+	}
+</script>
 
 <script>
 	const img = document.getElementById('hero-parallax-img');

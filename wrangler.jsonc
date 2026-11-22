@@ -1,0 +1,12 @@
+{
+  // RideMotoHub: sitio estático de Astro servido como Worker de solo archivos.
+  // Cloudflare Workers Builds lo construye en cada push a main (npm run build → dist/).
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "ridemotohub",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./dist",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page"
+  }
+}
