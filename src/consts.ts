@@ -2,4 +2,5 @@
 // You can import this data from anywhere in your site by using the `import` keyword.
 
 export const SITE_TITLE = 'RideMotoHub Guatemala';
+export const TELEGRAM_URL = 'https://t.me/+PvdHAuxgxHoyMjdh';
 export const SITE_DESCRIPTION = 'La comunidad que une a todos los riders de Guatemala - Todas las cilindradas, una sola pasión';
