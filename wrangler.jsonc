@@ -4,6 +4,12 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "ridemotohub",
   "compatibility_date": "2026-11-01",
+  "workers_dev": true,
+  "preview_urls": true,
+  "routes": [
+    { "pattern": "ridemotohub.com", "custom_domain": true },
+    { "pattern": "www.ridemotohub.com", "custom_domain": true }
+  ],
   "assets": {
     "directory": "./dist",
     "html_handling": "auto-trailing-slash",
