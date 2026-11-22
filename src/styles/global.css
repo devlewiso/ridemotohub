@@ -5,8 +5,8 @@
  */
 
 :root {
-	--accent: #2337ff;
-	--accent-dark: #000d8a;
+	--accent: #FF6B1A;
+	--accent-dark: #C94E0C;
 	--black: 15, 18, 25;
 	--gray: 96, 115, 159;
 	--gray-light: 229, 233, 240;
@@ -17,21 +17,46 @@
 		rgba(var(--gray), 33%);
 }
 @font-face {
-	font-family: "Atkinson";
-	src: url("/fonts/atkinson-regular.woff") format("woff");
-	font-weight: 400;
-	font-style: normal;
+	font-family: "Archivo";
+	src: url("/fonts/archivo.woff2") format("woff2");
+	font-weight: 100 900;
+	font-stretch: 62% 125%;
 	font-display: swap;
 }
 @font-face {
-	font-family: "Atkinson";
-	src: url("/fonts/atkinson-bold.woff") format("woff");
-	font-weight: 700;
-	font-style: normal;
+	font-family: "Geist";
+	src: url("/fonts/geist.woff2") format("woff2");
+	font-weight: 100 900;
 	font-display: swap;
 }
+@font-face {
+	font-family: "Geist Mono";
+	src: url("/fonts/geist-mono.woff2") format("woff2");
+	font-weight: 100 900;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Instrument Serif";
+	src: url("/fonts/instrument-serif-italic.woff2") format("woff2");
+	font-style: italic;
+	font-weight: 400;
+	font-display: swap;
+}
+/* RideMotoHub · «Asfalto y Señal»: titulares condensados como rótulo de carretera. */
+h1, h2, h3, .hero-title, .section-title {
+	font-stretch: 78%;
+	letter-spacing: -0.01em;
+}
+.mano {
+	font-family: "Instrument Serif", Georgia, serif;
+	font-style: italic;
+	font-weight: 400;
+	letter-spacing: 0;
+	font-stretch: 100%;
+}
+::selection { background: #FF6B1A; color: #0E0E0C; }
 body {
-	font-family: "Atkinson", sans-serif;
+	font-family: "Geist", system-ui, sans-serif;
 	margin: 0;
 	padding: 0;
 	text-align: left;

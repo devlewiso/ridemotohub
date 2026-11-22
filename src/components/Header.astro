@@ -55,22 +55,22 @@ import HeaderLink from "./HeaderLink.astro";
 		
 	/* Obsidian Velocity tokens */
 	:root {
-		--ov-primary:        #69daff;
+		--ov-primary:        #FF6B1A;
 		--ov-primary-dim:    #00c0ea;
-		--ov-secondary:      #ac89ff;
-		--ov-tertiary:       #ff5dd7;
-		--ov-bg:             #0d0d19;
-		--ov-surface:        #0d0d19;
-		--ov-surface-low:    #121220;
-		--ov-surface-mid:    #181827;
-		--ov-surface-high:   #1e1e2f;
-		--ov-surface-top:    #242436;
-		--ov-surface-bright: #2a2a3e;
-		--ov-on-surface:     #e9e6f9;
-		--ov-on-surface-var: #aba9ba;
-		--ov-outline:        #757484;
-		--ov-outline-var:    #474655;
-		--ov-tint:           #69daff;
+		--ov-secondary:      #F5C518;
+		--ov-tertiary:       #F2EDE3;
+		--ov-bg:             #0E0E0C;
+		--ov-surface:        #0E0E0C;
+		--ov-surface-low:    #141412;
+		--ov-surface-mid:    #1A1A17;
+		--ov-surface-high:   #21211D;
+		--ov-surface-top:    #292924;
+		--ov-surface-bright: #303029;
+		--ov-on-surface:     #EEE9DF;
+		--ov-on-surface-var: #A8A294;
+		--ov-outline:        #7A766B;
+		--ov-outline-var:    #3D3B34;
+		--ov-tint:           #FF6B1A;
 	}
 
 
@@ -80,18 +80,18 @@ import HeaderLink from "./HeaderLink.astro";
 		z-index: 1000;
 		height: 64px;
 		/* Glass formula: surface_variant at 60% + blur 20px */
-		background: rgba(36, 36, 54, 0.6);
+		background: rgba(41,41,36, 0.6);
 		backdrop-filter: blur(20px) saturate(160%);
 		-webkit-backdrop-filter: blur(20px) saturate(160%);
-		border-bottom: 1px solid rgba(105, 218, 255, 0.06);
+		border-bottom: 1px solid rgba(255,107,26, 0.06);
 		/* Ambient shadow tinted with surface_tint */
-		box-shadow: 0 8px 40px rgba(105, 218, 255, 0.06);
+		box-shadow: 0 8px 40px rgba(255,107,26, 0.06);
 		transition: background 0.3s ease, box-shadow 0.3s ease;
 	}
 
 	header.scrolled {
 		background: rgba(13, 13, 25, 0.94);
-		box-shadow: 0 4px 40px rgba(105, 218, 255, 0.08);
+		box-shadow: 0 4px 40px rgba(255,107,26, 0.08);
 	}
 
 	nav {
@@ -126,17 +126,17 @@ import HeaderLink from "./HeaderLink.astro";
 		background: linear-gradient(135deg, var(--ov-primary), var(--ov-secondary));
 		border-radius: 10px;
 		/* Ambient glow tinted with surface_tint */
-		box-shadow: 0 0 16px rgba(105, 218, 255, 0.35);
+		box-shadow: 0 0 16px rgba(255,107,26, 0.35);
 		transition: transform 0.3s ease, box-shadow 0.3s ease;
 		flex-shrink: 0;
 	}
 	.logo a:hover .logo-icon-wrap {
 		transform: scale(1.1) rotate(-6deg);
-		box-shadow: 0 0 28px rgba(105, 218, 255, 0.55);
+		box-shadow: 0 0 28px rgba(255,107,26, 0.55);
 	}
 
 	.logo-text {
-		font-family: 'Space Grotesk', sans-serif;
+		font-family: 'Archivo', 'Arial Narrow', sans-serif;
 		font-size: 1.2rem;
 		font-weight: 800;
 		font-style: italic;
@@ -155,7 +155,7 @@ import HeaderLink from "./HeaderLink.astro";
 	}
 
 	.nav-links :global(a) {
-		font-family: 'Manrope', sans-serif;
+		font-family: 'Geist', system-ui, sans-serif;
 		font-size: 0.875rem;
 		font-weight: 500;
 		/* on_surface_variant for nav links */
@@ -169,7 +169,7 @@ import HeaderLink from "./HeaderLink.astro";
 	}
 	.nav-links :global(a:hover) {
 		color: var(--ov-on-surface);
-		background: rgba(105, 218, 255, 0.06);
+		background: rgba(255,107,26, 0.06);
 	}
 	.nav-links :global(a.active) {
 		color: var(--ov-on-surface);
@@ -186,7 +186,7 @@ import HeaderLink from "./HeaderLink.astro";
 		height: 2px;
 		background: var(--ov-primary);
 		border-radius: 2px;
-		box-shadow: 0 0 6px rgba(105, 218, 255, 0.6);
+		box-shadow: 0 0 6px rgba(255,107,26, 0.6);
 	}
 
 	/* ── Right ── */
@@ -221,23 +221,23 @@ import HeaderLink from "./HeaderLink.astro";
 
 	/* ── CTA — gradient primary → secondary, pill shape ── */
 	.cta-btn {
-		font-family: 'Space Grotesk', sans-serif;
+		font-family: 'Archivo', 'Arial Narrow', sans-serif;
 		font-size: 0.85rem;
 		font-weight: 700;
 		letter-spacing: 0.01em;
 		padding: 0.45rem 1.25rem;
 		background: linear-gradient(135deg, var(--ov-primary), var(--ov-secondary));
-		color: #004a5d;
+		color: #160A02;
 		border-radius: 9999px;
 		text-decoration: none;
-		box-shadow: 0 4px 14px rgba(105, 218, 255, 0.25);
+		box-shadow: 0 4px 14px rgba(255,107,26, 0.25);
 		transition: transform 0.2s ease, box-shadow 0.2s ease;
 		white-space: nowrap;
 	}
 	.cta-btn:hover {
 		transform: scale(1.05);
 		/* On hover: outer glow with primary_dim */
-		box-shadow: 0 0 0 3px rgba(0, 192, 234, 0.25), 0 6px 20px rgba(105, 218, 255, 0.35);
+		box-shadow: 0 0 0 3px rgba(0, 192, 234, 0.25), 0 6px 20px rgba(255,107,26, 0.35);
 	}
 	.cta-btn:active { transform: scale(0.97); }
 
@@ -251,13 +251,13 @@ import HeaderLink from "./HeaderLink.astro";
 		height: 36px;
 		padding: 0.4rem;
 		/* Ghost border fallback: outline_variant at 20% */
-		background: rgba(36, 36, 54, 0.5);
-		border: 1px solid rgba(71, 70, 85, 0.4);
+		background: rgba(41,41,36, 0.5);
+		border: 1px solid rgba(61,59,52, 0.4);
 		border-radius: 8px;
 		cursor: pointer;
 		transition: background 0.2s ease;
 	}
-	.hamburger:hover { background: rgba(105, 218, 255, 0.08); }
+	.hamburger:hover { background: rgba(255,107,26, 0.08); }
 	.hamburger span {
 		display: block;
 		height: 2px;
@@ -286,13 +286,13 @@ import HeaderLink from "./HeaderLink.astro";
 			align-items: stretch;
 			background: rgba(13, 13, 25, 0.97);
 			backdrop-filter: blur(20px);
-			border-bottom: 1px solid rgba(71, 70, 85, 0.2);
+			border-bottom: 1px solid rgba(61,59,52, 0.2);
 			padding: 0.75rem 1.25rem 1.5rem;
 			animation: slideDown 0.22s ease;
 		}
 		.nav-links.open { display: flex; }
 		.nav-links :global(a) { padding: 0.75rem 1rem; font-size: 0.95rem; border-radius: 8px; }
-		.nav-links :global(a:hover) { background: rgba(105, 218, 255, 0.06); }
+		.nav-links :global(a:hover) { background: rgba(255,107,26, 0.06); }
 		.nav-links :global(a.active::after) { display: none; }
 	}
 

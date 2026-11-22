@@ -93,21 +93,21 @@ const postAuthor = author || { name: "RideMotoHub Team", since: 2020 };
 		<style>
 
 			:root {
-				--ov-primary:        #69daff;
-				--ov-secondary:      #ac89ff;
-				--ov-bg:             #0d0d19;
-				--ov-surface-low:    #121220;
-				--ov-surface-mid:    #181827;
-				--ov-surface-high:   #1e1e2f;
-				--ov-on-surface:     #e9e6f9;
-				--ov-on-surface-var: #aba9ba;
-				--ov-outline-var:    #474655;
+				--ov-primary:        #FF6B1A;
+				--ov-secondary:      #F5C518;
+				--ov-bg:             #0E0E0C;
+				--ov-surface-low:    #141412;
+				--ov-surface-mid:    #1A1A17;
+				--ov-surface-high:   #21211D;
+				--ov-on-surface:     #EEE9DF;
+				--ov-on-surface-var: #A8A294;
+				--ov-outline-var:    #3D3B34;
 			}
 
 			body {
 				background: var(--ov-bg);
 				color: var(--ov-on-surface);
-				font-family: 'Manrope', sans-serif;
+				font-family: 'Geist', system-ui, sans-serif;
 				margin: 0;
 				padding: 0;
 			}
@@ -122,7 +122,7 @@ const postAuthor = author || { name: "RideMotoHub Team", since: 2020 };
 			/* Breadcrumb */
 			.breadcrumb {
 				background: var(--ov-surface-low);
-				border-bottom: 1px solid rgba(71, 70, 85, 0.3);
+				border-bottom: 1px solid rgba(61,59,52, 0.3);
 				padding: 0.75rem 2rem;
 			}
 
@@ -217,11 +217,11 @@ const postAuthor = author || { name: "RideMotoHub Team", since: 2020 };
 				gap: 0.65rem;
 				margin-bottom: 1.25rem;
 				padding: 0.4rem 1.1rem;
-				background: rgba(36, 36, 54, 0.6);
-				border: 1px solid rgba(105, 218, 255, 0.2);
+				background: rgba(41,41,36, 0.6);
+				border: 1px solid rgba(255,107,26, 0.2);
 				backdrop-filter: blur(12px);
 				border-radius: 9999px;
-				font-family: 'Manrope', sans-serif;
+				font-family: 'Geist', system-ui, sans-serif;
 				font-size: 0.8rem;
 				font-weight: 600;
 				letter-spacing: 0.05em;
@@ -250,8 +250,8 @@ const postAuthor = author || { name: "RideMotoHub Team", since: 2020 };
 				gap: 0.5rem;
 				margin-bottom: 1rem;
 				padding: 0.5rem 1rem;
-				background: rgba(172, 137, 255, 0.1);
-				border: 1px solid rgba(172, 137, 255, 0.25);
+				background: rgba(245,197,24, 0.1);
+				border: 1px solid rgba(245,197,24, 0.25);
 				border-radius: 9999px;
 				font-size: 0.85rem;
 				color: var(--ov-secondary);
@@ -277,7 +277,7 @@ const postAuthor = author || { name: "RideMotoHub Team", since: 2020 };
 			}
 
 			.post-header h1 {
-				font-family: 'Space Grotesk', sans-serif;
+				font-family: 'Archivo', 'Arial Narrow', sans-serif;
 				font-size: clamp(2.2rem, 5.5vw, 3.8rem);
 				font-weight: 900;
 				letter-spacing: -0.04em;
@@ -294,8 +294,8 @@ const postAuthor = author || { name: "RideMotoHub Team", since: 2020 };
 				gap: 0.35rem;
 				margin-top: 1rem;
 				padding: 0.35rem 0.85rem;
-				background: rgba(105, 218, 255, 0.1);
-				border: 1px solid rgba(105, 218, 255, 0.3);
+				background: rgba(255,107,26, 0.1);
+				border: 1px solid rgba(255,107,26, 0.3);
 				border-radius: 9999px;
 				font-size: 0.8rem;
 				color: var(--ov-primary);
@@ -327,13 +327,13 @@ const postAuthor = author || { name: "RideMotoHub Team", since: 2020 };
 
 			.toc-container {
 				background: var(--ov-surface-mid);
-				border: 1px solid rgba(105, 218, 255, 0.1);
+				border: 1px solid rgba(255,107,26, 0.1);
 				border-radius: 12px;
 				padding: 1.25rem;
 			}
 
 			.toc-title {
-				font-family: 'Space Grotesk', sans-serif;
+				font-family: 'Archivo', 'Arial Narrow', sans-serif;
 				font-size: 0.85rem;
 				font-weight: 700;
 				letter-spacing: 0.1em;
@@ -372,7 +372,7 @@ const postAuthor = author || { name: "RideMotoHub Team", since: 2020 };
 			.toc-list a.active {
 				color: var(--ov-primary);
 				border-left-color: var(--ov-primary);
-				background: rgba(105, 218, 255, 0.05);
+				background: rgba(255,107,26, 0.05);
 			}
 
 			.toc-list .toc-h2 {
@@ -396,7 +396,7 @@ const postAuthor = author || { name: "RideMotoHub Team", since: 2020 };
 			}
 
 			.prose :global(h2) {
-				font-family: 'Space Grotesk', sans-serif;
+				font-family: 'Archivo', 'Arial Narrow', sans-serif;
 				font-size: 1.6rem;
 				font-weight: 700;
 				letter-spacing: -0.03em;
@@ -406,7 +406,7 @@ const postAuthor = author || { name: "RideMotoHub Team", since: 2020 };
 			}
 
 			.prose :global(h3) {
-				font-family: 'Space Grotesk', sans-serif;
+				font-family: 'Archivo', 'Arial Narrow', sans-serif;
 				font-size: 1.2rem;
 				font-weight: 600;
 				color: var(--ov-on-surface);
@@ -427,7 +427,7 @@ const postAuthor = author || { name: "RideMotoHub Team", since: 2020 };
 			.prose :global(a) {
 				color: var(--ov-primary);
 				text-decoration: none;
-				border-bottom: 1px solid rgba(105, 218, 255, 0.3);
+				border-bottom: 1px solid rgba(255,107,26, 0.3);
 				transition: border-color 0.2s;
 			}
 
@@ -437,7 +437,7 @@ const postAuthor = author || { name: "RideMotoHub Team", since: 2020 };
 
 			.prose :global(hr) {
 				border: none;
-				border-top: 1px solid rgba(71, 70, 85, 0.4);
+				border-top: 1px solid rgba(61,59,52, 0.4);
 				margin: 2.5rem 0;
 			}
 
@@ -474,11 +474,11 @@ const postAuthor = author || { name: "RideMotoHub Team", since: 2020 };
 				padding: 1.5rem;
 				background: var(--ov-surface-mid);
 				border-radius: 12px;
-				border: 1px solid rgba(105, 218, 255, 0.1);
+				border: 1px solid rgba(255,107,26, 0.1);
 			}
 
 			.related-posts h3 {
-				font-family: 'Space Grotesk', sans-serif;
+				font-family: 'Archivo', 'Arial Narrow', sans-serif;
 				font-size: 1.1rem;
 				color: var(--ov-on-surface);
 				margin-bottom: 1rem;
@@ -526,13 +526,13 @@ const postAuthor = author || { name: "RideMotoHub Team", since: 2020 };
 				margin-top: 2.5rem;
 				text-align: center;
 				padding: 2rem;
-				background: linear-gradient(135deg, rgba(105, 218, 255, 0.08), rgba(172, 137, 255, 0.08));
+				background: linear-gradient(135deg, rgba(255,107,26, 0.08), rgba(245,197,24, 0.08));
 				border-radius: 16px;
-				border: 1px solid rgba(105, 218, 255, 0.15);
+				border: 1px solid rgba(255,107,26, 0.15);
 			}
 
 			.post-ctas h3 {
-				font-family: 'Space Grotesk', sans-serif;
+				font-family: 'Archivo', 'Arial Narrow', sans-serif;
 				font-size: 1.3rem;
 				color: var(--ov-on-surface);
 				margin-bottom: 1rem;
@@ -570,7 +570,7 @@ const postAuthor = author || { name: "RideMotoHub Team", since: 2020 };
 
 			.cta-btn-primary {
 				background: linear-gradient(135deg, var(--ov-primary), var(--ov-secondary));
-				color: #003d4d;
+				color: #1A0A00;
 			}
 
 			.cta-btn-secondary {
@@ -590,7 +590,7 @@ const postAuthor = author || { name: "RideMotoHub Team", since: 2020 };
 				padding: 1.5rem;
 				background: var(--ov-surface-mid);
 				border-radius: 12px;
-				border: 1px solid rgba(71, 70, 85, 0.5);
+				border: 1px solid rgba(61,59,52, 0.5);
 				display: flex;
 				align-items: center;
 				gap: 1rem;
@@ -598,7 +598,7 @@ const postAuthor = author || { name: "RideMotoHub Team", since: 2020 };
 			}
 
 			.share-label {
-				font-family: 'Space Grotesk', sans-serif;
+				font-family: 'Archivo', 'Arial Narrow', sans-serif;
 				font-size: 0.85rem;
 				font-weight: 700;
 				letter-spacing: 0.08em;
@@ -638,11 +638,11 @@ const postAuthor = author || { name: "RideMotoHub Team", since: 2020 };
 			.comments-section {
 				margin-top: 3rem;
 				padding-top: 3rem;
-				border-top: 1px solid rgba(71, 70, 85, 0.3);
+				border-top: 1px solid rgba(61,59,52, 0.3);
 			}
 
 			.comments-title {
-				font-family: 'Space Grotesk', sans-serif;
+				font-family: 'Archivo', 'Arial Narrow', sans-serif;
 				font-size: 1.3rem;
 				color: var(--ov-on-surface);
 				margin-bottom: 1.5rem;

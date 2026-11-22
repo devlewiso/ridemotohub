@@ -95,29 +95,13 @@ const structuredData = {
 />
 <meta name="generator" content={Astro.generator} />
 
-<!-- Font preloads -->
-<link
-	rel="preload"
-	href="/fonts/atkinson-regular.woff"
-	as="font"
-	type="font/woff"
-	crossorigin
-/>
-<link
-	rel="preload"
-	href="/fonts/atkinson-bold.woff"
-	as="font"
-	type="font/woff"
-	crossorigin
-/>
+<!-- Fuentes propias (sin Google Fonts): Archivo para titulares, Geist para texto -->
+<link rel="preload" href="/fonts/archivo.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/fonts/geist.woff2" as="font" type="font/woff2" crossorigin />
+<meta name="theme-color" content="#0E0E0C" />
 
-<!-- Google Fonts — Space Grotesk + Manrope (Obsidian Velocity) -->
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link
-	href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;900&family=Manrope:wght@400;500;600;700&display=swap"
-	rel="stylesheet"
-/>
+<!-- Firma de NeuralCodeLab: el camaleón (no captura clics, respeta reduced-motion) -->
+<script is:inline src="/camaleon.js" defer></script>
 
 <!-- Canonical URL -->
 <link rel="canonical" href={canonicalURL} />

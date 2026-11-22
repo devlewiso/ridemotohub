@@ -24,10 +24,10 @@ const recentPosts = (await getCollection("blog"))
 		<!-- Hero Section -->
 		<section class="hero">
 			<div class="hero-content">
-				<div class="hero-badge">🏍️ Guatemala</div>
+				<div class="hero-badge">Guatemala · 125cc a 1000cc+</div>
 				<h1 class="hero-title">
 					<span class="gradient-text">RideMotoHub</span>
-					<span class="hero-title-tagline">La comunidad motera más grande de Guatemala</span>
+					<span class="hero-title-tagline">La comunidad motera <span class="mano">más grande</span> de Guatemala</span>
 				</h1>
 				<p class="hero-description">
 					Desde 125cc hasta 1000cc+, todos somos parte de la misma
@@ -54,9 +54,9 @@ const recentPosts = (await getCollection("blog"))
 					<a href="/about" class="btn btn-secondary">Conoce Más</a>
 				</div>
 				<div class="hero-quick-links">
-					<a href="/rutas" class="quick-link">🗺️ Rutas</a>
-					<a href="/eventos" class="quick-link">📅 Eventos</a>
-					<a href="/tips" class="quick-link">💡 Tips</a>
+					<a href="/rutas" class="quick-link">Rutas</a>
+					<a href="/eventos" class="quick-link">Eventos</a>
+					<a href="/tips" class="quick-link">Tips</a>
 				</div>
 			</div>
 			<div class="hero-image-overlay">
@@ -90,7 +90,7 @@ const recentPosts = (await getCollection("blog"))
 
 				<div class="features-grid">
 					<div class="feature-card">
-						<div class="feature-icon">🤝</div>
+						<div class="feature-icon">01</div>
 						<h3>Todas las Cilindradas</h3>
 						<p>
 							No importa si tienes una 125cc o una 1000cc, aquí
@@ -100,7 +100,7 @@ const recentPosts = (await getCollection("blog"))
 					</div>
 
 					<a href="/rutas" class="feature-card feature-card-link">
-						<div class="feature-icon">🗺️</div>
+						<div class="feature-icon">02</div>
 						<h3>Rutas Épicas</h3>
 						<p>
 							Descubre las mejores rutas de Guatemala, desde la
@@ -111,7 +111,7 @@ const recentPosts = (await getCollection("blog"))
 					</a>
 
 					<a href="/eventos" class="feature-card feature-card-link">
-						<div class="feature-icon">📅</div>
+						<div class="feature-icon">03</div>
 						<h3>Eventos & Rodadas</h3>
 						<p>
 							Participa en eventos exclusivos, rodadas grupales y
@@ -121,7 +121,7 @@ const recentPosts = (await getCollection("blog"))
 					</a>
 
 					<a href="/tips" class="feature-card feature-card-link">
-						<div class="feature-icon">💡</div>
+						<div class="feature-icon">04</div>
 						<h3>Tips & Consejos</h3>
 						<p>
 							Aprende sobre mantenimiento, seguridad vial, y
@@ -131,7 +131,7 @@ const recentPosts = (await getCollection("blog"))
 					</a>
 
 					<div class="feature-card">
-						<div class="feature-icon">📸</div>
+						<div class="feature-icon">05</div>
 						<h3>Comparte Experiencias</h3>
 						<p>
 							Comparte tus aventuras, fotos y experiencias con una
@@ -140,7 +140,7 @@ const recentPosts = (await getCollection("blog"))
 					</div>
 
 					<div class="feature-card">
-						<div class="feature-icon">🔧</div>
+						<div class="feature-icon">06</div>
 						<h3>Red de Apoyo</h3>
 						<p>
 							Encuentra talleres confiables, recomendaciones de
@@ -241,21 +241,21 @@ const recentPosts = (await getCollection("blog"))
 		
 	/* ── Obsidian Velocity Design Tokens ── */
 	:root {
-		--ov-primary:        #69daff;
+		--ov-primary:        #FF6B1A;
 		--ov-primary-dim:    #00c0ea;
-		--ov-secondary:      #ac89ff;
-		--ov-tertiary:       #ff5dd7;
-		--ov-bg:             #0d0d19;
-		--ov-surface-low:    #121220;
-		--ov-surface-mid:    #181827;
-		--ov-surface-high:   #1e1e2f;
-		--ov-surface-top:    #242436;
-		--ov-surface-bright: #2a2a3e;
-		--ov-on-surface:     #e9e6f9;
-		--ov-on-surface-var: #aba9ba;
-		--ov-outline:        #757484;
-		--ov-outline-var:    #474655;
-		--ov-tint:           #69daff;
+		--ov-secondary:      #F5C518;
+		--ov-tertiary:       #F2EDE3;
+		--ov-bg:             #0E0E0C;
+		--ov-surface-low:    #141412;
+		--ov-surface-mid:    #1A1A17;
+		--ov-surface-high:   #21211D;
+		--ov-surface-top:    #292924;
+		--ov-surface-bright: #303029;
+		--ov-on-surface:     #EEE9DF;
+		--ov-on-surface-var: #A8A294;
+		--ov-outline:        #7A766B;
+		--ov-outline-var:    #3D3B34;
+		--ov-tint:           #FF6B1A;
 	}
 
 
@@ -263,7 +263,7 @@ const recentPosts = (await getCollection("blog"))
 		overflow-x: hidden;
 		background: var(--ov-bg);
 		color: var(--ov-on-surface);
-		font-family: 'Manrope', sans-serif;
+		font-family: 'Geist', system-ui, sans-serif;
 	}
 
 	.container {
@@ -297,27 +297,29 @@ const recentPosts = (await getCollection("blog"))
 		display: inline-block;
 		padding: 0.45rem 1.25rem;
 		/* Glass pill: surface_variant 60% + primary ghost border */
-		background: rgba(36, 36, 54, 0.6);
-		border: 1px solid rgba(105, 218, 255, 0.25);
+		background: rgba(41,41,36, 0.6);
+		border: 1px solid rgba(255,107,26, 0.25);
 		backdrop-filter: blur(12px);
 		color: var(--ov-primary);
 		border-radius: 9999px;
-		font-family: 'Space Grotesk', sans-serif;
+		font-family: 'Archivo', 'Arial Narrow', sans-serif;
 		font-size: 0.85rem;
 		font-weight: 600;
 		letter-spacing: 0.03em;
 		margin-bottom: 2rem;
-		box-shadow: 0 0 16px rgba(105, 218, 255, 0.12);
+		box-shadow: 0 0 16px rgba(255,107,26, 0.12);
 		animation: pulse 3s ease-in-out infinite;
 	}
 
 	.hero-title {
-		font-family: 'Space Grotesk', sans-serif;
-		font-size: clamp(3rem, 8vw, 5.5rem);
+		font-family: 'Archivo', 'Arial Narrow', sans-serif;
+		font-size: clamp(3.4rem, 11vw, 8rem);
 		font-weight: 900;
-		letter-spacing: -0.04em;
+		font-stretch: 72%;
+		text-transform: uppercase;
+		letter-spacing: -0.02em;
 		margin: 0 0 1.5rem 0;
-		line-height: 1.05;
+		line-height: 0.92;
 	}
 
 	.gradient-text {
@@ -329,7 +331,7 @@ const recentPosts = (await getCollection("blog"))
 	}
 
 	.hero-subtitle {
-		font-family: 'Space Grotesk', sans-serif;
+		font-family: 'Archivo', 'Arial Narrow', sans-serif;
 		font-size: clamp(1.2rem, 3vw, 1.7rem);
 		color: var(--ov-on-surface);
 		margin: 0 0 1rem 0;
@@ -359,7 +361,7 @@ const recentPosts = (await getCollection("blog"))
 		gap: 0.5rem;
 		padding: 0.85rem 1.75rem;
 		border-radius: 9999px;
-		font-family: 'Space Grotesk', sans-serif;
+		font-family: 'Archivo', 'Arial Narrow', sans-serif;
 		font-weight: 700;
 		font-size: 0.95rem;
 		letter-spacing: 0.01em;
@@ -372,23 +374,23 @@ const recentPosts = (await getCollection("blog"))
 	/* Primary: gradient primary → secondary */
 	.btn-primary {
 		background: linear-gradient(135deg, var(--ov-primary), var(--ov-secondary));
-		color: #004a5d;
-		box-shadow: 0 4px 20px rgba(105, 218, 255, 0.25);
+		color: #160A02;
+		box-shadow: 0 4px 20px rgba(255,107,26, 0.25);
 	}
 	.btn-primary:hover {
 		transform: scale(1.04);
-		box-shadow: 0 0 0 3px rgba(0, 192, 234, 0.2), 0 8px 28px rgba(105, 218, 255, 0.35);
+		box-shadow: 0 0 0 3px rgba(0, 192, 234, 0.2), 0 8px 28px rgba(255,107,26, 0.35);
 	}
 
 	/* Secondary: ghost style — surface_variant 20% + primary border */
 	.btn-secondary {
-		background: rgba(36, 36, 54, 0.5);
+		background: rgba(41,41,36, 0.5);
 		color: var(--ov-primary);
-		border: 1px solid rgba(105, 218, 255, 0.35);
+		border: 1px solid rgba(255,107,26, 0.35);
 		backdrop-filter: blur(8px);
 	}
 	.btn-secondary:hover {
-		background: rgba(105, 218, 255, 0.08);
+		background: rgba(255,107,26, 0.08);
 		border-color: var(--ov-primary);
 		transform: scale(1.04);
 	}
@@ -397,12 +399,12 @@ const recentPosts = (await getCollection("blog"))
 	.btn-outline {
 		background: transparent;
 		color: var(--ov-on-surface-var);
-		border: 1px solid rgba(71, 70, 85, 0.6);
+		border: 1px solid rgba(61,59,52, 0.6);
 	}
 	.btn-outline:hover {
 		color: var(--ov-on-surface);
-		border-color: rgba(105, 218, 255, 0.4);
-		background: rgba(105, 218, 255, 0.05);
+		border-color: rgba(255,107,26, 0.4);
+		background: rgba(255,107,26, 0.05);
 		transform: scale(1.04);
 	}
 
@@ -449,19 +451,19 @@ const recentPosts = (await getCollection("blog"))
 	.circle-1 {
 		width: 500px; height: 500px;
 		top: -120px; right: -120px;
-		background: radial-gradient(circle, rgba(105, 218, 255, 0.06) 0%, transparent 70%);
+		background: radial-gradient(circle, rgba(255,107,26, 0.06) 0%, transparent 70%);
 		animation-delay: 0s;
 	}
 	.circle-2 {
 		width: 360px; height: 360px;
 		bottom: -60px; left: -60px;
-		background: radial-gradient(circle, rgba(172, 137, 255, 0.07) 0%, transparent 70%);
+		background: radial-gradient(circle, rgba(245,197,24, 0.07) 0%, transparent 70%);
 		animation-delay: 2.5s;
 	}
 	.circle-3 {
 		width: 240px; height: 240px;
 		top: 40%; left: 8%;
-		background: radial-gradient(circle, rgba(255, 93, 215, 0.05) 0%, transparent 70%);
+		background: radial-gradient(circle, rgba(242,237,227, 0.05) 0%, transparent 70%);
 		animation-delay: 5s;
 	}
 
@@ -472,17 +474,19 @@ const recentPosts = (await getCollection("blog"))
 	}
 
 	.section-title {
-		font-family: 'Space Grotesk', sans-serif;
+		font-family: 'Archivo', 'Arial Narrow', sans-serif;
 		text-align: center;
-		font-size: clamp(2rem, 5vw, 3rem);
-		font-weight: 800;
-		letter-spacing: -0.04em;
+		font-size: clamp(2.4rem, 6vw, 4rem);
+		font-weight: 900;
+		font-stretch: 72%;
+		text-transform: uppercase;
+		letter-spacing: -0.01em;
 		margin: 0 0 1rem 0;
 		color: var(--ov-on-surface);
 	}
 
 	.section-subtitle {
-		font-family: 'Manrope', sans-serif;
+		font-family: 'Geist', system-ui, sans-serif;
 		text-align: center;
 		font-size: clamp(1rem, 2vw, 1.2rem);
 		color: var(--ov-on-surface-var);
@@ -500,9 +504,11 @@ const recentPosts = (await getCollection("blog"))
 
 	/* Cards: surface_container with lg (1rem) radius, NO borders */
 	.feature-card {
+		position: relative;
 		padding: 2.25rem;
 		background: var(--ov-surface-mid);
-		border-radius: 16px;
+		border-radius: 4px;
+		border-left: 3px solid var(--ov-primary);
 		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 		cursor: pointer;
 	}
@@ -510,17 +516,24 @@ const recentPosts = (await getCollection("blog"))
 		transform: translateY(-6px);
 		background: var(--ov-surface-high);
 		/* Ambient shadow tinted with surface_tint */
-		box-shadow: 0 20px 40px rgba(105, 218, 255, 0.08);
+		box-shadow: 0 20px 40px rgba(255,107,26, 0.08);
 	}
 
 	.feature-icon {
-		font-size: 2.5rem;
-		margin-bottom: 1.25rem;
+		font-family: 'Geist Mono', ui-monospace, monospace;
+		font-size: 0.8rem;
+		letter-spacing: 0.18em;
+		color: var(--ov-primary);
+		margin-bottom: 1.5rem;
 		display: inline-block;
+		padding-bottom: 0.35rem;
+		border-bottom: 2px dashed var(--ov-secondary);
+		width: fit-content;
+		align-self: flex-start;
 	}
 
 	.feature-card h3 {
-		font-family: 'Space Grotesk', sans-serif;
+		font-family: 'Archivo', 'Arial Narrow', sans-serif;
 		font-size: 1.3rem;
 		font-weight: 700;
 		letter-spacing: -0.02em;
@@ -529,7 +542,7 @@ const recentPosts = (await getCollection("blog"))
 	}
 
 	.feature-card p {
-		font-family: 'Manrope', sans-serif;
+		font-family: 'Geist', system-ui, sans-serif;
 		color: var(--ov-on-surface-var);
 		line-height: 1.7;
 		margin: 0;
@@ -537,6 +550,18 @@ const recentPosts = (await getCollection("blog"))
 	}
 
 	/* ── Stats — surface_container_highest ── */
+	.features, .stats, .recent-posts {
+		position: relative;
+	}
+	.features::before, .recent-posts::before {
+		content: "";
+		position: absolute;
+		top: 0; left: 50%;
+		width: min(1200px, 90%);
+		transform: translateX(-50%);
+		border-top: 3px dashed var(--ov-secondary);
+		opacity: 0.55;
+	}
 	.stats {
 		padding: 5rem 0;
 		background: var(--ov-surface-top);
@@ -552,7 +577,7 @@ const recentPosts = (await getCollection("blog"))
 	.stat-item { animation: fadeInUp 1s ease-out; }
 
 	.stat-number {
-		font-family: 'Space Grotesk', sans-serif;
+		font-family: 'Archivo', 'Arial Narrow', sans-serif;
 		font-size: clamp(2.5rem, 5vw, 4rem);
 		font-weight: 900;
 		letter-spacing: -0.04em;
@@ -565,7 +590,7 @@ const recentPosts = (await getCollection("blog"))
 	}
 
 	.stat-label {
-		font-family: 'Manrope', sans-serif;
+		font-family: 'Geist', system-ui, sans-serif;
 		font-size: 0.9rem;
 		letter-spacing: 0.08em;
 		text-transform: uppercase;
@@ -586,7 +611,7 @@ const recentPosts = (await getCollection("blog"))
 	}
 
 	.cta-content h2 {
-		font-family: 'Space Grotesk', sans-serif;
+		font-family: 'Archivo', 'Arial Narrow', sans-serif;
 		font-size: clamp(2rem, 5vw, 3rem);
 		font-weight: 800;
 		letter-spacing: -0.04em;
@@ -595,7 +620,7 @@ const recentPosts = (await getCollection("blog"))
 	}
 
 	.cta-content p {
-		font-family: 'Manrope', sans-serif;
+		font-family: 'Geist', system-ui, sans-serif;
 		font-size: clamp(1rem, 2vw, 1.2rem);
 		color: var(--ov-on-surface-var);
 		margin: 0 0 2.5rem 0;
@@ -621,8 +646,8 @@ const recentPosts = (await getCollection("blog"))
 	}
 
 	@keyframes pulse {
-		0%, 100% { box-shadow: 0 0 16px rgba(105, 218, 255, 0.12); }
-		50%       { box-shadow: 0 0 24px rgba(105, 218, 255, 0.22); }
+		0%, 100% { box-shadow: 0 0 16px rgba(255,107,26, 0.12); }
+		50%       { box-shadow: 0 0 24px rgba(255,107,26, 0.22); }
 	}
 
 	/* ── Hero quick links ── */
@@ -639,10 +664,10 @@ const recentPosts = (await getCollection("blog"))
 		align-items: center;
 		gap: 0.35rem;
 		padding: 0.4rem 1.1rem;
-		background: rgba(36, 36, 54, 0.5);
-		border: 1px solid rgba(71, 70, 85, 0.5);
+		background: rgba(41,41,36, 0.5);
+		border: 1px solid rgba(61,59,52, 0.5);
 		border-radius: 9999px;
-		font-family: 'Space Grotesk', sans-serif;
+		font-family: 'Archivo', 'Arial Narrow', sans-serif;
 		font-size: 0.82rem;
 		font-weight: 600;
 		color: var(--ov-on-surface-var);
@@ -650,9 +675,9 @@ const recentPosts = (await getCollection("blog"))
 		transition: all 0.2s ease;
 	}
 	.quick-link:hover {
-		border-color: rgba(105, 218, 255, 0.4);
+		border-color: rgba(255,107,26, 0.4);
 		color: var(--ov-primary);
-		background: rgba(105, 218, 255, 0.06);
+		background: rgba(255,107,26, 0.06);
 	}
 
 	/* ── Feature cards linkable ── */
@@ -664,13 +689,13 @@ const recentPosts = (await getCollection("blog"))
 	.feature-card-link:hover {
 		transform: translateY(-6px);
 		background: var(--ov-surface-high);
-		box-shadow: 0 20px 40px rgba(105, 218, 255, 0.08);
+		box-shadow: 0 20px 40px rgba(255,107,26, 0.08);
 	}
 	.feature-link-hint {
 		display: block;
 		margin-top: auto;
 		padding-top: 1rem;
-		font-family: 'Space Grotesk', sans-serif;
+		font-family: 'Archivo', 'Arial Narrow', sans-serif;
 		font-size: 0.8rem;
 		font-weight: 700;
 		color: var(--ov-primary);
@@ -682,7 +707,7 @@ const recentPosts = (await getCollection("blog"))
 	/* ── Hero title tagline ── */
 	.hero-title-tagline {
 		display: block;
-		font-family: 'Space Grotesk', sans-serif;
+		font-family: 'Archivo', 'Arial Narrow', sans-serif;
 		font-size: clamp(1.1rem, 2.5vw, 1.55rem);
 		font-weight: 600;
 		letter-spacing: -0.02em;
@@ -715,7 +740,7 @@ const recentPosts = (await getCollection("blog"))
 	.post-preview-card:hover {
 		transform: translateY(-6px);
 		background: var(--ov-surface-high);
-		box-shadow: 0 20px 40px rgba(105, 218, 255, 0.08);
+		box-shadow: 0 20px 40px rgba(255,107,26, 0.08);
 	}
 
 	.post-preview-img {
@@ -738,8 +763,8 @@ const recentPosts = (await getCollection("blog"))
 	.post-preview-cat {
 		display: inline-block;
 		padding: 0.25rem 0.75rem;
-		background: rgba(105, 218, 255, 0.1);
-		border: 1px solid rgba(105, 218, 255, 0.2);
+		background: rgba(255,107,26, 0.1);
+		border: 1px solid rgba(255,107,26, 0.2);
 		border-radius: 9999px;
 		font-size: 0.68rem;
 		font-weight: 700;
@@ -750,7 +775,7 @@ const recentPosts = (await getCollection("blog"))
 	}
 
 	.post-preview-title {
-		font-family: 'Space Grotesk', sans-serif;
+		font-family: 'Archivo', 'Arial Narrow', sans-serif;
 		font-size: 1.05rem;
 		font-weight: 700;
 		letter-spacing: -0.02em;
@@ -764,7 +789,7 @@ const recentPosts = (await getCollection("blog"))
 	}
 
 	.post-preview-desc {
-		font-family: 'Manrope', sans-serif;
+		font-family: 'Geist', system-ui, sans-serif;
 		font-size: 0.85rem;
 		color: var(--ov-on-surface-var);
 		line-height: 1.6;

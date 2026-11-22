@@ -48,23 +48,23 @@ const popular = posts.slice(0, 3);
 		<style is:global>
 
 			:root {
-				--ov-primary:        #69daff;
-				--ov-secondary:      #ac89ff;
-				--ov-tertiary:       #ff5dd7;
-				--ov-bg:             #0d0d19;
-				--ov-surface-low:    #121220;
-				--ov-surface-mid:    #181827;
-				--ov-surface-high:   #1e1e2f;
-				--ov-surface-top:    #242436;
-				--ov-on-surface:     #e9e6f9;
-				--ov-on-surface-var: #aba9ba;
-				--ov-outline-var:    #474655;
+				--ov-primary:        #FF6B1A;
+				--ov-secondary:      #F5C518;
+				--ov-tertiary:       #F2EDE3;
+				--ov-bg:             #0E0E0C;
+				--ov-surface-low:    #141412;
+				--ov-surface-mid:    #1A1A17;
+				--ov-surface-high:   #21211D;
+				--ov-surface-top:    #292924;
+				--ov-on-surface:     #EEE9DF;
+				--ov-on-surface-var: #A8A294;
+				--ov-outline-var:    #3D3B34;
 			}
 
 			body {
 				background: var(--ov-bg) !important;
 				color: var(--ov-on-surface) !important;
-				font-family: 'Manrope', sans-serif !important;
+				font-family: 'Geist', system-ui, sans-serif !important;
 				font-size: 16px !important;
 				margin: 0 !important;
 				padding: 0 !important;
@@ -98,7 +98,7 @@ const popular = posts.slice(0, 3);
 				top: -80px; left: 50%;
 				transform: translateX(-50%);
 				width: 600px; height: 300px;
-				background: radial-gradient(ellipse, rgba(105,218,255,0.07) 0%, transparent 70%);
+				background: radial-gradient(ellipse, rgba(255,107,26,0.07) 0%, transparent 70%);
 				pointer-events: none;
 			}
 			.page-hero-label {
@@ -106,8 +106,8 @@ const popular = posts.slice(0, 3);
 				align-items: center;
 				gap: 0.5rem;
 				padding: 0.35rem 1rem;
-				background: rgba(36,36,54,0.6);
-				border: 1px solid rgba(105,218,255,0.2);
+				background: rgba(41,41,36,0.6);
+				border: 1px solid rgba(255,107,26,0.2);
 				border-radius: 9999px;
 				font-size: 0.72rem;
 				font-weight: 700;
@@ -123,7 +123,7 @@ const popular = posts.slice(0, 3);
 				animation: pulse-dot 2s ease-in-out infinite;
 			}
 			.page-hero h1 {
-				font-family: 'Space Grotesk', sans-serif;
+				font-family: 'Archivo', 'Arial Narrow', sans-serif;
 				font-size: clamp(2.5rem, 6vw, 4rem);
 				font-weight: 900;
 				letter-spacing: -0.04em;
@@ -162,7 +162,7 @@ const popular = posts.slice(0, 3);
 			}
 			.featured-post:hover {
 				transform: translateY(-4px);
-				box-shadow: 0 24px 48px rgba(105,218,255,0.08);
+				box-shadow: 0 24px 48px rgba(255,107,26,0.08);
 			}
 			.featured-img {
 				position: relative;
@@ -193,8 +193,8 @@ const popular = posts.slice(0, 3);
 			.cat-badge {
 				display: inline-block;
 				padding: 0.28rem 0.8rem;
-				background: rgba(105,218,255,0.1);
-				border: 1px solid rgba(105,218,255,0.22);
+				background: rgba(255,107,26,0.1);
+				border: 1px solid rgba(255,107,26,0.22);
 				border-radius: 9999px;
 				font-size: 0.7rem;
 				font-weight: 700;
@@ -204,7 +204,7 @@ const popular = posts.slice(0, 3);
 				margin-bottom: 0.7rem;
 			}
 			.featured-title {
-				font-family: 'Space Grotesk', sans-serif;
+				font-family: 'Archivo', 'Arial Narrow', sans-serif;
 				font-size: clamp(1.3rem, 2.5vw, 1.9rem);
 				font-weight: 800;
 				letter-spacing: -0.03em;
@@ -238,17 +238,17 @@ const popular = posts.slice(0, 3);
 				gap: 0.35rem;
 				padding: 0.45rem 1rem;
 				background: linear-gradient(135deg, var(--ov-primary), var(--ov-secondary));
-				color: #003d4d;
-				font-family: 'Space Grotesk', sans-serif;
+				color: #1A0A00;
+				font-family: 'Archivo', 'Arial Narrow', sans-serif;
 				font-size: 0.78rem;
 				font-weight: 700;
 				border-radius: 9999px;
-				box-shadow: 0 4px 14px rgba(105,218,255,0.18);
+				box-shadow: 0 4px 14px rgba(255,107,26,0.18);
 				transition: transform 0.2s, box-shadow 0.2s;
 			}
 			.featured-post:hover .read-btn {
 				transform: scale(1.04);
-				box-shadow: 0 6px 20px rgba(105,218,255,0.32);
+				box-shadow: 0 6px 20px rgba(255,107,26,0.32);
 			}
 
 			/* ── Posts grid ── */
@@ -268,7 +268,7 @@ const popular = posts.slice(0, 3);
 			.post-card:hover {
 				transform: translateY(-4px);
 				background: var(--ov-surface-high);
-				box-shadow: 0 14px 30px rgba(105,218,255,0.07);
+				box-shadow: 0 14px 30px rgba(255,107,26,0.07);
 			}
 			.card-img {
 				width: 100%;
@@ -287,7 +287,7 @@ const popular = posts.slice(0, 3);
 			.post-card:hover .card-img img { transform: scale(1.05); }
 			.card-body { padding: 1.1rem 1.15rem 1.25rem; }
 			.card-title {
-				font-family: 'Space Grotesk', sans-serif;
+				font-family: 'Archivo', 'Arial Narrow', sans-serif;
 				font-size: 0.95rem;
 				font-weight: 700;
 				letter-spacing: -0.02em;
@@ -324,7 +324,7 @@ const popular = posts.slice(0, 3);
 				padding: 1.25rem;
 			}
 			.widget-title {
-				font-family: 'Space Grotesk', sans-serif;
+				font-family: 'Archivo', 'Arial Narrow', sans-serif;
 				font-size: 0.7rem;
 				font-weight: 700;
 				letter-spacing: 0.1em;
@@ -339,7 +339,7 @@ const popular = posts.slice(0, 3);
 				content: '';
 				flex: 1;
 				height: 1px;
-				background: rgba(71,70,85,0.35);
+				background: rgba(61,59,52,0.35);
 			}
 			.cat-list, .archive-list, .popular-list {
 				list-style: none;
@@ -360,7 +360,7 @@ const popular = posts.slice(0, 3);
 				transition: background 0.2s, color 0.2s;
 			}
 			.cat-item:hover, .archive-item:hover {
-				background: rgba(105,218,255,0.06);
+				background: rgba(255,107,26,0.06);
 				color: var(--ov-on-surface);
 			}
 			.cat-left {
@@ -408,7 +408,7 @@ const popular = posts.slice(0, 3);
 				filter: brightness(0.82);
 			}
 			.popular-title {
-				font-family: 'Space Grotesk', sans-serif;
+				font-family: 'Archivo', 'Arial Narrow', sans-serif;
 				font-size: 0.78rem;
 				font-weight: 700;
 				color: var(--ov-on-surface);

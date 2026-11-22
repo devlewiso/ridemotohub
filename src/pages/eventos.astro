@@ -203,25 +203,25 @@ const eventSchema = {
 
 <style is:global>
     :root {
-        --ov-primary:        #69daff;
-        --ov-secondary:      #ac89ff;
-        --ov-tertiary:       #ff5dd7;
-        --ov-bg:             #0d0d19;
-        --ov-surface-low:    #121220;
-        --ov-surface-mid:    #181827;
-        --ov-surface-high:   #1e1e2f;
-        --ov-surface-top:    #242436;
-        --ov-on-surface:     #e9e6f9;
-        --ov-on-surface-var: #aba9ba;
-        --ov-outline-var:    #474655;
+        --ov-primary:        #FF6B1A;
+        --ov-secondary:      #F5C518;
+        --ov-tertiary:       #F2EDE3;
+        --ov-bg:             #0E0E0C;
+        --ov-surface-low:    #141412;
+        --ov-surface-mid:    #1A1A17;
+        --ov-surface-high:   #21211D;
+        --ov-surface-top:    #292924;
+        --ov-on-surface:     #EEE9DF;
+        --ov-on-surface-var: #A8A294;
+        --ov-outline-var:    #3D3B34;
     }
     main { width: 100% !important; max-width: 100% !important; padding: 0 !important; }
     body {
         margin: 0 !important; padding: 0 !important;
-        background: #0d0d19 !important;
+        background: #0E0E0C !important;
         background-image: none !important;
         font-size: 16px !important;
-        color: #e9e6f9 !important;
+        color: #EEE9DF !important;
     }
 </style>
 
@@ -229,7 +229,7 @@ const eventSchema = {
     body {
         background: var(--ov-bg);
         color: var(--ov-on-surface);
-        font-family: 'Manrope', sans-serif;
+        font-family: 'Geist', system-ui, sans-serif;
     }
 
     .container {
@@ -239,7 +239,7 @@ const eventSchema = {
     }
 
     .gradient-text {
-        background: linear-gradient(135deg, #69daff, #ac89ff);
+        background: linear-gradient(135deg, #FF6B1A, #F5C518);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -264,7 +264,7 @@ const eventSchema = {
     }
 
     .section-header h2 {
-        font-family: 'Space Grotesk', sans-serif;
+        font-family: 'Archivo', 'Arial Narrow', sans-serif;
         font-size: clamp(1.5rem, 3vw, 2.25rem);
         font-weight: 900;
         letter-spacing: -0.04em;
@@ -286,8 +286,8 @@ const eventSchema = {
     .hero-badge {
         display: inline-block;
         padding: 0.35rem 1rem;
-        background: rgba(105, 218, 255, 0.08);
-        border: 1px solid rgba(105, 218, 255, 0.25);
+        background: rgba(255,107,26, 0.08);
+        border: 1px solid rgba(255,107,26, 0.25);
         border-radius: 9999px;
         font-size: 0.78rem;
         font-weight: 700;
@@ -298,7 +298,7 @@ const eventSchema = {
     }
 
     .page-hero h1 {
-        font-family: 'Space Grotesk', sans-serif;
+        font-family: 'Archivo', 'Arial Narrow', sans-serif;
         font-size: clamp(2.5rem, 6vw, 4.5rem);
         font-weight: 900;
         letter-spacing: -0.04em;
@@ -324,7 +324,7 @@ const eventSchema = {
     /* Evento destacado */
     .event-featured {
         background: var(--ov-surface-mid);
-        border: 1px solid rgba(105, 218, 255, 0.1);
+        border: 1px solid rgba(255,107,26, 0.1);
         border-radius: 20px;
         padding: 2.5rem;
         display: grid;
@@ -332,7 +332,7 @@ const eventSchema = {
         gap: 2.5rem;
         align-items: start;
         margin-bottom: 4rem;
-        box-shadow: 0 8px 40px rgba(105, 218, 255, 0.06);
+        box-shadow: 0 8px 40px rgba(255,107,26, 0.06);
     }
 
     .event-date-block {
@@ -343,22 +343,22 @@ const eventSchema = {
         border-radius: 16px;
         padding: 1.5rem 1rem;
         text-align: center;
-        border: 1px solid rgba(105, 218, 255, 0.1);
+        border: 1px solid rgba(255,107,26, 0.1);
     }
 
     .date-day {
-        font-family: 'Space Grotesk', sans-serif;
+        font-family: 'Archivo', 'Arial Narrow', sans-serif;
         font-size: 3rem;
         font-weight: 900;
         line-height: 1;
-        background: linear-gradient(135deg, #69daff, #ac89ff);
+        background: linear-gradient(135deg, #FF6B1A, #F5C518);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
     }
 
     .date-month {
-        font-family: 'Space Grotesk', sans-serif;
+        font-family: 'Archivo', 'Arial Narrow', sans-serif;
         font-size: 1.1rem;
         font-weight: 700;
         letter-spacing: 0.1em;
@@ -383,8 +383,8 @@ const eventSchema = {
     .event-flag {
         display: inline-block;
         padding: 0.3rem 0.85rem;
-        background: rgba(255, 93, 215, 0.1);
-        border: 1px solid rgba(255, 93, 215, 0.25);
+        background: rgba(242,237,227, 0.1);
+        border: 1px solid rgba(242,237,227, 0.25);
         border-radius: 9999px;
         font-size: 0.72rem;
         font-weight: 700;
@@ -407,7 +407,7 @@ const eventSchema = {
     }
 
     .event-body h3 {
-        font-family: 'Space Grotesk', sans-serif;
+        font-family: 'Archivo', 'Arial Narrow', sans-serif;
         font-size: clamp(1.3rem, 2.5vw, 1.75rem);
         font-weight: 800;
         letter-spacing: -0.03em;
@@ -450,7 +450,7 @@ const eventSchema = {
     .tag {
         display: inline-block;
         padding: 0.3rem 0.85rem;
-        background: rgba(71, 70, 85, 0.4);
+        background: rgba(61,59,52, 0.4);
         border-radius: 9999px;
         font-size: 0.78rem;
         font-weight: 600;
@@ -463,13 +463,13 @@ const eventSchema = {
         gap: 0.5rem;
         padding: 0.75rem 1.75rem;
         background: linear-gradient(135deg, var(--ov-primary), var(--ov-secondary));
-        color: #003d4d;
-        font-family: 'Space Grotesk', sans-serif;
+        color: #1A0A00;
+        font-family: 'Archivo', 'Arial Narrow', sans-serif;
         font-weight: 700;
         font-size: 0.9rem;
         border-radius: 9999px;
         text-decoration: none;
-        box-shadow: 0 4px 16px rgba(105, 218, 255, 0.2);
+        box-shadow: 0 4px 16px rgba(255,107,26, 0.2);
         transition: opacity 0.2s, transform 0.2s;
     }
 
@@ -481,15 +481,15 @@ const eventSchema = {
     /* CTA */
     .cta-box {
         background: var(--ov-surface-top);
-        border: 1px solid rgba(105, 218, 255, 0.1);
+        border: 1px solid rgba(255,107,26, 0.1);
         border-radius: 20px;
         padding: 3.5rem;
         text-align: center;
-        box-shadow: 0 8px 40px rgba(105, 218, 255, 0.05);
+        box-shadow: 0 8px 40px rgba(255,107,26, 0.05);
     }
 
     .cta-box h3 {
-        font-family: 'Space Grotesk', sans-serif;
+        font-family: 'Archivo', 'Arial Narrow', sans-serif;
         font-size: clamp(1.5rem, 3vw, 2rem);
         font-weight: 900;
         letter-spacing: -0.03em;
@@ -509,13 +509,13 @@ const eventSchema = {
         align-items: center;
         padding: 0.85rem 2rem;
         background: linear-gradient(135deg, var(--ov-primary), var(--ov-secondary));
-        color: #003d4d;
-        font-family: 'Space Grotesk', sans-serif;
+        color: #1A0A00;
+        font-family: 'Archivo', 'Arial Narrow', sans-serif;
         font-weight: 700;
         font-size: 0.95rem;
         border-radius: 9999px;
         text-decoration: none;
-        box-shadow: 0 4px 20px rgba(105, 218, 255, 0.2);
+        box-shadow: 0 4px 20px rgba(255,107,26, 0.2);
         transition: opacity 0.2s, transform 0.2s;
     }
 
@@ -524,7 +524,7 @@ const eventSchema = {
     /* ── Past Events ── */
     .past-events-section {
         background: var(--ov-surface-low);
-        border-top: 1px solid rgba(71, 70, 85, 0.3);
+        border-top: 1px solid rgba(61,59,52, 0.3);
     }
 
     .past-events-grid {
@@ -540,7 +540,7 @@ const eventSchema = {
         padding: 1.25rem 1.5rem;
         background: var(--ov-surface-mid);
         border-radius: 14px;
-        border: 1px solid rgba(71, 70, 85, 0.3);
+        border: 1px solid rgba(61,59,52, 0.3);
         opacity: 0.75;
         transition: opacity 0.2s;
     }
@@ -555,7 +555,7 @@ const eventSchema = {
     }
 
     .past-day {
-        font-family: 'Space Grotesk', sans-serif;
+        font-family: 'Archivo', 'Arial Narrow', sans-serif;
         font-size: 1.6rem;
         font-weight: 900;
         line-height: 1;
@@ -576,7 +576,7 @@ const eventSchema = {
     }
 
     .past-event-info h3 {
-        font-family: 'Space Grotesk', sans-serif;
+        font-family: 'Archivo', 'Arial Narrow', sans-serif;
         font-size: 0.95rem;
         font-weight: 700;
         color: var(--ov-on-surface);
@@ -622,11 +622,11 @@ const eventSchema = {
     .explore-more {
         background: var(--ov-surface-low);
         padding: 4rem 0;
-        border-top: 1px solid rgba(71, 70, 85, 0.3);
+        border-top: 1px solid rgba(61,59,52, 0.3);
     }
 
     .explore-label {
-        font-family: 'Space Grotesk', sans-serif;
+        font-family: 'Archivo', 'Arial Narrow', sans-serif;
         font-size: 0.72rem;
         font-weight: 700;
         letter-spacing: 0.1em;
@@ -655,13 +655,13 @@ const eventSchema = {
     .explore-card:hover {
         transform: translateY(-4px);
         background: var(--ov-surface-high);
-        box-shadow: 0 12px 28px rgba(105, 218, 255, 0.07);
+        box-shadow: 0 12px 28px rgba(255,107,26, 0.07);
     }
 
     .explore-icon { font-size: 1.5rem; }
 
     .explore-title {
-        font-family: 'Space Grotesk', sans-serif;
+        font-family: 'Archivo', 'Arial Narrow', sans-serif;
         font-size: 0.95rem;
         font-weight: 700;
         color: var(--ov-on-surface);

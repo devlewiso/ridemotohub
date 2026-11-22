@@ -496,29 +496,29 @@ import Header from "../components/Header.astro";
 
 <style is:global>
     :root {
-        --ov-primary:        #69daff;
+        --ov-primary:        #FF6B1A;
         --ov-primary-dim:    #00c0ea;
-        --ov-secondary:      #ac89ff;
-        --ov-tertiary:       #ff5dd7;
-        --ov-bg:             #0d0d19;
-        --ov-surface-low:    #121220;
-        --ov-surface-mid:    #181827;
-        --ov-surface-high:   #1e1e2f;
-        --ov-surface-top:    #242436;
-        --ov-surface-bright: #2a2a3e;
-        --ov-on-surface:     #e9e6f9;
-        --ov-on-surface-var: #aba9ba;
-        --ov-outline:        #757484;
-        --ov-outline-var:    #474655;
-        --ov-tint:           #69daff;
+        --ov-secondary:      #F5C518;
+        --ov-tertiary:       #F2EDE3;
+        --ov-bg:             #0E0E0C;
+        --ov-surface-low:    #141412;
+        --ov-surface-mid:    #1A1A17;
+        --ov-surface-high:   #21211D;
+        --ov-surface-top:    #292924;
+        --ov-surface-bright: #303029;
+        --ov-on-surface:     #EEE9DF;
+        --ov-on-surface-var: #A8A294;
+        --ov-outline:        #7A766B;
+        --ov-outline-var:    #3D3B34;
+        --ov-tint:           #FF6B1A;
     }
     main { width: 100% !important; max-width: 100% !important; padding: 0 !important; }
     body {
         margin: 0 !important; padding: 0 !important;
-        background: #0d0d19 !important;
+        background: #0E0E0C !important;
         background-image: none !important;
         font-size: 16px !important;
-        color: #e9e6f9 !important;
+        color: #EEE9DF !important;
     }
 </style>
 
@@ -527,7 +527,7 @@ import Header from "../components/Header.astro";
     body {
         background: var(--ov-bg);
         color: var(--ov-on-surface);
-        font-family: 'Manrope', sans-serif;
+        font-family: 'Geist', system-ui, sans-serif;
     }
 
     .container {
@@ -557,8 +557,8 @@ import Header from "../components/Header.astro";
     .hero-badge {
         display: inline-block;
         padding: 0.35rem 1rem;
-        background: rgba(105, 218, 255, 0.08);
-        border: 1px solid rgba(105, 218, 255, 0.25);
+        background: rgba(255,107,26, 0.08);
+        border: 1px solid rgba(255,107,26, 0.25);
         border-radius: 9999px;
         font-size: 0.78rem;
         font-weight: 700;
@@ -569,7 +569,7 @@ import Header from "../components/Header.astro";
     }
 
     .page-hero h1 {
-        font-family: 'Space Grotesk', sans-serif;
+        font-family: 'Archivo', 'Arial Narrow', sans-serif;
         font-size: clamp(2.5rem, 6vw, 4rem);
         font-weight: 900;
         letter-spacing: -0.04em;
@@ -602,7 +602,7 @@ import Header from "../components/Header.astro";
         padding: 2rem;
         background: var(--ov-surface-mid);
         border-radius: 16px;
-        border: 1px solid rgba(105, 218, 255, 0.1);
+        border: 1px solid rgba(255,107,26, 0.1);
     }
 
     .intro-text {
@@ -613,15 +613,15 @@ import Header from "../components/Header.astro";
     }
 
     .important-notice {
-        background: rgba(255, 93, 215, 0.08);
-        border: 1px solid rgba(255, 93, 215, 0.25);
+        background: rgba(242,237,227, 0.08);
+        border: 1px solid rgba(242,237,227, 0.25);
         border-radius: 16px;
         padding: 1.5rem;
         margin-top: 1.5rem;
     }
 
     .important-notice h3 {
-        font-family: 'Space Grotesk', sans-serif;
+        font-family: 'Archivo', 'Arial Narrow', sans-serif;
         color: var(--ov-tertiary);
         margin: 0 0 1rem 0;
         font-size: 1.2rem;
@@ -649,7 +649,7 @@ import Header from "../components/Header.astro";
     }
 
     .legal-section h2 {
-        font-family: 'Space Grotesk', sans-serif;
+        font-family: 'Archivo', 'Arial Narrow', sans-serif;
         font-size: 1.6rem;
         font-weight: 800;
         letter-spacing: -0.02em;
@@ -660,7 +660,7 @@ import Header from "../components/Header.astro";
     }
 
     .legal-section h3 {
-        font-family: 'Space Grotesk', sans-serif;
+        font-family: 'Archivo', 'Arial Narrow', sans-serif;
         font-size: 1.2rem;
         font-weight: 700;
         margin: 1.5rem 0 1rem 0;
@@ -710,12 +710,12 @@ import Header from "../components/Header.astro";
         border-radius: 9999px;
         font-size: 0.95rem;
         font-weight: 600;
-        box-shadow: 0 4px 20px rgba(172, 137, 255, 0.25);
+        box-shadow: 0 4px 20px rgba(245,197,24, 0.25);
     }
 
     .contact-box {
         background: var(--ov-surface-mid);
-        border: 1px solid rgba(105, 218, 255, 0.1);
+        border: 1px solid rgba(255,107,26, 0.1);
         border-radius: 16px;
         padding: 2rem;
         margin-top: 1.5rem;
@@ -739,7 +739,7 @@ import Header from "../components/Header.astro";
     }
 
     .disclaimer-box h3 {
-        font-family: 'Space Grotesk', sans-serif;
+        font-family: 'Archivo', 'Arial Narrow', sans-serif;
         font-size: 1.2rem;
         font-weight: 700;
         margin: 1.5rem 0 1rem 0;
@@ -784,19 +784,19 @@ import Header from "../components/Header.astro";
         gap: 0.5rem;
         padding: 0.85rem 1.75rem;
         background: linear-gradient(135deg, var(--ov-primary), var(--ov-secondary));
-        color: #003d4d;
-        font-family: 'Space Grotesk', sans-serif;
+        color: #1A0A00;
+        font-family: 'Archivo', 'Arial Narrow', sans-serif;
         font-weight: 700;
         font-size: 0.95rem;
         border-radius: 9999px;
         text-decoration: none;
-        box-shadow: 0 4px 20px rgba(105, 218, 255, 0.25);
+        box-shadow: 0 4px 20px rgba(255,107,26, 0.25);
         transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
     .btn-primary:hover {
         transform: translateY(-2px);
-        box-shadow: 0 6px 24px rgba(105, 218, 255, 0.35);
+        box-shadow: 0 6px 24px rgba(255,107,26, 0.35);
     }
 
     /* Responsive */

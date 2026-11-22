@@ -44,15 +44,22 @@ const today = new Date();
 	<div class="footer-bottom">
 		<span>&copy; {today.getFullYear()} RideMotoHub Guatemala</span>
 		<span class="dot">·</span>
-		<span>Hecho con ❤️ para la comunidad motera</span>
+		<span>Hecho para la comunidad motera</span>
+		<a class="ncl" href="https://neuralcodelab.com" target="_blank" rel="noopener">
+			<svg viewBox="0 0 120 120" width="16" height="16" fill="none" aria-hidden="true">
+				<path d="M24 96 V30 Q24 22 30 27 L90 93 Q96 98 96 90 V24" stroke="currentColor" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+				<circle cx="24" cy="96" r="11" fill="#19D39A"/><circle cx="60" cy="60" r="9" fill="#19D39A"/><circle cx="96" cy="24" r="11" fill="#19D39A"/>
+			</svg>
+			<span>Hecho por <b>neural<i>code</i></b><em>lab</em></span>
+		</a>
 	</div>
 </footer>
 
 <style>
 	footer {
-		background: var(--ov-surface-low, #121220);
-		color: var(--ov-on-surface, #e9e6f9);
-		font-family: 'Manrope', sans-serif;
+		background: var(--ov-surface-low, #141412);
+		color: var(--ov-on-surface, #EEE9DF);
+		font-family: 'Geist', system-ui, sans-serif;
 	}
 
 	.footer-inner {
@@ -62,7 +69,7 @@ const today = new Date();
 		display: grid;
 		grid-template-columns: 1.4fr 2fr;
 		gap: 4rem;
-		border-bottom: 1px solid rgba(71, 70, 85, 0.25);
+		border-bottom: 1px solid rgba(61,59,52, 0.25);
 	}
 
 	/* ── Brand ── */
@@ -82,7 +89,7 @@ const today = new Date();
 		width: 36px;
 		height: 36px;
 		border-radius: 10px;
-		background: linear-gradient(135deg, #69daff, #ac89ff);
+		background: linear-gradient(135deg, #FF6B1A, #F5C518);
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -90,11 +97,11 @@ const today = new Date();
 	}
 
 	.logo-text {
-		font-family: 'Space Grotesk', sans-serif;
+		font-family: 'Archivo', 'Arial Narrow', sans-serif;
 		font-size: 1.15rem;
 		font-weight: 800;
 		letter-spacing: -0.03em;
-		background: linear-gradient(135deg, #69daff, #ac89ff);
+		background: linear-gradient(135deg, #FF6B1A, #F5C518);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		background-clip: text;
@@ -102,7 +109,7 @@ const today = new Date();
 
 	.brand-tagline {
 		font-size: 0.875rem;
-		color: var(--ov-on-surface-var, #aba9ba);
+		color: var(--ov-on-surface-var, #A8A294);
 		margin: 0;
 		line-height: 1.6;
 		max-width: 280px;
@@ -116,26 +123,26 @@ const today = new Date();
 	}
 
 	.link-group h4 {
-		font-family: 'Space Grotesk', sans-serif;
+		font-family: 'Archivo', 'Arial Narrow', sans-serif;
 		font-size: 0.72rem;
 		font-weight: 700;
 		letter-spacing: 0.08em;
 		text-transform: uppercase;
-		color: var(--ov-primary, #69daff);
+		color: var(--ov-primary, #FF6B1A);
 		margin: 0 0 1.1rem;
 	}
 
 	.link-group a {
 		display: block;
 		font-size: 0.875rem;
-		color: var(--ov-on-surface-var, #aba9ba);
+		color: var(--ov-on-surface-var, #A8A294);
 		text-decoration: none;
 		margin-bottom: 0.65rem;
 		transition: color 0.2s, transform 0.2s;
 	}
 
 	.link-group a:hover {
-		color: var(--ov-on-surface, #e9e6f9);
+		color: var(--ov-on-surface, #EEE9DF);
 		transform: translateX(4px);
 	}
 
@@ -148,11 +155,31 @@ const today = new Date();
 		align-items: center;
 		gap: 0.75rem;
 		font-size: 0.8rem;
-		color: var(--ov-on-surface-var, #aba9ba);
-		opacity: 0.7;
+		color: var(--ov-on-surface-var, #A8A294);
 	}
+	.footer-bottom > span { opacity: 0.7; }
 
 	.dot { opacity: 0.4; }
+
+	/* Sello de NeuralCodeLab */
+	.ncl {
+		margin-left: auto;
+		display: inline-flex;
+		align-items: center;
+		gap: 0.45rem;
+		color: var(--ov-on-surface, #EEE9DF);
+		text-decoration: none;
+		font-family: "Geist Mono", ui-monospace, monospace;
+		font-size: 0.72rem;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		opacity: 1;
+		transition: color 0.2s;
+	}
+	.ncl b { font-weight: 700; text-transform: none; letter-spacing: -0.02em; font-family: "Archivo", sans-serif; font-size: 0.85rem; }
+	.ncl i { font-style: normal; color: #19D39A; font-weight: 500; }
+	.ncl em { font-family: "Instrument Serif", Georgia, serif; font-style: italic; text-transform: none; letter-spacing: 0; font-size: 0.95rem; }
+	.ncl:hover { color: #19D39A; }
 
 	/* ── Responsive ── */
 	@media (max-width: 768px) {
