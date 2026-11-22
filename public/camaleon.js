@@ -1,5 +1,5 @@
-// NeuralCodeLab · el camaleón. Firma de marca: visto desde arriba, cruza la página en diagonal
-// (abajo-izquierda → arriba-derecha), se detiene un rato en el centro a mirar y cambiar de color, y sigue.
+// NeuralCodeLab · el camaleón. Firma de marca: visto desde arriba, entra por cualquier orilla de la pantalla
+// (en un punto al azar), se detiene un rato en algún lugar a mirar y cambiar de color, y sale por cualquier orilla.
 // Uso: <script src="/camaleon.js" defer></script>. Semitransparente, no captura clics, no cambia el layout,
 // respeta prefers-reduced-motion, se pausa con la pestaña oculta y funciona con CSP estricta (sin <style> en línea).
 (() => {
@@ -126,10 +126,22 @@
     for (;;) {
       await visible()
       const w = innerWidth, h = innerHeight, aw = ancho(), ah = alto()
-      // entra por la esquina inferior izquierda, fuera de la pantalla
-      const inicio = { x: -aw * 1.5, y: h + ah * 0.3 }
-      const medio = { x: w / 2 - aw / 2, y: h / 2 - ah / 2 }
-      const fin = { x: w + aw * 0.5, y: -ah * 1.5 }
+      // Entra por cualquier orilla (arriba, derecha, abajo o izquierda), en un punto al azar,
+      // se detiene en algún lugar de la pantalla y sale por cualquier orilla (puede ser la misma, de regreso).
+      const azar = (a, b) => a + Math.random() * (b - a)
+      const fuera = Math.max(aw, ah) * 1.4
+      const orilla = (lado) => [
+        { x: azar(0, w - aw), y: -fuera },        // arriba
+        { x: w + fuera * 0.4, y: azar(0, h - ah) }, // derecha
+        { x: azar(0, w - aw), y: h + fuera * 0.4 }, // abajo
+        { x: -fuera, y: azar(0, h - ah) },         // izquierda
+      ][lado]
+      const ladoEntrada = Math.floor(Math.random() * 4)
+      const inicio = orilla(ladoEntrada)
+      const medio = { x: azar(w * 0.15, w * 0.85 - aw), y: azar(h * 0.2, h * 0.8 - ah) }
+      let fin = orilla(Math.floor(Math.random() * 4))
+      // que la salida no quede pegada a la entrada (así no da media vuelta en el mismo lugar)
+      for (let n = 0; n < 5 && Math.hypot(fin.x - inicio.x, fin.y - inicio.y) < Math.min(w, h) * 0.4; n++) fin = orilla(Math.floor(Math.random() * 4))
       const angulo = (a, b) => (Math.atan2(b.y - a.y, b.x - a.x) * 180) / Math.PI + 90 // la cabeza apunta hacia arriba
       x = inicio.x; y = inicio.y; rot = angulo(inicio, medio); caja.style.transform = tf()
       caja.style.visibility = 'visible'
